@@ -1,0 +1,86 @@
+# Generative setting completeness (76 Psych-101 experiment ids).
+# Tier A: paper + transcript (± OSF/supplement lookup) specify full episode rules,
+#         including silent/no-feedback phases (those are design, not missing data).
+# Tier C: cannot specify a faithful generative Sim without extra unavailable assets,
+#         paradigm split, or non-recoverable session-local parameters.
+# See docs/SIMENV_DESIGN.md §8.9.
+
+tier_A:
+  - badham2017deficits/exp1.csv
+  - bahrami2020four/exp.csv
+  - collsiöö2023MCPL/exp1.csv
+  - collsiöö2023MCPL/exp3.csv
+  - cox2017information/exp1.csv
+  - enkavi2019adaptivenback/exp1.csv
+  - enkavi2019digitspan/exp1.csv
+  - enkavi2019gonogo/exp1.csv
+  - enkavi2019recentprobes/exp1.csv
+  - feng2021dynamics/exp1.csv
+  - flesch2018comparing/exp1.csv
+  - frey2017cct/exp1.csv
+  - frey2017risk/exp1.csv
+  - garcia2023experiential/exp1.csv
+  - garcia2023experiential/exp2.csv
+  - garcia2023experiential/exp3.csv
+  - garcia2023experiential/exp4.csv
+  - gershman2018deconstructing/exp1.csv
+  - gershman2018deconstructing/exp2.csv
+  - gershman2020reward/exp1.csv
+  - hilbig2014generalized/exp1.csv
+  - kool2016when/exp1.csv
+  - kool2016when/exp2.csv
+  - kool2017cost/exp1.csv
+  - kool2017cost/exp2.csv
+  - krueger2022identifying/exp1.csv
+  - lefebvre2017behavioural/exp1.csv
+  - lefebvre2017behavioural/exp2.csv
+  - ludwig2023human/exp0.csv
+  - ludwig2023human/exp1.csv
+  - ludwig2023human/exp2.csv
+  - peterson2021using/exp1.csv
+  - plonsky2018when/exp1.csv
+  - ruggeri2022globalizability/exp1.csv
+  - sadeghiyeh2020temporal/exp1.csv
+  - schulz2020finding/exp1.csv
+  - schulz2020finding/exp2.csv
+  - schulz2020finding/exp3.csv
+  - schulz2020finding/exp4.csv
+  - schulz2020finding/exp5.csv
+  - somerville2017charting/exp1.csv
+  - speekenbrink2008learning/exp1.csv
+  - steingroever2015data/exp1.csv
+  - steingroever2015data/exp2.csv
+  - steingroever2015data/exp3.csv
+  - wilson2014humans/exp1.csv
+  - wilson2014humans/exp2.csv
+  - wilson2014humans/exp3.csv
+  - wilson2014humans/exp4.csv
+  - wilson2014humans/exp5.csv
+  - waltz2020differential/exp1.csv
+  - wu2018generalisation/exp1.csv
+  - wu2023chunking/exp1.csv
+  - wu2023chunking/exp2.csv
+  - wulff2018description/exp1.csv
+  - wulff2018sampling/exp1.csv
+  - xiong2023neural/exp1.csv
+  - zorowitz2023data/exp1.csv
+
+tier_C:
+  - collsiöö2023MCPL/exp2.csv
+  - hebart2023things/exp1.csv
+  - jansen2021dunningkruger/exp1.csv
+  - kumar2023disentangling/exp1.csv
+  - levering2020revisiting/exp1.csv
+  - levering2020revisiting/exp2.csv
+  - popov2023intent/exp1.csv
+  - popov2023intent/exp2.csv
+  - popov2023intent/exp3.csv
+  - tomov2020discovery/exp2.csv
+  - tomov2020discovery/exp4.csv
+  - tomov2020discovery/exp5.csv
+  - tomov2020discovery/exp7.csv
+  - tomov2021multitask/exp1.csv
+  - tomov2021multitask/exp3.csv
+  - wise2019acomputational/exp1.csv
+  - zhu2020bayesian/exp1.csv
+  - zhu2020bayesian/exp2.csv

@@ -1,0 +1,15 @@
+experiment_id: kool2017cost/exp2.csv
+family: two_step_spaceship
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: outcome
+phases: [instruction, spaceship_choice, alien_choice]
+action_parser: psych101_press
+payoff_rule:
+  type: treasure_multiplier
+  multiplier: 5
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+notes: >
+  Two-step spaceship then alien choice with optional 5x treasure multiplier; pooled alien treasures on the recorded path.

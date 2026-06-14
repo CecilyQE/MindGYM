@@ -1,0 +1,14 @@
+experiment_id: enkavi2019digitspan/exp1.csv
+family: working_memory
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: correctness
+phases: [instruction, recall]
+action_parser: psych101_press
+payoff_rule:
+  type: ordered_digit_recall
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+notes: >
+  Digit-span recall with session-specific end keys; per-keypress correctness reward on the recorded path.

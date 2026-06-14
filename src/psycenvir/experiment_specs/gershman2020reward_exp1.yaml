@@ -1,0 +1,15 @@
+experiment_id: gershman2020reward/exp1.csv
+family: stimulus_mapping
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: correctness
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: points_only
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+  paper: "Gershman et al. (2020)"
+notes: >
+  Generative fresh mappings plus recorded-path exact feedback on parsed stimulus schedules.

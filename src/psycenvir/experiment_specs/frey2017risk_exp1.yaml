@@ -1,0 +1,15 @@
+experiment_id: frey2017risk/exp1.csv
+family: balloon_risk_task
+implementation_status: implemented_generative
+fidelity_level: generative_exact
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: points_only
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+  paper: "Frey et al. (2017)"
+notes: >
+  Generative BART-style balloons with hidden explosion thresholds per balloon.

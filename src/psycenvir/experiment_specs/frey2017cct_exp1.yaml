@@ -1,0 +1,21 @@
+experiment_id: frey2017cct/exp1.csv
+family: columbia_card_task
+implementation_status: implemented_recorded_path
+fidelity_level: partial_sim
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: points_only
+  monetary_payoff_modeled: false
+ethics_recorded: true
+payoff_rule_recorded: partial
+verbatim_text_available: false
+sources:
+  psych101: true
+  paper: "Frey et al. (2017)"
+  task_dynamics_reference: "Columbia Card Task instructions"
+notes: >
+  Recorded card draws and stop actions support exact human-path replay and
+  exact early-stop interventions. Turning a card after a source participant
+  stopped is unobserved and is explicitly truncated rather than generated.

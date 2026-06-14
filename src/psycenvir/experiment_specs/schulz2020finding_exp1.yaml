@@ -1,0 +1,15 @@
+experiment_id: schulz2020finding/exp1.csv
+family: multi_arm_bandit
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: points_only
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+notes: >
+  Generative eight-arm bandit with round-wise latent payoffs and recorded-path
+  pooled per-round arm outcomes.

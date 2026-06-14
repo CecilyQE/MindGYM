@@ -1,0 +1,14 @@
+experiment_id: bahrami2020four/exp.csv
+family: four_arm_bandit
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: points_only
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+notes: >
+  Generative four-arm bandit and recorded-path pooled arm outcomes.

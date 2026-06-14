@@ -1,0 +1,15 @@
+experiment_id: plonsky2018when/exp1.csv
+family: gamble_feedback
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: points_only
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+notes: >
+  Generative two-option gambles with 5 silent then 20 counterfactual trials per problem.
+  Recorded path supports feedback trials; no-feedback trials truncate alternative actions.

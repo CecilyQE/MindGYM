@@ -1,0 +1,15 @@
+experiment_id: gershman2018deconstructing/exp1.csv
+family: volatile_bandit
+implementation_status: implemented_generative
+fidelity_level: generative_exact
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: points_only
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+  paper: "Gershman et al. (2018)"
+notes: >
+  Generative volatile vs fixed-zero two-arm bandit games.

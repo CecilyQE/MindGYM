@@ -1,0 +1,77 @@
+experiment_id,n_participants,n_press_median,n_say_median,feedback_class,sim_tier_auto,sim_tier_final,v1_priority,family,reward_mode,has_score,has_monetary_bonus,ethics_recorded,payoff_rule_recorded,verbatim_text_available,sources,notes,generative_setting_tier
+badham2017deficits/exp1.csv,85,352,0,F1_correctness,1,1_exact,P1,category_learning,correctness,True,false,true,true,false,"Psych-101; Badham, Sanborn & Maylor (2017)","Reviewed: correctness feedback is exact; compensation is course credit or fixed GBP 5, not performance bonus.",A
+bahrami2020four/exp.csv,869,148,0,F_other,2,,P2,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+collsiöö2023MCPL/exp1.csv,70,0.0,280.0,F1_correctness,1,2_pending,P2,judgment_learning,correctness,True,,,,,Psych-101,"Reviewed candidate: feedback ceases before test trials and some test stimuli have no recovered label, so exact simulation remains blocked.",A
+collsiöö2023MCPL/exp2.csv,74,0.0,280.0,F1_correctness,1,,defer,,correctness,True,,,,,Psych-101,Auto-generated; requires manual source review.,C
+collsiöö2023MCPL/exp3.csv,88,0.0,138.0,F1_correctness,1,1_exact,P2,judgment_learning,correctness,True,unknown,unknown,unknown,unknown,Psych-101,Implemented: all recorded trials expose correct-concentration feedback; exact transitions on recovered stimulus schedules.,A
+cox2017information/exp1.csv,424,180.0,0.0,F_other,2,2_pending,P2,episodic_memory_battery,none,False,,,,,Psych-101,"Reviewed candidate: sessions mix pair recognition, item recognition, and free recall blocks; an exact environment requires family-specific subtask parsers and recall scoring rules.",A
+enkavi2019adaptivenback/exp1.csv,470,434.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+enkavi2019digitspan/exp1.csv,472,207.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+enkavi2019gonogo/exp1.csv,463,326,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+enkavi2019recentprobes/exp1.csv,471,75,0,F_other,2,1_exact,P2,recognition_memory,none,False,unknown,unknown,unknown,unknown,Psych-101,Implemented: present/absent correctness is deterministically computed from displayed letter set; original trials provide no feedback or scalar reward.,A
+feng2021dynamics/exp1.csv,26,1120.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+flesch2018comparing/exp1.csv,320,600.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+frey2017cct/exp1.csv,1368,452.0,0.0,F4_state_machine,1,1_partial,P1,columbia_card_task,outcome,True,true,true,partial,false,Psych-101; Frey et al. (2017); CCT instructions,Reviewed: exact recorded paths and early stops; fresh deck generation and exact money conversion remain open.,A
+frey2017risk/exp1.csv,1331,30,0,F3_stochastic_outcome,1,2_pending,P2,balloon_risk_task,outcome,True,true,true,partial,false,Psych-101; Frey et al. (2017),Reviewed candidate: explosion distribution and exact money conversion must be recovered before implementation.,A
+garcia2023experiential/exp1.csv,87,208,0,F2_outcome,1,,defer,,outcome,True,,,,,Psych-101,Auto-generated; requires manual source review.,A
+garcia2023experiential/exp2.csv,87,208,0,F2_outcome,1,,defer,,outcome,True,,,,,Psych-101,Auto-generated; requires manual source review.,A
+garcia2023experiential/exp3.csv,86,208.0,0.0,F2_outcome,1,,defer,,outcome,True,,,,,Psych-101,Auto-generated; requires manual source review.,A
+garcia2023experiential/exp4.csv,86,164.0,0.0,F2_outcome,1,,defer,,outcome,True,,,,,Psych-101,Auto-generated; requires manual source review.,A
+gershman2018deconstructing/exp1.csv,40,200.0,0.0,F2_outcome,1,,defer,,outcome,True,,,,,Psych-101,Auto-generated; requires manual source review.,A
+gershman2018deconstructing/exp2.csv,40,200.0,0.0,F2_outcome,1,,defer,,outcome,True,,,,,Psych-101,Auto-generated; requires manual source review.,A
+gershman2020reward/exp1.csv,74,525.0,0.0,F2_outcome,1,2_pending,P2,stimulus_response_learning,outcome,True,,,,,Psych-101,"Reviewed candidate: labels are recoverable for most stimulus-game instances, but seven session-local stimuli never expose a rewarded response, preventing full exact-transition registration.",C
+hebart2023things/exp1.csv,11122,40.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+hilbig2014generalized/exp1.csv,73,96,0,F_other,2,,P2,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+jansen2021dunningkruger/exp1.csv,3192,20.0,8.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+kool2016when/exp1.csv,179,123,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+kool2016when/exp2.csv,188,247.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+kool2017cost/exp1.csv,93,197,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+kool2017cost/exp2.csv,88,398.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+krueger2022identifying/exp1.csv,1755,99,0,F2_outcome,1,,defer,,outcome,True,,,,,Psych-101,Auto-generated; requires manual source review.,A
+kumar2023disentangling/exp1.csv,707,0,0,F_other,3,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+lefebvre2017behavioural/exp1.csv,44,96.0,0.0,F2_outcome,1,,defer,,outcome,True,,,,,Psych-101,Auto-generated; requires manual source review.,A
+lefebvre2017behavioural/exp2.csv,33,96,0,F2_outcome,1,,defer,,outcome,True,,,,,Psych-101,Auto-generated; requires manual source review.,A
+levering2020revisiting/exp1.csv,126,158.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+levering2020revisiting/exp2.csv,102,158.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+ludwig2023human/exp0.csv,59,360,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+ludwig2023human/exp1.csv,19,360,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+ludwig2023human/exp2.csv,18,360.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+peterson2021using/exp1.csv,13735,85,0,F2_outcome,1,1_partial,P1,gamble_choice,outcome,True,true,true,true,false,Psych-101; Peterson et al. (2021); Thomas et al. (2024),Reviewed: exact only on feedback blocks; fresh outcomes require Corr/Amb joint sampling.,A
+plonsky2018when/exp1.csv,216,750.0,0.0,F2_outcome,1,,defer,,outcome,True,,,,,Psych-101,Auto-generated; requires manual source review.,A
+popov2023intent/exp1.csv,43,90,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+popov2023intent/exp2.csv,42,90.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+popov2023intent/exp3.csv,47,90,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+ruggeri2022globalizability/exp1.csv,11937,12,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+sadeghiyeh2020temporal/exp1.csv,78,315.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+schulz2020finding/exp1.csv,110,300.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+schulz2020finding/exp2.csv,72,300.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+schulz2020finding/exp3.csv,112,300.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+schulz2020finding/exp4.csv,99,300,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+schulz2020finding/exp5.csv,141,300,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+somerville2017charting/exp1.csv,78,560.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+speekenbrink2008learning/exp1.csv,23,200,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+steingroever2015data/exp1.csv,410,100.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+steingroever2015data/exp2.csv,13,95,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+steingroever2015data/exp3.csv,88,150.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+tomov2020discovery/exp2.csv,219,344,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+tomov2020discovery/exp4.csv,67,280,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+tomov2020discovery/exp5.csv,346,253.5,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+tomov2020discovery/exp7.csv,157,337,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+tomov2021multitask/exp1.csv,196,202.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+tomov2021multitask/exp3.csv,184,202.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+waltz2020differential/exp1.csv,36,425.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+wilson2014humans/exp1.csv,27,1120,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+wilson2014humans/exp2.csv,7,560,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+wilson2014humans/exp3.csv,68,560.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+wilson2014humans/exp4.csv,80,560.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+wilson2014humans/exp5.csv,39,560,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+wise2019acomputational/exp1.csv,57,0,0,F_other,3,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+wu2018generalisation/exp1.csv,78,120.0,0.0,F2_outcome,1,2_pending,P2,spatial_bandit,outcome,True,unknown,unknown,partial,unknown,Psych-101; Wu et al. (2018),Reviewed candidate: numeric reward mechanism is clear; compensation and generator details remain to be recovered.,A
+wu2023chunking/exp1.csv,132,1000.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+wu2023chunking/exp2.csv,106,1000.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+wulff2018description/exp1.csv,1981,6,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+wulff2018sampling/exp1.csv,3942,101.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,A
+xiong2023neural/exp1.csv,30,4800.0,0.0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+zhu2020bayesian/exp1.csv,55,0,0,F_other,3,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+zhu2020bayesian/exp2.csv,73,0,0,F_other,3,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C
+zorowitz2023data/exp1.csv,139,402,0,F_other,2,,defer,,none,False,,,,,Psych-101,Auto-generated; requires manual source review.,C

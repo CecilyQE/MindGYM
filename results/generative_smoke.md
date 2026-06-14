@@ -1,0 +1,35 @@
+# Generative Simulator Smoke Report
+
+- `badham2017deficits/exp1.csv`: 1 steps, total_reward=0.00, fidelity=generative_exact
+- `wu2018generalisation/exp1.csv`: 4 steps, total_reward=202.00, fidelity=generative_exact
+- `frey2017risk/exp1.csv`: 9 steps, total_reward=6.00, fidelity=generative_exact
+- `peterson2021using/exp1.csv`: 3 steps, total_reward=5.00, fidelity=generative_exact
+- `wilson2014humans/exp1.csv`: 5 steps, total_reward=268.00, fidelity=generative_exact
+- `lefebvre2017behavioural/exp1.csv`: 2 steps, total_reward=0.00, fidelity=generative_exact
+- `lefebvre2017behavioural/exp2.csv`: 3 steps, total_reward=0.00, fidelity=generative_exact
+- `gershman2020reward/exp1.csv`: 8 steps, total_reward=5.00, fidelity=generative_exact
+- `speekenbrink2008learning/exp1.csv`: 8 steps, total_reward=3.00, fidelity=generative_exact
+- `frey2017cct/exp1.csv`: 4 steps, total_reward=-791.00, fidelity=generative_exact
+- `kool2016when/exp1.csv`: 1 steps, total_reward=0.00, fidelity=generative_exact
+- `kool2016when/exp2.csv`: 1 steps, total_reward=0.00, fidelity=generative_exact
+- `kool2017cost/exp1.csv`: 1 steps, total_reward=0.00, fidelity=generative_exact
+- `gershman2018deconstructing/exp1.csv`: 1 steps, total_reward=0.00, fidelity=generative_exact
+- `bahrami2020four/exp.csv`: 1 steps, total_reward=0.00, fidelity=generative_exact
+- `hilbig2014generalized/exp1.csv`: 8 steps, total_reward=3.00, fidelity=generative_exact
+- `wulff2018description/exp1.csv`: 2 steps, total_reward=-2.20, fidelity=generative_exact
+- `gershman2018deconstructing/exp2.csv`: 1 steps, total_reward=0.00, fidelity=generative_exact
+- `wulff2018sampling/exp1.csv`: 2 steps, total_reward=0.00, fidelity=generative_exact
+- `plonsky2018when/exp1.csv`: 1 steps, total_reward=0.00, fidelity=generative_exact
+- `schulz2020finding/exp1.csv`: 10 steps, total_reward=338.72, fidelity=generative_exact
+- `schulz2020finding/exp2.csv`: 10 steps, total_reward=223.11, fidelity=generative_exact
+- `schulz2020finding/exp3.csv`: 10 steps, total_reward=254.85, fidelity=generative_exact
+- `schulz2020finding/exp4.csv`: 10 steps, total_reward=252.57, fidelity=generative_exact
+- `schulz2020finding/exp5.csv`: 10 steps, total_reward=319.03, fidelity=generative_exact
+- `tomov2021multitask/exp1.csv`: 4 steps, total_reward=-85.00, fidelity=generative_exact
+- `tomov2021multitask/exp3.csv`: 1 steps, total_reward=0.00, fidelity=generative_exact
+- `steingroever2015data/exp1.csv`: 10 steps, total_reward=-242.69, fidelity=generative_exact
+- `cox2017information/exp1.csv`: 10 steps, total_reward=5.00, fidelity=generative_exact
+- `steingroever2015data/exp3.csv`: 10 steps, total_reward=-226.59, fidelity=generative_exact
+- `flesch2018comparing/exp1.csv`: 10 steps, total_reward=-125.00, fidelity=generative_exact
+- `enkavi2019digitspan/exp1.csv`: 10 steps, total_reward=2.00, fidelity=generative_exact
+- `kool2017cost/exp2.csv`: 1 steps, total_reward=0.00, fidelity=generative_exact

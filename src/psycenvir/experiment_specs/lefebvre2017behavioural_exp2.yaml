@@ -1,0 +1,15 @@
+experiment_id: lefebvre2017behavioural/exp2.csv
+family: casino_bandit
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: points_only
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+  paper: "Lefebvre et al. (2017)"
+notes: >
+  Same generative casino bandit dynamics as exp1 with a distinct experiment id.

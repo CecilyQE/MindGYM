@@ -1,0 +1,15 @@
+experiment_id: tomov2020discovery/exp2.csv
+family: subway_navigation
+implementation_status: implemented_recorded_path
+fidelity_level: exact_transition
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: round_success
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+notes: >
+  Recorded-path subway navigation with per-transcript direction keys (G/B/V/C/Z).
+  Counterfactual moves truncate because the graph is not recovered.

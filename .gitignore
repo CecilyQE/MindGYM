@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+build/
+dist/
+*.egg-info/
+.env
+
+# Psych-101 JSONL (~819MB); copy from PsycEnvir or HuggingFace Psych-101 export
+data/raw/
+
+# HuggingFace / xet cache
+data/.hfhome/
+data/.xet/
+data/**/.cache/
+
+# Audit checkpoints (regenerated on run)
+results/*.checkpoint.json
+results/*.pid
+results/*nohup*

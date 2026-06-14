@@ -1,0 +1,5194 @@
+{
+  "badham2017deficits/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_problems": 4,
+      "trials_per_problem": 88
+    },
+    "kind": "paper_documented",
+    "notes": "8 geometric stimuli and 3 rule dimensions match the published paradigm.",
+    "sources": [
+      "paper:Badham2017",
+      "psych101:stimulus_inventory"
+    ]
+  },
+  "bahrami2020four/exp.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_trials": 120
+    },
+    "kind": "mixed",
+    "notes": "",
+    "sources": [
+      "paper:Bahrami2020",
+      "psych101:reward_pools"
+    ]
+  },
+  "cox2017information/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_studied_pairs": 20,
+      "n_test_trials": 60
+    },
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Cox2017",
+      "psych101:word_pool"
+    ]
+  },
+  "enkavi2019digitspan/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "end_keys": [
+        "S",
+        "D",
+        "W",
+        "H",
+        "K",
+        "L",
+        "Y",
+        "K",
+        "I",
+        "M",
+        "Z",
+        "E",
+        "U",
+        "E",
+        "I",
+        "X",
+        "I",
+        "L",
+        "I",
+        "G",
+        "Z",
+        "D",
+        "H",
+        "T",
+        "Y",
+        "D",
+        "S",
+        "M",
+        "Q",
+        "H",
+        "H",
+        "P",
+        "A",
+        "P",
+        "X",
+        "C",
+        "N",
+        "K",
+        "R",
+        "M",
+        "N",
+        "G",
+        "V",
+        "L",
+        "X",
+        "V",
+        "N",
+        "R",
+        "U",
+        "X",
+        "W",
+        "T",
+        "Y",
+        "U",
+        "G",
+        "Z",
+        "N",
+        "P",
+        "M",
+        "W",
+        "M",
+        "B",
+        "Y",
+        "Q",
+        "P",
+        "V",
+        "U",
+        "J",
+        "Q",
+        "N",
+        "C",
+        "X",
+        "S",
+        "Q",
+        "H",
+        "E",
+        "D",
+        "G",
+        "G",
+        "M",
+        "L",
+        "B",
+        "V",
+        "M",
+        "Y",
+        "H",
+        "R",
+        "E",
+        "A",
+        "F",
+        "C",
+        "V",
+        "F",
+        "J",
+        "O",
+        "Z",
+        "J",
+        "D",
+        "B",
+        "B",
+        "M",
+        "A",
+        "I",
+        "E",
+        "X",
+        "D",
+        "I",
+        "W",
+        "M",
+        "Y",
+        "N",
+        "X",
+        "F",
+        "P",
+        "E",
+        "W",
+        "M",
+        "R",
+        "O",
+        "W",
+        "K",
+        "S",
+        "F",
+        "E",
+        "A",
+        "Q",
+        "V",
+        "Z",
+        "T",
+        "H",
+        "R",
+        "U",
+        "T",
+        "A",
+        "S",
+        "H",
+        "H",
+        "P",
+        "U",
+        "Q",
+        "R",
+        "C",
+        "R",
+        "I",
+        "X",
+        "Y",
+        "Q",
+        "T",
+        "P",
+        "K",
+        "X",
+        "V",
+        "W",
+        "S",
+        "R",
+        "F",
+        "F",
+        "L",
+        "W",
+        "R",
+        "G",
+        "D",
+        "Z",
+        "H",
+        "M",
+        "S",
+        "T",
+        "Y",
+        "P",
+        "C",
+        "O",
+        "L",
+        "A",
+        "B",
+        "H",
+        "Z",
+        "F",
+        "P",
+        "Z",
+        "E",
+        "A",
+        "W",
+        "H",
+        "O",
+        "O",
+        "D",
+        "Z",
+        "U",
+        "T",
+        "X",
+        "M",
+        "Z",
+        "R",
+        "K",
+        "R",
+        "H",
+        "S",
+        "Y",
+        "R",
+        "O",
+        "D",
+        "M",
+        "N",
+        "X",
+        "V",
+        "T",
+        "D",
+        "C",
+        "C",
+        "B",
+        "R",
+        "F",
+        "V",
+        "L",
+        "Q",
+        "Y",
+        "X",
+        "P",
+        "P",
+        "O",
+        "F",
+        "Y",
+        "H",
+        "M",
+        "E",
+        "W",
+        "N",
+        "C",
+        "R",
+        "T",
+        "N",
+        "L",
+        "Q",
+        "G",
+        "J",
+        "R",
+        "F",
+        "F",
+        "Y",
+        "V",
+        "F",
+        "X",
+        "S",
+        "Q",
+        "N",
+        "E",
+        "X",
+        "N",
+        "P",
+        "J",
+        "W",
+        "S",
+        "F",
+        "A",
+        "J",
+        "L",
+        "O",
+        "R",
+        "R",
+        "X",
+        "F",
+        "X",
+        "P",
+        "H",
+        "B",
+        "W",
+        "K",
+        "E",
+        "J",
+        "S",
+        "J",
+        "V",
+        "B",
+        "X",
+        "L",
+        "O",
+        "O",
+        "X",
+        "C",
+        "N",
+        "J",
+        "N",
+        "Q",
+        "J",
+        "D",
+        "F",
+        "X",
+        "F",
+        "X",
+        "I",
+        "Q",
+        "L",
+        "K",
+        "Y",
+        "P",
+        "T",
+        "F",
+        "G",
+        "W",
+        "Q",
+        "J",
+        "Y",
+        "R",
+        "D",
+        "X",
+        "O",
+        "V",
+        "O",
+        "J",
+        "O",
+        "L",
+        "R",
+        "B",
+        "Y",
+        "J",
+        "K",
+        "S",
+        "Y",
+        "F",
+        "T",
+        "Y",
+        "W",
+        "L",
+        "Q",
+        "F",
+        "B",
+        "A",
+        "L",
+        "D",
+        "P",
+        "C",
+        "J",
+        "N",
+        "Y",
+        "T",
+        "U",
+        "E",
+        "D",
+        "F",
+        "N",
+        "P",
+        "A",
+        "I",
+        "R",
+        "Z",
+        "I",
+        "W",
+        "R",
+        "O",
+        "V",
+        "U",
+        "G",
+        "U",
+        "R",
+        "U",
+        "V",
+        "J",
+        "X",
+        "S",
+        "U",
+        "J",
+        "B",
+        "W",
+        "U",
+        "G",
+        "X",
+        "Q",
+        "B",
+        "C",
+        "I",
+        "P",
+        "F",
+        "S",
+        "W",
+        "T",
+        "U",
+        "H",
+        "I",
+        "U",
+        "D",
+        "D",
+        "O",
+        "N",
+        "P",
+        "P",
+        "A",
+        "M",
+        "V",
+        "R",
+        "B",
+        "K",
+        "W",
+        "O",
+        "P",
+        "L",
+        "E",
+        "Y",
+        "G",
+        "D",
+        "Q",
+        "V",
+        "A",
+        "Z",
+        "C",
+        "O",
+        "M",
+        "S",
+        "O",
+        "D",
+        "W",
+        "M",
+        "C",
+        "Y",
+        "I",
+        "F",
+        "Y",
+        "Y",
+        "M",
+        "Y",
+        "W",
+        "I",
+        "C",
+        "O",
+        "G",
+        "V",
+        "L",
+        "I",
+        "B",
+        "J",
+        "W",
+        "N",
+        "P",
+        "D",
+        "D",
+        "D",
+        "O",
+        "G",
+        "M",
+        "N",
+        "W",
+        "U",
+        "W",
+        "J",
+        "P",
+        "L",
+        "D",
+        "M",
+        "G",
+        "D",
+        "O",
+        "Z",
+        "G",
+        "O",
+        "S",
+        "B",
+        "R",
+        "Z",
+        "S",
+        "M",
+        "T",
+        "N",
+        "X",
+        "F",
+        "U",
+        "K",
+        "G",
+        "S",
+        "X",
+        "F",
+        "Y",
+        "W",
+        "V"
+      ],
+      "max_length": 16,
+      "min_length": 1,
+      "n_spans": 28
+    },
+    "kind": "transcript_calibrated",
+    "notes": "",
+    "sources": [
+      "paper:Enkavi2019",
+      "psych101:end_keys_and_lengths"
+    ]
+  },
+  "enkavi2019gonogo/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "colour1_probability": 0.8888888888888967,
+      "go_keys": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "n_practice_trials": 10,
+      "n_test_trials": 350
+    },
+    "kind": "transcript_calibrated",
+    "notes": "Go key and practice/test counts calibrated from Psych-101 sessions.",
+    "sources": [
+      "paper:Enkavi2019",
+      "psych101:go_keys_and_trial_counts"
+    ]
+  },
+  "flesch2018comparing/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_test_trials": 200,
+      "n_training_trials": 400,
+      "response_key_pairs": [
+        [
+          "T",
+          "N"
+        ],
+        [
+          "T",
+          "Z"
+        ],
+        [
+          "Z",
+          "U"
+        ],
+        [
+          "X",
+          "A"
+        ],
+        [
+          "K",
+          "Q"
+        ],
+        [
+          "E",
+          "X"
+        ],
+        [
+          "E",
+          "M"
+        ],
+        [
+          "V",
+          "N"
+        ],
+        [
+          "E",
+          "X"
+        ],
+        [
+          "G",
+          "E"
+        ],
+        [
+          "D",
+          "C"
+        ],
+        [
+          "Y",
+          "D"
+        ],
+        [
+          "H",
+          "V"
+        ],
+        [
+          "Z",
+          "F"
+        ],
+        [
+          "K",
+          "V"
+        ],
+        [
+          "J",
+          "R"
+        ],
+        [
+          "H",
+          "W"
+        ],
+        [
+          "R",
+          "T"
+        ],
+        [
+          "S",
+          "Q"
+        ],
+        [
+          "J",
+          "Z"
+        ],
+        [
+          "M",
+          "B"
+        ],
+        [
+          "G",
+          "U"
+        ],
+        [
+          "H",
+          "J"
+        ],
+        [
+          "F",
+          "U"
+        ],
+        [
+          "W",
+          "L"
+        ],
+        [
+          "T",
+          "L"
+        ],
+        [
+          "G",
+          "A"
+        ],
+        [
+          "T",
+          "L"
+        ],
+        [
+          "W",
+          "R"
+        ],
+        [
+          "Q",
+          "W"
+        ],
+        [
+          "Q",
+          "V"
+        ],
+        [
+          "R",
+          "V"
+        ],
+        [
+          "U",
+          "E"
+        ],
+        [
+          "J",
+          "A"
+        ],
+        [
+          "P",
+          "B"
+        ],
+        [
+          "Y",
+          "N"
+        ],
+        [
+          "S",
+          "Q"
+        ],
+        [
+          "Q",
+          "H"
+        ],
+        [
+          "A",
+          "Y"
+        ],
+        [
+          "M",
+          "S"
+        ],
+        [
+          "G",
+          "T"
+        ],
+        [
+          "R",
+          "S"
+        ],
+        [
+          "J",
+          "U"
+        ],
+        [
+          "Q",
+          "C"
+        ],
+        [
+          "N",
+          "P"
+        ],
+        [
+          "H",
+          "M"
+        ],
+        [
+          "E",
+          "I"
+        ],
+        [
+          "L",
+          "X"
+        ],
+        [
+          "K",
+          "U"
+        ],
+        [
+          "V",
+          "E"
+        ],
+        [
+          "R",
+          "V"
+        ],
+        [
+          "E",
+          "X"
+        ],
+        [
+          "L",
+          "C"
+        ],
+        [
+          "G",
+          "H"
+        ],
+        [
+          "T",
+          "L"
+        ],
+        [
+          "Q",
+          "I"
+        ],
+        [
+          "G",
+          "P"
+        ],
+        [
+          "R",
+          "C"
+        ],
+        [
+          "V",
+          "H"
+        ],
+        [
+          "P",
+          "V"
+        ],
+        [
+          "V",
+          "W"
+        ],
+        [
+          "D",
+          "P"
+        ],
+        [
+          "G",
+          "F"
+        ],
+        [
+          "T",
+          "V"
+        ],
+        [
+          "S",
+          "C"
+        ],
+        [
+          "Y",
+          "M"
+        ],
+        [
+          "X",
+          "J"
+        ],
+        [
+          "E",
+          "B"
+        ],
+        [
+          "Y",
+          "K"
+        ],
+        [
+          "Z",
+          "C"
+        ],
+        [
+          "H",
+          "L"
+        ],
+        [
+          "J",
+          "C"
+        ],
+        [
+          "I",
+          "Q"
+        ],
+        [
+          "G",
+          "Z"
+        ],
+        [
+          "D",
+          "M"
+        ],
+        [
+          "S",
+          "W"
+        ],
+        [
+          "Y",
+          "W"
+        ],
+        [
+          "M",
+          "H"
+        ],
+        [
+          "J",
+          "C"
+        ],
+        [
+          "B",
+          "Q"
+        ],
+        [
+          "H",
+          "Z"
+        ],
+        [
+          "H",
+          "Q"
+        ],
+        [
+          "W",
+          "T"
+        ],
+        [
+          "L",
+          "I"
+        ],
+        [
+          "R",
+          "B"
+        ],
+        [
+          "W",
+          "T"
+        ],
+        [
+          "L",
+          "X"
+        ],
+        [
+          "A",
+          "T"
+        ],
+        [
+          "M",
+          "H"
+        ],
+        [
+          "M",
+          "D"
+        ],
+        [
+          "Z",
+          "U"
+        ],
+        [
+          "V",
+          "I"
+        ],
+        [
+          "R",
+          "V"
+        ],
+        [
+          "U",
+          "M"
+        ],
+        [
+          "U",
+          "S"
+        ],
+        [
+          "Q",
+          "B"
+        ],
+        [
+          "T",
+          "S"
+        ],
+        [
+          "I",
+          "T"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "Q",
+          "S"
+        ],
+        [
+          "M",
+          "G"
+        ],
+        [
+          "L",
+          "J"
+        ],
+        [
+          "P",
+          "G"
+        ],
+        [
+          "V",
+          "Y"
+        ],
+        [
+          "S",
+          "P"
+        ],
+        [
+          "X",
+          "H"
+        ],
+        [
+          "I",
+          "V"
+        ],
+        [
+          "A",
+          "D"
+        ],
+        [
+          "K",
+          "M"
+        ],
+        [
+          "F",
+          "N"
+        ],
+        [
+          "W",
+          "A"
+        ],
+        [
+          "O",
+          "I"
+        ],
+        [
+          "V",
+          "F"
+        ],
+        [
+          "I",
+          "H"
+        ],
+        [
+          "E",
+          "C"
+        ],
+        [
+          "S",
+          "U"
+        ],
+        [
+          "G",
+          "N"
+        ],
+        [
+          "H",
+          "U"
+        ],
+        [
+          "V",
+          "J"
+        ],
+        [
+          "M",
+          "U"
+        ],
+        [
+          "A",
+          "E"
+        ],
+        [
+          "R",
+          "J"
+        ],
+        [
+          "N",
+          "C"
+        ],
+        [
+          "T",
+          "O"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "S",
+          "I"
+        ],
+        [
+          "I",
+          "B"
+        ],
+        [
+          "U",
+          "J"
+        ],
+        [
+          "T",
+          "Y"
+        ],
+        [
+          "W",
+          "M"
+        ],
+        [
+          "Y",
+          "G"
+        ],
+        [
+          "I",
+          "H"
+        ],
+        [
+          "Z",
+          "V"
+        ],
+        [
+          "B",
+          "N"
+        ],
+        [
+          "K",
+          "E"
+        ],
+        [
+          "X",
+          "I"
+        ],
+        [
+          "A",
+          "Z"
+        ],
+        [
+          "L",
+          "N"
+        ],
+        [
+          "P",
+          "W"
+        ],
+        [
+          "E",
+          "Z"
+        ],
+        [
+          "Z",
+          "E"
+        ],
+        [
+          "M",
+          "S"
+        ],
+        [
+          "Z",
+          "B"
+        ],
+        [
+          "I",
+          "J"
+        ],
+        [
+          "K",
+          "H"
+        ],
+        [
+          "W",
+          "K"
+        ],
+        [
+          "R",
+          "K"
+        ],
+        [
+          "H",
+          "Z"
+        ],
+        [
+          "F",
+          "R"
+        ],
+        [
+          "E",
+          "S"
+        ],
+        [
+          "W",
+          "K"
+        ],
+        [
+          "S",
+          "F"
+        ],
+        [
+          "U",
+          "A"
+        ],
+        [
+          "Z",
+          "M"
+        ],
+        [
+          "H",
+          "C"
+        ],
+        [
+          "L",
+          "U"
+        ],
+        [
+          "H",
+          "E"
+        ],
+        [
+          "J",
+          "P"
+        ],
+        [
+          "H",
+          "O"
+        ],
+        [
+          "O",
+          "S"
+        ],
+        [
+          "S",
+          "E"
+        ],
+        [
+          "E",
+          "R"
+        ],
+        [
+          "X",
+          "Q"
+        ],
+        [
+          "T",
+          "Q"
+        ],
+        [
+          "O",
+          "P"
+        ],
+        [
+          "A",
+          "E"
+        ],
+        [
+          "A",
+          "T"
+        ],
+        [
+          "L",
+          "O"
+        ],
+        [
+          "J",
+          "F"
+        ],
+        [
+          "Y",
+          "A"
+        ],
+        [
+          "A",
+          "S"
+        ],
+        [
+          "K",
+          "M"
+        ],
+        [
+          "R",
+          "V"
+        ],
+        [
+          "T",
+          "I"
+        ],
+        [
+          "G",
+          "L"
+        ],
+        [
+          "B",
+          "R"
+        ],
+        [
+          "H",
+          "C"
+        ],
+        [
+          "Z",
+          "T"
+        ],
+        [
+          "V",
+          "Z"
+        ],
+        [
+          "K",
+          "P"
+        ],
+        [
+          "I",
+          "C"
+        ],
+        [
+          "L",
+          "D"
+        ],
+        [
+          "Z",
+          "O"
+        ],
+        [
+          "P",
+          "R"
+        ],
+        [
+          "Z",
+          "S"
+        ],
+        [
+          "X",
+          "P"
+        ],
+        [
+          "O",
+          "K"
+        ],
+        [
+          "A",
+          "V"
+        ],
+        [
+          "B",
+          "W"
+        ],
+        [
+          "Y",
+          "C"
+        ],
+        [
+          "S",
+          "I"
+        ],
+        [
+          "C",
+          "B"
+        ],
+        [
+          "G",
+          "T"
+        ],
+        [
+          "Y",
+          "P"
+        ],
+        [
+          "D",
+          "R"
+        ],
+        [
+          "W",
+          "D"
+        ],
+        [
+          "X",
+          "O"
+        ],
+        [
+          "X",
+          "V"
+        ],
+        [
+          "W",
+          "A"
+        ],
+        [
+          "Z",
+          "Y"
+        ],
+        [
+          "Q",
+          "H"
+        ],
+        [
+          "X",
+          "Q"
+        ],
+        [
+          "Q",
+          "M"
+        ],
+        [
+          "P",
+          "U"
+        ],
+        [
+          "H",
+          "Q"
+        ],
+        [
+          "D",
+          "B"
+        ],
+        [
+          "X",
+          "P"
+        ],
+        [
+          "C",
+          "U"
+        ],
+        [
+          "Q",
+          "N"
+        ],
+        [
+          "Q",
+          "I"
+        ],
+        [
+          "S",
+          "G"
+        ],
+        [
+          "G",
+          "W"
+        ],
+        [
+          "M",
+          "K"
+        ],
+        [
+          "Z",
+          "F"
+        ],
+        [
+          "R",
+          "K"
+        ],
+        [
+          "G",
+          "A"
+        ],
+        [
+          "G",
+          "C"
+        ],
+        [
+          "M",
+          "U"
+        ],
+        [
+          "W",
+          "Q"
+        ],
+        [
+          "U",
+          "A"
+        ],
+        [
+          "G",
+          "E"
+        ],
+        [
+          "I",
+          "T"
+        ],
+        [
+          "X",
+          "O"
+        ],
+        [
+          "O",
+          "A"
+        ],
+        [
+          "B",
+          "M"
+        ],
+        [
+          "F",
+          "V"
+        ],
+        [
+          "E",
+          "Q"
+        ],
+        [
+          "F",
+          "Y"
+        ],
+        [
+          "Z",
+          "F"
+        ],
+        [
+          "Z",
+          "G"
+        ],
+        [
+          "X",
+          "T"
+        ],
+        [
+          "F",
+          "I"
+        ],
+        [
+          "O",
+          "S"
+        ],
+        [
+          "P",
+          "K"
+        ],
+        [
+          "O",
+          "W"
+        ],
+        [
+          "N",
+          "Y"
+        ],
+        [
+          "R",
+          "E"
+        ],
+        [
+          "L",
+          "S"
+        ],
+        [
+          "E",
+          "P"
+        ],
+        [
+          "W",
+          "U"
+        ],
+        [
+          "F",
+          "S"
+        ],
+        [
+          "N",
+          "I"
+        ],
+        [
+          "D",
+          "J"
+        ],
+        [
+          "G",
+          "M"
+        ],
+        [
+          "W",
+          "Q"
+        ],
+        [
+          "V",
+          "Q"
+        ],
+        [
+          "T",
+          "N"
+        ],
+        [
+          "R",
+          "P"
+        ],
+        [
+          "X",
+          "K"
+        ],
+        [
+          "W",
+          "U"
+        ],
+        [
+          "S",
+          "V"
+        ],
+        [
+          "S",
+          "Q"
+        ],
+        [
+          "E",
+          "Z"
+        ],
+        [
+          "A",
+          "O"
+        ],
+        [
+          "D",
+          "O"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "Z",
+          "K"
+        ],
+        [
+          "A",
+          "M"
+        ],
+        [
+          "L",
+          "T"
+        ],
+        [
+          "G",
+          "K"
+        ],
+        [
+          "L",
+          "I"
+        ],
+        [
+          "K",
+          "J"
+        ],
+        [
+          "U",
+          "V"
+        ],
+        [
+          "R",
+          "Y"
+        ],
+        [
+          "K",
+          "X"
+        ],
+        [
+          "G",
+          "Y"
+        ],
+        [
+          "N",
+          "O"
+        ],
+        [
+          "H",
+          "N"
+        ],
+        [
+          "G",
+          "X"
+        ],
+        [
+          "L",
+          "G"
+        ],
+        [
+          "F",
+          "V"
+        ],
+        [
+          "B",
+          "S"
+        ],
+        [
+          "T",
+          "K"
+        ],
+        [
+          "D",
+          "U"
+        ],
+        [
+          "Y",
+          "K"
+        ],
+        [
+          "H",
+          "J"
+        ],
+        [
+          "F",
+          "U"
+        ],
+        [
+          "E",
+          "W"
+        ],
+        [
+          "E",
+          "H"
+        ],
+        [
+          "K",
+          "S"
+        ],
+        [
+          "V",
+          "X"
+        ],
+        [
+          "Z",
+          "W"
+        ],
+        [
+          "Z",
+          "N"
+        ],
+        [
+          "M",
+          "Q"
+        ],
+        [
+          "T",
+          "Q"
+        ],
+        [
+          "T",
+          "Q"
+        ],
+        [
+          "X",
+          "I"
+        ],
+        [
+          "K",
+          "O"
+        ],
+        [
+          "Z",
+          "P"
+        ],
+        [
+          "J",
+          "F"
+        ],
+        [
+          "K",
+          "U"
+        ],
+        [
+          "Y",
+          "Z"
+        ],
+        [
+          "I",
+          "V"
+        ],
+        [
+          "P",
+          "R"
+        ],
+        [
+          "M",
+          "R"
+        ],
+        [
+          "I",
+          "E"
+        ],
+        [
+          "L",
+          "G"
+        ],
+        [
+          "R",
+          "M"
+        ],
+        [
+          "G",
+          "R"
+        ],
+        [
+          "Z",
+          "P"
+        ],
+        [
+          "F",
+          "A"
+        ],
+        [
+          "W",
+          "O"
+        ],
+        [
+          "W",
+          "Z"
+        ],
+        [
+          "X",
+          "J"
+        ],
+        [
+          "S",
+          "O"
+        ],
+        [
+          "K",
+          "I"
+        ],
+        [
+          "A",
+          "O"
+        ],
+        [
+          "U",
+          "F"
+        ],
+        [
+          "W",
+          "L"
+        ],
+        [
+          "M",
+          "W"
+        ],
+        [
+          "Q",
+          "Z"
+        ],
+        [
+          "Q",
+          "B"
+        ],
+        [
+          "Z",
+          "Q"
+        ],
+        [
+          "M",
+          "X"
+        ],
+        [
+          "F",
+          "R"
+        ],
+        [
+          "Y",
+          "F"
+        ],
+        [
+          "J",
+          "F"
+        ],
+        [
+          "R",
+          "X"
+        ],
+        [
+          "G",
+          "I"
+        ],
+        [
+          "K",
+          "O"
+        ]
+      ]
+    },
+    "kind": "transcript_calibrated",
+    "notes": "Accept/reject keys resampled per episode from recorded sessions.",
+    "sources": [
+      "paper:Flesch2018",
+      "psych101:response_key_pairs"
+    ]
+  },
+  "frey2017cct/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_rounds": 84
+    },
+    "kind": "paper_documented",
+    "notes": "32-card Columbia-style task; fresh deck generation not transcript-seeded.",
+    "sources": [
+      "paper:Frey2017",
+      "psych101:task_rules"
+    ]
+  },
+  "frey2017risk/exp1.csv": {
+    "caveats": [],
+    "default_config": {},
+    "kind": "paper_documented",
+    "notes": "Balloon pump/stop structure from published BART-style instructions.",
+    "sources": [
+      "paper:Frey2017",
+      "psych101:instruction"
+    ]
+  },
+  "gershman2018deconstructing/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_games": 20,
+      "trials_per_game": 20
+    },
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Gershman2018",
+      "psych101:instruction"
+    ]
+  },
+  "gershman2018deconstructing/exp2.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_games": 20,
+      "trials_per_game": 20
+    },
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Gershman2018",
+      "psych101:instruction"
+    ]
+  },
+  "gershman2020reward/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_games": 13,
+      "trials_per_game": 6
+    },
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Gershman2020",
+      "psych101:instruction"
+    ]
+  },
+  "hilbig2014generalized/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_trials": 60
+    },
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Hilbig2014",
+      "psych101:expert_weights"
+    ]
+  },
+  "kool2016when/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_days": 125
+    },
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Kool2016",
+      "psych101:instruction"
+    ]
+  },
+  "kool2016when/exp2.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_days": 125
+    },
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Kool2016",
+      "psych101:instruction"
+    ]
+  },
+  "kool2017cost/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "multiplier_probability": 0.48927070579588305,
+      "multiplier_value": 5,
+      "n_days": 197,
+      "session_topologies": [
+        {
+          "planet_by_ship": {
+            "F": "Q",
+            "J": "Q",
+            "P": "L",
+            "Z": "L"
+          },
+          "ships": [
+            "F",
+            "P"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "D": "W",
+            "H": "Z",
+            "T": "W",
+            "Y": "Z"
+          },
+          "ships": [
+            "H",
+            "T"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "J": "R",
+            "K": "E",
+            "V": "R",
+            "Y": "E"
+          },
+          "ships": [
+            "J",
+            "Y"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "K": "H",
+            "L": "B",
+            "O": "B",
+            "P": "H"
+          },
+          "ships": [
+            "O",
+            "P"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "H": "K",
+            "Q": "B",
+            "S": "B",
+            "W": "K"
+          },
+          "ships": [
+            "W",
+            "S"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "B": "J",
+            "K": "Q",
+            "R": "J",
+            "T": "Q"
+          },
+          "ships": [
+            "B",
+            "T"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "F": "V",
+            "P": "G",
+            "Q": "G",
+            "R": "V"
+          },
+          "ships": [
+            "R",
+            "Q"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "C": "Y",
+            "L": "Y",
+            "P": "R",
+            "T": "R"
+          },
+          "ships": [
+            "C",
+            "P"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "H": "Y",
+            "Q": "L",
+            "S": "L",
+            "T": "Y"
+          },
+          "ships": [
+            "S",
+            "H"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "M": "L",
+            "Q": "H",
+            "U": "H",
+            "X": "L"
+          },
+          "ships": [
+            "M",
+            "U"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "F": "N",
+            "J": "N",
+            "Q": "S",
+            "X": "S"
+          },
+          "ships": [
+            "F",
+            "X"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "C": "U",
+            "E": "B",
+            "M": "U",
+            "Z": "B"
+          },
+          "ships": [
+            "M",
+            "E"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "D": "V",
+            "O": "M",
+            "U": "M",
+            "Z": "V"
+          },
+          "ships": [
+            "O",
+            "Z"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "B": "U",
+            "I": "K",
+            "O": "U",
+            "R": "K"
+          },
+          "ships": [
+            "I",
+            "B"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "G": "F",
+            "K": "D",
+            "M": "F",
+            "U": "D"
+          },
+          "ships": [
+            "M",
+            "U"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "E": "O",
+            "P": "X",
+            "T": "X",
+            "U": "O"
+          },
+          "ships": [
+            "T",
+            "U"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "C": "H",
+            "E": "F",
+            "L": "F",
+            "W": "H"
+          },
+          "ships": [
+            "C",
+            "E"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "A": "E",
+            "K": "E",
+            "Q": "S",
+            "Y": "S"
+          },
+          "ships": [
+            "Y",
+            "K"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "D": "I",
+            "R": "J",
+            "T": "J",
+            "U": "I"
+          },
+          "ships": [
+            "T",
+            "U"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "B": "W",
+            "F": "C",
+            "L": "W",
+            "U": "C"
+          },
+          "ships": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "A": "S",
+            "F": "B",
+            "J": "S",
+            "X": "B"
+          },
+          "ships": [
+            "X",
+            "J"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "H": "X",
+            "K": "Z",
+            "T": "Z",
+            "U": "X"
+          },
+          "ships": [
+            "U",
+            "T"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "G": "S",
+            "I": "S",
+            "P": "H",
+            "Y": "H"
+          },
+          "ships": [
+            "I",
+            "Y"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "A": "U",
+            "E": "O",
+            "J": "O",
+            "P": "U"
+          },
+          "ships": [
+            "P",
+            "J"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "A": "S",
+            "D": "M",
+            "N": "M",
+            "R": "S"
+          },
+          "ships": [
+            "A",
+            "N"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "E": "O",
+            "J": "O",
+            "S": "F",
+            "X": "F"
+          },
+          "ships": [
+            "J",
+            "S"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "E": "X",
+            "I": "X",
+            "J": "L",
+            "Q": "L"
+          },
+          "ships": [
+            "E",
+            "Q"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "G": "D",
+            "P": "K",
+            "V": "K",
+            "Z": "D"
+          },
+          "ships": [
+            "V",
+            "Z"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "A": "L",
+            "B": "S",
+            "N": "L",
+            "W": "S"
+          },
+          "ships": [
+            "B",
+            "N"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "G": "I",
+            "M": "C",
+            "R": "I",
+            "S": "C"
+          },
+          "ships": [
+            "M",
+            "R"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "B": "V",
+            "I": "E",
+            "M": "V",
+            "R": "E"
+          },
+          "ships": [
+            "R",
+            "B"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "L": "U",
+            "O": "I",
+            "R": "U",
+            "Y": "I"
+          },
+          "ships": [
+            "Y",
+            "L"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "C": "O",
+            "D": "B",
+            "H": "B",
+            "N": "O"
+          },
+          "ships": [
+            "H",
+            "C"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "D": "N",
+            "K": "G",
+            "S": "N",
+            "U": "G"
+          },
+          "ships": [
+            "S",
+            "U"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "A": "K",
+            "B": "I",
+            "J": "K",
+            "Y": "I"
+          },
+          "ships": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "D": "L",
+            "J": "T",
+            "Q": "L",
+            "V": "T"
+          },
+          "ships": [
+            "Q",
+            "V"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "D": "B",
+            "J": "B",
+            "M": "V",
+            "Y": "V"
+          },
+          "ships": [
+            "J",
+            "M"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "B": "V",
+            "C": "G",
+            "U": "G",
+            "Y": "V"
+          },
+          "ships": [
+            "Y",
+            "U"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "D": "G",
+            "I": "X",
+            "P": "G",
+            "W": "X"
+          },
+          "ships": [
+            "W",
+            "P"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "C": "F",
+            "N": "F",
+            "R": "Q",
+            "T": "Q"
+          },
+          "ships": [
+            "C",
+            "R"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "K": "Y",
+            "N": "L",
+            "V": "Y",
+            "W": "L"
+          },
+          "ships": [
+            "V",
+            "N"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "E": "X",
+            "F": "X",
+            "S": "G",
+            "Z": "G"
+          },
+          "ships": [
+            "F",
+            "Z"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "F": "Q",
+            "O": "Q",
+            "S": "E",
+            "T": "E"
+          },
+          "ships": [
+            "O",
+            "T"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "A": "K",
+            "D": "K",
+            "I": "S",
+            "X": "S"
+          },
+          "ships": [
+            "D",
+            "X"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "O": "B",
+            "T": "E",
+            "U": "B",
+            "Z": "E"
+          },
+          "ships": [
+            "U",
+            "T"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "A": "I",
+            "L": "Z",
+            "P": "Z",
+            "R": "I"
+          },
+          "ships": [
+            "R",
+            "L"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "O": "K",
+            "X": "K",
+            "Y": "J",
+            "Z": "J"
+          },
+          "ships": [
+            "Z",
+            "O"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "I": "U",
+            "R": "U",
+            "W": "T",
+            "Z": "T"
+          },
+          "ships": [
+            "Z",
+            "R"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "A": "Y",
+            "B": "X",
+            "L": "X",
+            "R": "Y"
+          },
+          "ships": [
+            "R",
+            "B"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "H": "B",
+            "J": "R",
+            "P": "B",
+            "X": "R"
+          },
+          "ships": [
+            "J",
+            "H"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "E": "J",
+            "G": "B",
+            "K": "J",
+            "X": "B"
+          },
+          "ships": [
+            "E",
+            "G"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "B": "Z",
+            "I": "U",
+            "K": "U",
+            "T": "Z"
+          },
+          "ships": [
+            "K",
+            "T"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "E": "G",
+            "K": "G",
+            "M": "P",
+            "U": "P"
+          },
+          "ships": [
+            "K",
+            "M"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "I": "O",
+            "V": "E",
+            "W": "O",
+            "Z": "E"
+          },
+          "ships": [
+            "Z",
+            "I"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "E": "F",
+            "G": "J",
+            "H": "J",
+            "V": "F"
+          },
+          "ships": [
+            "V",
+            "H"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "I": "F",
+            "P": "N",
+            "R": "F",
+            "V": "N"
+          },
+          "ships": [
+            "R",
+            "V"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "I": "D",
+            "R": "B",
+            "T": "D",
+            "X": "B"
+          },
+          "ships": [
+            "I",
+            "X"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "C": "U",
+            "K": "U",
+            "W": "M",
+            "Z": "M"
+          },
+          "ships": [
+            "C",
+            "W"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "K": "J",
+            "L": "W",
+            "O": "J",
+            "S": "W"
+          },
+          "ships": [
+            "L",
+            "K"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "M": "G",
+            "Q": "I",
+            "V": "I",
+            "Y": "G"
+          },
+          "ships": [
+            "M",
+            "V"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "F": "S",
+            "U": "T",
+            "W": "T",
+            "Y": "S"
+          },
+          "ships": [
+            "Y",
+            "U"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "G": "Q",
+            "M": "E",
+            "S": "E",
+            "X": "Q"
+          },
+          "ships": [
+            "G",
+            "S"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "H": "B",
+            "M": "F",
+            "O": "F",
+            "Y": "B"
+          },
+          "ships": [
+            "O",
+            "H"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "J": "L",
+            "Q": "L",
+            "S": "G",
+            "U": "G"
+          },
+          "ships": [
+            "Q",
+            "U"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "B": "R",
+            "O": "P",
+            "U": "P",
+            "W": "R"
+          },
+          "ships": [
+            "W",
+            "U"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "J": "G",
+            "S": "M",
+            "T": "M",
+            "Z": "G"
+          },
+          "ships": [
+            "S",
+            "J"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "N": "R",
+            "Q": "R",
+            "V": "P",
+            "W": "P"
+          },
+          "ships": [
+            "N",
+            "V"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "J": "Z",
+            "L": "Z",
+            "N": "K",
+            "Y": "K"
+          },
+          "ships": [
+            "N",
+            "J"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "B": "Q",
+            "J": "P",
+            "K": "Q",
+            "X": "P"
+          },
+          "ships": [
+            "J",
+            "B"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "A": "U",
+            "F": "S",
+            "Q": "U",
+            "R": "S"
+          },
+          "ships": [
+            "A",
+            "F"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "E": "T",
+            "F": "T",
+            "L": "H",
+            "M": "H"
+          },
+          "ships": [
+            "L",
+            "E"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "D": "C",
+            "T": "O",
+            "U": "C",
+            "X": "O"
+          },
+          "ships": [
+            "T",
+            "D"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "B": "I",
+            "E": "C",
+            "J": "I",
+            "Q": "C"
+          },
+          "ships": [
+            "J",
+            "Q"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "I": "R",
+            "N": "R",
+            "V": "E",
+            "W": "E"
+          },
+          "ships": [
+            "V",
+            "N"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "B": "C",
+            "O": "W",
+            "Q": "W",
+            "T": "C"
+          },
+          "ships": [
+            "Q",
+            "T"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "B": "U",
+            "F": "Z",
+            "K": "U",
+            "T": "Z"
+          },
+          "ships": [
+            "F",
+            "B"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "H": "Z",
+            "I": "P",
+            "M": "P",
+            "X": "Z"
+          },
+          "ships": [
+            "X",
+            "M"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "F": "N",
+            "I": "P",
+            "K": "N",
+            "U": "P"
+          },
+          "ships": [
+            "K",
+            "I"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "B": "U",
+            "M": "F",
+            "P": "U",
+            "X": "F"
+          },
+          "ships": [
+            "X",
+            "P"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "J": "E",
+            "O": "C",
+            "R": "C",
+            "T": "E"
+          },
+          "ships": [
+            "O",
+            "J"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "C": "P",
+            "E": "P",
+            "M": "Z",
+            "V": "Z"
+          },
+          "ships": [
+            "M",
+            "E"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "B": "G",
+            "P": "O",
+            "W": "O",
+            "Y": "G"
+          },
+          "ships": [
+            "Y",
+            "P"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "I": "M",
+            "N": "M",
+            "R": "B",
+            "S": "B"
+          },
+          "ships": [
+            "S",
+            "N"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "F": "R",
+            "J": "C",
+            "X": "C",
+            "Y": "R"
+          },
+          "ships": [
+            "F",
+            "J"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "L": "B",
+            "R": "C",
+            "U": "B",
+            "Y": "C"
+          },
+          "ships": [
+            "Y",
+            "U"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "B": "U",
+            "O": "K",
+            "P": "K",
+            "V": "U"
+          },
+          "ships": [
+            "V",
+            "P"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "E": "C",
+            "I": "Z",
+            "K": "Z",
+            "M": "C"
+          },
+          "ships": [
+            "K",
+            "M"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "G": "X",
+            "K": "I",
+            "N": "X",
+            "O": "I"
+          },
+          "ships": [
+            "N",
+            "O"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "A": "P",
+            "D": "Y",
+            "L": "P",
+            "Q": "Y"
+          },
+          "ships": [
+            "L",
+            "Q"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "A": "T",
+            "D": "B",
+            "P": "B",
+            "S": "T"
+          },
+          "ships": [
+            "P",
+            "A"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "F": "B",
+            "I": "D",
+            "R": "D",
+            "Y": "B"
+          },
+          "ships": [
+            "R",
+            "F"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "G": "A",
+            "M": "T",
+            "P": "T",
+            "Y": "A"
+          },
+          "ships": [
+            "M",
+            "Y"
+          ]
+        },
+        {
+          "planet_by_ship": {
+            "C": "H",
+            "M": "H",
+            "V": "R",
+            "W": "R"
+          },
+          "ships": [
+            "C",
+            "V"
+          ]
+        }
+      ]
+    },
+    "kind": "transcript_calibrated",
+    "notes": "Each episode samples a recorded session's ship/planet mapping.",
+    "sources": [
+      "paper:Kool2017",
+      "psych101:session_topologies"
+    ]
+  },
+  "kool2017cost/exp2.csv": {
+    "caveats": [],
+    "default_config": {
+      "multiplier_probability": 0.47847767010203557,
+      "multiplier_value": 5,
+      "n_days": 199,
+      "session_topologies": [
+        {
+          "aliens_by_planet": {
+            "I": [
+              "Q",
+              "G"
+            ],
+            "R": [
+              "B",
+              "X"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships V or W to one of the planets I or R.\nThe spaceships can fly to either planet, but one will mostly fly to planet I, and the other will mostly fly to planet R.\nThe planet a spaceship goes to most won't change during the game.\nPlanet I has aliens Q and G, and planet R has aliens B and X on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "V": "I",
+            "W": "R"
+          },
+          "ships": [
+            "W",
+            "V"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "E": [
+              "M",
+              "D"
+            ],
+            "J": [
+              "S",
+              "U"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships F or T to one of the planets E or J.\nThe spaceships can fly to either planet, but one will mostly fly to planet E, and the other will mostly fly to planet J.\nThe planet a spaceship goes to most won't change during the game.\nPlanet E has aliens M and D, and planet J has aliens S and U on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "F": "E",
+            "T": "J"
+          },
+          "ships": [
+            "T",
+            "F"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "S": [
+              "B",
+              "E"
+            ],
+            "W": [
+              "F",
+              "Y"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships I or R to one of the planets S or W.\nThe spaceships can fly to either planet, but one will mostly fly to planet S, and the other will mostly fly to planet W.\nThe planet a spaceship goes to most won't change during the game.\nPlanet S has aliens B and E, and planet W has aliens F and Y on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "I": "S",
+            "R": "W"
+          },
+          "ships": [
+            "R",
+            "I"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "J": [
+              "X",
+              "U"
+            ],
+            "N": [
+              "I",
+              "Q"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships T or M to one of the planets J or N.\nThe spaceships can fly to either planet, but one will mostly fly to planet J, and the other will mostly fly to planet N.\nThe planet a spaceship goes to most won't change during the game.\nPlanet J has aliens X and U, and planet N has aliens I and Q on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "M": "N",
+            "T": "J"
+          },
+          "ships": [
+            "M",
+            "T"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "M": [
+              "J",
+              "Y"
+            ],
+            "V": [
+              "C",
+              "D"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships T or G to one of the planets M or V.\nThe spaceships can fly to either planet, but one will mostly fly to planet M, and the other will mostly fly to planet V.\nThe planet a spaceship goes to most won't change during the game.\nPlanet M has aliens J and Y, and planet V has aliens C and D on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "G": "V",
+            "T": "M"
+          },
+          "ships": [
+            "T",
+            "G"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "B": [
+              "O",
+              "A"
+            ],
+            "F": [
+              "S",
+              "V"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships X or Y to one of the planets B or F.\nThe spaceships can fly to either planet, but one will mostly fly to planet B, and the other will mostly fly to planet F.\nThe planet a spaceship goes to most won't change during the game.\nPlanet B has aliens O and A, and planet F has aliens S and V on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "X": "B",
+            "Y": "F"
+          },
+          "ships": [
+            "X",
+            "Y"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "M": [
+              "F",
+              "W"
+            ],
+            "O": [
+              "D",
+              "Y"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships G or E to one of the planets O or M.\nThe spaceships can fly to either planet, but one will mostly fly to planet O, and the other will mostly fly to planet M.\nThe planet a spaceship goes to most won't change during the game.\nPlanet O has aliens D and Y, and planet M has aliens F and W on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "E": "M",
+            "G": "O"
+          },
+          "ships": [
+            "G",
+            "E"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "A": [
+              "K",
+              "H"
+            ],
+            "D": [
+              "X",
+              "V"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships M or C to one of the planets D or A.\nThe spaceships can fly to either planet, but one will mostly fly to planet D, and the other will mostly fly to planet A.\nThe planet a spaceship goes to most won't change during the game.\nPlanet D has aliens X and V, and planet A has aliens K and H on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "C": "A",
+            "M": "D"
+          },
+          "ships": [
+            "C",
+            "M"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "R": [
+              "N",
+              "M"
+            ],
+            "X": [
+              "Y",
+              "L"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships S or U to one of the planets R or X.\nThe spaceships can fly to either planet, but one will mostly fly to planet R, and the other will mostly fly to planet X.\nThe planet a spaceship goes to most won't change during the game.\nPlanet R has aliens N and M, and planet X has aliens Y and L on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "S": "R",
+            "U": "X"
+          },
+          "ships": [
+            "U",
+            "S"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "P": [
+              "R",
+              "U"
+            ],
+            "Z": [
+              "Q",
+              "M"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships E or C to one of the planets Z or P.\nThe spaceships can fly to either planet, but one will mostly fly to planet Z, and the other will mostly fly to planet P.\nThe planet a spaceship goes to most won't change during the game.\nPlanet Z has aliens Q and M, and planet P has aliens R and U on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "C": "P",
+            "E": "Z"
+          },
+          "ships": [
+            "E",
+            "C"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "E": [
+              "M",
+              "W"
+            ],
+            "I": [
+              "L",
+              "V"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships D or A to one of the planets I or E.\nThe spaceships can fly to either planet, but one will mostly fly to planet I, and the other will mostly fly to planet E.\nThe planet a spaceship goes to most won't change during the game.\nPlanet I has aliens L and V, and planet E has aliens M and W on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "A": "E",
+            "D": "I"
+          },
+          "ships": [
+            "A",
+            "D"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "E": [
+              "K",
+              "X"
+            ],
+            "R": [
+              "Y",
+              "D"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships Z or U to one of the planets E or R.\nThe spaceships can fly to either planet, but one will mostly fly to planet E, and the other will mostly fly to planet R.\nThe planet a spaceship goes to most won't change during the game.\nPlanet E has aliens K and X, and planet R has aliens Y and D on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "U": "R",
+            "Z": "E"
+          },
+          "ships": [
+            "Z",
+            "U"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "O": [
+              "B",
+              "N"
+            ],
+            "V": [
+              "T",
+              "J"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships U or D to one of the planets V or O.\nThe spaceships can fly to either planet, but one will mostly fly to planet V, and the other will mostly fly to planet O.\nThe planet a spaceship goes to most won't change during the game.\nPlanet V has aliens T and J, and planet O has aliens B and N on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "D": "O",
+            "U": "V"
+          },
+          "ships": [
+            "D",
+            "U"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "E": [
+              "K",
+              "Z"
+            ],
+            "T": [
+              "D",
+              "U"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships H or S to one of the planets E or T.\nThe spaceships can fly to either planet, but one will mostly fly to planet E, and the other will mostly fly to planet T.\nThe planet a spaceship goes to most won't change during the game.\nPlanet E has aliens K and Z, and planet T has aliens D and U on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "H": "E",
+            "S": "T"
+          },
+          "ships": [
+            "S",
+            "H"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "I": [
+              "W",
+              "N"
+            ],
+            "L": [
+              "P",
+              "Q"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships R or A to one of the planets I or L.\nThe spaceships can fly to either planet, but one will mostly fly to planet I, and the other will mostly fly to planet L.\nThe planet a spaceship goes to most won't change during the game.\nPlanet I has aliens W and N, and planet L has aliens P and Q on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "A": "L",
+            "R": "I"
+          },
+          "ships": [
+            "R",
+            "A"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "R": [
+              "O",
+              "M"
+            ],
+            "Y": [
+              "B",
+              "K"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships X or E to one of the planets R or Y.\nThe spaceships can fly to either planet, but one will mostly fly to planet R, and the other will mostly fly to planet Y.\nThe planet a spaceship goes to most won't change during the game.\nPlanet R has aliens O and M, and planet Y has aliens B and K on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "E": "R",
+            "X": "R"
+          },
+          "ships": [
+            "X",
+            "E"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "H": [
+              "A",
+              "Z"
+            ],
+            "K": [
+              "G",
+              "E"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships C or W to one of the planets K or H.\nThe spaceships can fly to either planet, but one will mostly fly to planet K, and the other will mostly fly to planet H.\nThe planet a spaceship goes to most won't change during the game.\nPlanet K has aliens G and E, and planet H has aliens A and Z on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "C": "K",
+            "W": "H"
+          },
+          "ships": [
+            "W",
+            "C"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "H": [
+              "Z",
+              "K"
+            ],
+            "M": [
+              "R",
+              "D"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships W or L to one of the planets H or M.\nThe spaceships can fly to either planet, but one will mostly fly to planet H, and the other will mostly fly to planet M.\nThe planet a spaceship goes to most won't change during the game.\nPlanet H has aliens Z and K, and planet M has aliens R and D on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "L": "M",
+            "W": "H"
+          },
+          "ships": [
+            "L",
+            "W"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "D": [
+              "B",
+              "Z"
+            ],
+            "E": [
+              "L",
+              "W"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships M or P to one of the planets E or D.\nThe spaceships can fly to either planet, but one will mostly fly to planet E, and the other will mostly fly to planet D.\nThe planet a spaceship goes to most won't change during the game.\nPlanet E has aliens L and W, and planet D has aliens B and Z on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "M": "E",
+            "P": "D"
+          },
+          "ships": [
+            "P",
+            "M"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "F": [
+              "V",
+              "A"
+            ],
+            "K": [
+              "J",
+              "E"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships R or M to one of the planets F or K.\nThe spaceships can fly to either planet, but one will mostly fly to planet F, and the other will mostly fly to planet K.\nThe planet a spaceship goes to most won't change during the game.\nPlanet F has aliens V and A, and planet K has aliens J and E on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "M": "K",
+            "R": "F"
+          },
+          "ships": [
+            "R",
+            "M"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "D": [
+              "N",
+              "U"
+            ],
+            "E": [
+              "V",
+              "Y"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships C or P to one of the planets E or D.\nThe spaceships can fly to either planet, but one will mostly fly to planet E, and the other will mostly fly to planet D.\nThe planet a spaceship goes to most won't change during the game.\nPlanet E has aliens V and Y, and planet D has aliens N and U on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "C": "E",
+            "P": "D"
+          },
+          "ships": [
+            "C",
+            "P"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "C": [
+              "T",
+              "B"
+            ],
+            "D": [
+              "S",
+              "Z"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships Y or L to one of the planets D or C.\nThe spaceships can fly to either planet, but one will mostly fly to planet D, and the other will mostly fly to planet C.\nThe planet a spaceship goes to most won't change during the game.\nPlanet D has aliens S and Z, and planet C has aliens T and B on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "L": "C",
+            "Y": "D"
+          },
+          "ships": [
+            "L",
+            "Y"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "B": [
+              "M",
+              "R"
+            ],
+            "O": [
+              "F",
+              "D"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships E or U to one of the planets O or B.\nThe spaceships can fly to either planet, but one will mostly fly to planet O, and the other will mostly fly to planet B.\nThe planet a spaceship goes to most won't change during the game.\nPlanet O has aliens F and D, and planet B has aliens M and R on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "E": "O",
+            "U": "B"
+          },
+          "ships": [
+            "U",
+            "E"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "A": [
+              "Z",
+              "S"
+            ],
+            "N": [
+              "H",
+              "P"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships C or O to one of the planets N or A.\nThe spaceships can fly to either planet, but one will mostly fly to planet N, and the other will mostly fly to planet A.\nThe planet a spaceship goes to most won't change during the game.\nPlanet N has aliens H and P, and planet A has aliens Z and S on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "C": "N",
+            "O": "A"
+          },
+          "ships": [
+            "O",
+            "C"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "U": [
+              "K",
+              "C"
+            ],
+            "Y": [
+              "V",
+              "F"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships M or Z to one of the planets U or Y.\nThe spaceships can fly to either planet, but one will mostly fly to planet U, and the other will mostly fly to planet Y.\nThe planet a spaceship goes to most won't change during the game.\nPlanet U has aliens K and C, and planet Y has aliens V and F on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "M": "U",
+            "Z": "Y"
+          },
+          "ships": [
+            "M",
+            "Z"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "J": [
+              "B",
+              "U"
+            ],
+            "L": [
+              "R",
+              "F"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships K or Q to one of the planets J or L.\nThe spaceships can fly to either planet, but one will mostly fly to planet J, and the other will mostly fly to planet L.\nThe planet a spaceship goes to most won't change during the game.\nPlanet J has aliens B and U, and planet L has aliens R and F on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "K": "J",
+            "Q": "L"
+          },
+          "ships": [
+            "K",
+            "Q"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "E": [
+              "V",
+              "J"
+            ],
+            "Q": [
+              "W",
+              "K"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships F or A to one of the planets Q or E.\nThe spaceships can fly to either planet, but one will mostly fly to planet Q, and the other will mostly fly to planet E.\nThe planet a spaceship goes to most won't change during the game.\nPlanet Q has aliens W and K, and planet E has aliens V and J on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "A": "E",
+            "F": "Q"
+          },
+          "ships": [
+            "A",
+            "F"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "X": [
+              "P",
+              "V"
+            ],
+            "Y": [
+              "Q",
+              "K"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships T or E to one of the planets Y or X.\nThe spaceships can fly to either planet, but one will mostly fly to planet Y, and the other will mostly fly to planet X.\nThe planet a spaceship goes to most won't change during the game.\nPlanet Y has aliens Q and K, and planet X has aliens P and V on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "E": "X",
+            "T": "Y"
+          },
+          "ships": [
+            "E",
+            "T"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "J": [
+              "H",
+              "Q"
+            ],
+            "R": [
+              "S",
+              "V"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships E or M to one of the planets R or J.\nThe spaceships can fly to either planet, but one will mostly fly to planet R, and the other will mostly fly to planet J.\nThe planet a spaceship goes to most won't change during the game.\nPlanet R has aliens S and V, and planet J has aliens H and Q on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "E": "R",
+            "M": "J"
+          },
+          "ships": [
+            "M",
+            "E"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "G": [
+              "X",
+              "E"
+            ],
+            "I": [
+              "U",
+              "H"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships L or Q to one of the planets I or G.\nThe spaceships can fly to either planet, but one will mostly fly to planet I, and the other will mostly fly to planet G.\nThe planet a spaceship goes to most won't change during the game.\nPlanet I has aliens U and H, and planet G has aliens X and E on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "L": "I",
+            "Q": "G"
+          },
+          "ships": [
+            "Q",
+            "L"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "M": [
+              "F",
+              "J"
+            ],
+            "R": [
+              "P",
+              "A"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships L or I to one of the planets R or M.\nThe spaceships can fly to either planet, but one will mostly fly to planet R, and the other will mostly fly to planet M.\nThe planet a spaceship goes to most won't change during the game.\nPlanet R has aliens P and A, and planet M has aliens F and J on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "I": "M",
+            "L": "R"
+          },
+          "ships": [
+            "I",
+            "L"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "G": [
+              "A",
+              "V"
+            ],
+            "U": [
+              "K",
+              "R"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships H or W to one of the planets G or U.\nThe spaceships can fly to either planet, but one will mostly fly to planet G, and the other will mostly fly to planet U.\nThe planet a spaceship goes to most won't change during the game.\nPlanet G has aliens A and V, and planet U has aliens K and R on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "H": "G",
+            "W": "U"
+          },
+          "ships": [
+            "H",
+            "W"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "P": [
+              "H",
+              "F"
+            ],
+            "V": [
+              "Z",
+              "J"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships U or K to one of the planets V or P.\nThe spaceships can fly to either planet, but one will mostly fly to planet V, and the other will mostly fly to planet P.\nThe planet a spaceship goes to most won't change during the game.\nPlanet V has aliens Z and J, and planet P has aliens H and F on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "K": "P",
+            "U": "V"
+          },
+          "ships": [
+            "K",
+            "U"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "L": [
+              "T",
+              "U"
+            ],
+            "X": [
+              "M",
+              "P"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships E or O to one of the planets L or X.\nThe spaceships can fly to either planet, but one will mostly fly to planet L, and the other will mostly fly to planet X.\nThe planet a spaceship goes to most won't change during the game.\nPlanet L has aliens T and U, and planet X has aliens M and P on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "E": "L",
+            "O": "X"
+          },
+          "ships": [
+            "E",
+            "O"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "A": [
+              "L",
+              "V"
+            ],
+            "W": [
+              "K",
+              "E"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships R or J to one of the planets W or A.\nThe spaceships can fly to either planet, but one will mostly fly to planet W, and the other will mostly fly to planet A.\nThe planet a spaceship goes to most won't change during the game.\nPlanet W has aliens K and E, and planet A has aliens L and V on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "J": "A",
+            "R": "W"
+          },
+          "ships": [
+            "R",
+            "J"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "G": [
+              "A",
+              "T"
+            ],
+            "L": [
+              "E",
+              "Z"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships R or H to one of the planets G or L.\nThe spaceships can fly to either planet, but one will mostly fly to planet G, and the other will mostly fly to planet L.\nThe planet a spaceship goes to most won't change during the game.\nPlanet G has aliens A and T, and planet L has aliens E and Z on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "H": "L",
+            "R": "G"
+          },
+          "ships": [
+            "H",
+            "R"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "I": [
+              "J",
+              "S"
+            ],
+            "V": [
+              "O",
+              "L"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships A or H to one of the planets I or V.\nThe spaceships can fly to either planet, but one will mostly fly to planet I, and the other will mostly fly to planet V.\nThe planet a spaceship goes to most won't change during the game.\nPlanet I has aliens J and S, and planet V has aliens O and L on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "A": "I",
+            "H": "V"
+          },
+          "ships": [
+            "H",
+            "A"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "C": [
+              "J",
+              "A"
+            ],
+            "S": [
+              "Y",
+              "I"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships O or H to one of the planets C or S.\nThe spaceships can fly to either planet, but one will mostly fly to planet C, and the other will mostly fly to planet S.\nThe planet a spaceship goes to most won't change during the game.\nPlanet C has aliens J and A, and planet S has aliens Y and I on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "H": "S",
+            "O": "C"
+          },
+          "ships": [
+            "O",
+            "H"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "A": [
+              "J",
+              "M"
+            ],
+            "S": [
+              "C",
+              "N"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships P or Y to one of the planets S or A.\nThe spaceships can fly to either planet, but one will mostly fly to planet S, and the other will mostly fly to planet A.\nThe planet a spaceship goes to most won't change during the game.\nPlanet S has aliens C and N, and planet A has aliens J and M on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "P": "S",
+            "Y": "A"
+          },
+          "ships": [
+            "Y",
+            "P"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "O": [
+              "T",
+              "C"
+            ],
+            "Y": [
+              "W",
+              "Z"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships M or J to one of the planets Y or O.\nThe spaceships can fly to either planet, but one will mostly fly to planet Y, and the other will mostly fly to planet O.\nThe planet a spaceship goes to most won't change during the game.\nPlanet Y has aliens W and Z, and planet O has aliens T and C on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "J": "O",
+            "M": "Y"
+          },
+          "ships": [
+            "J",
+            "M"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "N": [
+              "B",
+              "T"
+            ],
+            "X": [
+              "M",
+              "Z"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships K or L to one of the planets X or N.\nThe spaceships can fly to either planet, but one will mostly fly to planet X, and the other will mostly fly to planet N.\nThe planet a spaceship goes to most won't change during the game.\nPlanet X has aliens M and Z, and planet N has aliens B and T on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "K": "X",
+            "L": "N"
+          },
+          "ships": [
+            "L",
+            "K"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "D": [
+              "Y",
+              "C"
+            ],
+            "X": [
+              "Z",
+              "O"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships T or S to one of the planets D or X.\nThe spaceships can fly to either planet, but one will mostly fly to planet D, and the other will mostly fly to planet X.\nThe planet a spaceship goes to most won't change during the game.\nPlanet D has aliens Y and C, and planet X has aliens Z and O on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "S": "X",
+            "T": "D"
+          },
+          "ships": [
+            "T",
+            "S"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "T": [
+              "O",
+              "I"
+            ],
+            "U": [
+              "N",
+              "W"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships Y or D to one of the planets U or T.\nThe spaceships can fly to either planet, but one will mostly fly to planet U, and the other will mostly fly to planet T.\nThe planet a spaceship goes to most won't change during the game.\nPlanet U has aliens N and W, and planet T has aliens O and I on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "D": "T",
+            "Y": "U"
+          },
+          "ships": [
+            "D",
+            "Y"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "E": [
+              "B",
+              "T"
+            ],
+            "H": [
+              "N",
+              "R"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships Q or C to one of the planets H or E.\nThe spaceships can fly to either planet, but one will mostly fly to planet H, and the other will mostly fly to planet E.\nThe planet a spaceship goes to most won't change during the game.\nPlanet H has aliens N and R, and planet E has aliens B and T on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "C": "E",
+            "Q": "H"
+          },
+          "ships": [
+            "Q",
+            "C"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "G": [
+              "Z",
+              "N"
+            ],
+            "U": [
+              "S",
+              "C"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships D or E to one of the planets G or U.\nThe spaceships can fly to either planet, but one will mostly fly to planet G, and the other will mostly fly to planet U.\nThe planet a spaceship goes to most won't change during the game.\nPlanet G has aliens Z and N, and planet U has aliens S and C on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "D": "G",
+            "E": "U"
+          },
+          "ships": [
+            "D",
+            "E"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "D": [
+              "O",
+              "Q"
+            ],
+            "W": [
+              "K",
+              "F"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships H or U to one of the planets D or W.\nThe spaceships can fly to either planet, but one will mostly fly to planet D, and the other will mostly fly to planet W.\nThe planet a spaceship goes to most won't change during the game.\nPlanet D has aliens O and Q, and planet W has aliens K and F on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "H": "D",
+            "U": "W"
+          },
+          "ships": [
+            "H",
+            "U"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "O": [
+              "X",
+              "C"
+            ],
+            "T": [
+              "E",
+              "N"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships S or U to one of the planets T or O.\nThe spaceships can fly to either planet, but one will mostly fly to planet T, and the other will mostly fly to planet O.\nThe planet a spaceship goes to most won't change during the game.\nPlanet T has aliens E and N, and planet O has aliens X and C on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "S": "T",
+            "U": "O"
+          },
+          "ships": [
+            "U",
+            "S"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "L": [
+              "Z",
+              "A"
+            ],
+            "W": [
+              "Q",
+              "K"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships D or E to one of the planets W or L.\nThe spaceships can fly to either planet, but one will mostly fly to planet W, and the other will mostly fly to planet L.\nThe planet a spaceship goes to most won't change during the game.\nPlanet W has aliens Q and K, and planet L has aliens Z and A on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "D": "W",
+            "E": "L"
+          },
+          "ships": [
+            "D",
+            "E"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "E": [
+              "Z",
+              "H"
+            ],
+            "W": [
+              "V",
+              "F"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships U or X to one of the planets W or E.\nThe spaceships can fly to either planet, but one will mostly fly to planet W, and the other will mostly fly to planet E.\nThe planet a spaceship goes to most won't change during the game.\nPlanet W has aliens V and F, and planet E has aliens Z and H on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "U": "W",
+            "X": "E"
+          },
+          "ships": [
+            "U",
+            "X"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "L": [
+              "K",
+              "E"
+            ],
+            "V": [
+              "X",
+              "I"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships S or P to one of the planets V or L.\nThe spaceships can fly to either planet, but one will mostly fly to planet V, and the other will mostly fly to planet L.\nThe planet a spaceship goes to most won't change during the game.\nPlanet V has aliens X and I, and planet L has aliens K and E on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "P": "L",
+            "S": "V"
+          },
+          "ships": [
+            "S",
+            "P"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "D": [
+              "V",
+              "F"
+            ],
+            "I": [
+              "J",
+              "H"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships R or K to one of the planets I or D.\nThe spaceships can fly to either planet, but one will mostly fly to planet I, and the other will mostly fly to planet D.\nThe planet a spaceship goes to most won't change during the game.\nPlanet I has aliens J and H, and planet D has aliens V and F on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "K": "D",
+            "R": "I"
+          },
+          "ships": [
+            "K",
+            "R"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "B": [
+              "H",
+              "K"
+            ],
+            "Y": [
+              "U",
+              "F"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships R or P to one of the planets Y or B.\nThe spaceships can fly to either planet, but one will mostly fly to planet Y, and the other will mostly fly to planet B.\nThe planet a spaceship goes to most won't change during the game.\nPlanet Y has aliens U and F, and planet B has aliens H and K on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "P": "B",
+            "R": "Y"
+          },
+          "ships": [
+            "R",
+            "P"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "C": [
+              "P",
+              "S"
+            ],
+            "Q": [
+              "V",
+              "O"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships Z or L to one of the planets Q or C.\nThe spaceships can fly to either planet, but one will mostly fly to planet Q, and the other will mostly fly to planet C.\nThe planet a spaceship goes to most won't change during the game.\nPlanet Q has aliens V and O, and planet C has aliens P and S on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "L": "C",
+            "Z": "Q"
+          },
+          "ships": [
+            "Z",
+            "L"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "J": [
+              "T",
+              "C"
+            ],
+            "P": [
+              "V",
+              "Z"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships Q or S to one of the planets P or J.\nThe spaceships can fly to either planet, but one will mostly fly to planet P, and the other will mostly fly to planet J.\nThe planet a spaceship goes to most won't change during the game.\nPlanet P has aliens V and Z, and planet J has aliens T and C on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "Q": "P",
+            "S": "J"
+          },
+          "ships": [
+            "S",
+            "Q"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "N": [
+              "Y",
+              "J"
+            ],
+            "X": [
+              "F",
+              "A"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships B or K to one of the planets N or X.\nThe spaceships can fly to either planet, but one will mostly fly to planet N, and the other will mostly fly to planet X.\nThe planet a spaceship goes to most won't change during the game.\nPlanet N has aliens Y and J, and planet X has aliens F and A on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "B": "N",
+            "K": "X"
+          },
+          "ships": [
+            "B",
+            "K"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "O": [
+              "S",
+              "N"
+            ],
+            "Y": [
+              "E",
+              "I"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships M or K to one of the planets Y or O.\nThe spaceships can fly to either planet, but one will mostly fly to planet Y, and the other will mostly fly to planet O.\nThe planet a spaceship goes to most won't change during the game.\nPlanet Y has aliens E and I, and planet O has aliens S and N on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "K": "O",
+            "M": "Y"
+          },
+          "ships": [
+            "K",
+            "M"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "V": [
+              "B",
+              "P"
+            ],
+            "X": [
+              "W",
+              "O"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships K or F to one of the planets X or V.\nThe spaceships can fly to either planet, but one will mostly fly to planet X, and the other will mostly fly to planet V.\nThe planet a spaceship goes to most won't change during the game.\nPlanet X has aliens W and O, and planet V has aliens B and P on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "F": "V",
+            "K": "X"
+          },
+          "ships": [
+            "F",
+            "K"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "E": [
+              "C",
+              "I"
+            ],
+            "N": [
+              "U",
+              "T"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships Z or M to one of the planets N or E.\nThe spaceships can fly to either planet, but one will mostly fly to planet N, and the other will mostly fly to planet E.\nThe planet a spaceship goes to most won't change during the game.\nPlanet N has aliens U and T, and planet E has aliens C and I on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "M": "E",
+            "Z": "N"
+          },
+          "ships": [
+            "Z",
+            "M"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "J": [
+              "L",
+              "D"
+            ],
+            "S": [
+              "X",
+              "T"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships A or H to one of the planets S or J.\nThe spaceships can fly to either planet, but one will mostly fly to planet S, and the other will mostly fly to planet J.\nThe planet a spaceship goes to most won't change during the game.\nPlanet S has aliens X and T, and planet J has aliens L and D on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "A": "S",
+            "H": "J"
+          },
+          "ships": [
+            "H",
+            "A"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "E": [
+              "Z",
+              "V"
+            ],
+            "N": [
+              "Q",
+              "X"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships G or C to one of the planets N or E.\nThe spaceships can fly to either planet, but one will mostly fly to planet N, and the other will mostly fly to planet E.\nThe planet a spaceship goes to most won't change during the game.\nPlanet N has aliens Q and X, and planet E has aliens Z and V on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "C": "E",
+            "G": "N"
+          },
+          "ships": [
+            "G",
+            "C"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "G": [
+              "I",
+              "X"
+            ],
+            "P": [
+              "Q",
+              "M"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships C or S to one of the planets G or P.\nThe spaceships can fly to either planet, but one will mostly fly to planet G, and the other will mostly fly to planet P.\nThe planet a spaceship goes to most won't change during the game.\nPlanet G has aliens I and X, and planet P has aliens Q and M on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "C": "G",
+            "S": "P"
+          },
+          "ships": [
+            "C",
+            "S"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "E": [
+              "Q",
+              "S"
+            ],
+            "T": [
+              "I",
+              "O"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships F or J to one of the planets T or E.\nThe spaceships can fly to either planet, but one will mostly fly to planet T, and the other will mostly fly to planet E.\nThe planet a spaceship goes to most won't change during the game.\nPlanet T has aliens I and O, and planet E has aliens Q and S on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "F": "T",
+            "J": "E"
+          },
+          "ships": [
+            "J",
+            "F"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "H": [
+              "V",
+              "S"
+            ],
+            "L": [
+              "P",
+              "Z"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships G or T to one of the planets L or H.\nThe spaceships can fly to either planet, but one will mostly fly to planet L, and the other will mostly fly to planet H.\nThe planet a spaceship goes to most won't change during the game.\nPlanet L has aliens P and Z, and planet H has aliens V and S on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "G": "L",
+            "T": "H"
+          },
+          "ships": [
+            "T",
+            "G"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "S": [
+              "U",
+              "L"
+            ],
+            "Y": [
+              "R",
+              "E"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships C or P to one of the planets S or Y.\nThe spaceships can fly to either planet, but one will mostly fly to planet S, and the other will mostly fly to planet Y.\nThe planet a spaceship goes to most won't change during the game.\nPlanet S has aliens U and L, and planet Y has aliens R and E on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "C": "S",
+            "P": "Y"
+          },
+          "ships": [
+            "C",
+            "P"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "R": [
+              "Y",
+              "Q"
+            ],
+            "Z": [
+              "K",
+              "O"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships H or L to one of the planets Z or R.\nThe spaceships can fly to either planet, but one will mostly fly to planet Z, and the other will mostly fly to planet R.\nThe planet a spaceship goes to most won't change during the game.\nPlanet Z has aliens K and O, and planet R has aliens Y and Q on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "H": "Z",
+            "L": "R"
+          },
+          "ships": [
+            "L",
+            "H"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "N": [
+              "P",
+              "U"
+            ],
+            "S": [
+              "L",
+              "O"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships Z or B to one of the planets S or N.\nThe spaceships can fly to either planet, but one will mostly fly to planet S, and the other will mostly fly to planet N.\nThe planet a spaceship goes to most won't change during the game.\nPlanet S has aliens L and O, and planet N has aliens P and U on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "B": "N",
+            "Z": "S"
+          },
+          "ships": [
+            "Z",
+            "B"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "L": [
+              "V",
+              "O"
+            ],
+            "P": [
+              "E",
+              "Z"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships F or C to one of the planets P or L.\nThe spaceships can fly to either planet, but one will mostly fly to planet P, and the other will mostly fly to planet L.\nThe planet a spaceship goes to most won't change during the game.\nPlanet P has aliens E and Z, and planet L has aliens V and O on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "C": "L",
+            "F": "P"
+          },
+          "ships": [
+            "F",
+            "C"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "H": [
+              "B",
+              "W"
+            ],
+            "T": [
+              "J",
+              "I"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships U or K to one of the planets T or H.\nThe spaceships can fly to either planet, but one will mostly fly to planet T, and the other will mostly fly to planet H.\nThe planet a spaceship goes to most won't change during the game.\nPlanet T has aliens J and I, and planet H has aliens B and W on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "K": "H",
+            "U": "T"
+          },
+          "ships": [
+            "K",
+            "U"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "A": [
+              "H",
+              "B"
+            ],
+            "P": [
+              "V",
+              "K"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships J or U to one of the planets P or A.\nThe spaceships can fly to either planet, but one will mostly fly to planet P, and the other will mostly fly to planet A.\nThe planet a spaceship goes to most won't change during the game.\nPlanet P has aliens V and K, and planet A has aliens H and B on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "J": "P",
+            "U": "A"
+          },
+          "ships": [
+            "J",
+            "U"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "A": [
+              "R",
+              "G"
+            ],
+            "T": [
+              "C",
+              "Y"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships O or F to one of the planets T or A.\nThe spaceships can fly to either planet, but one will mostly fly to planet T, and the other will mostly fly to planet A.\nThe planet a spaceship goes to most won't change during the game.\nPlanet T has aliens C and Y, and planet A has aliens R and G on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "F": "A",
+            "O": "T"
+          },
+          "ships": [
+            "O",
+            "F"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "A": [
+              "D",
+              "I"
+            ],
+            "F": [
+              "R",
+              "H"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships X or J to one of the planets F or A.\nThe spaceships can fly to either planet, but one will mostly fly to planet F, and the other will mostly fly to planet A.\nThe planet a spaceship goes to most won't change during the game.\nPlanet F has aliens R and H, and planet A has aliens D and I on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "J": "A",
+            "X": "F"
+          },
+          "ships": [
+            "J",
+            "X"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "C": [
+              "B",
+              "U"
+            ],
+            "M": [
+              "K",
+              "L"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships F or I to one of the planets M or C.\nThe spaceships can fly to either planet, but one will mostly fly to planet M, and the other will mostly fly to planet C.\nThe planet a spaceship goes to most won't change during the game.\nPlanet M has aliens K and L, and planet C has aliens B and U on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "F": "M",
+            "I": "C"
+          },
+          "ships": [
+            "I",
+            "F"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "G": [
+              "V",
+              "T"
+            ],
+            "L": [
+              "K",
+              "F"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships H or Y to one of the planets L or G.\nThe spaceships can fly to either planet, but one will mostly fly to planet L, and the other will mostly fly to planet G.\nThe planet a spaceship goes to most won't change during the game.\nPlanet L has aliens K and F, and planet G has aliens V and T on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "H": "L",
+            "Y": "G"
+          },
+          "ships": [
+            "H",
+            "Y"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "M": [
+              "H",
+              "B"
+            ],
+            "Z": [
+              "L",
+              "Q"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships U or V to one of the planets Z or M.\nThe spaceships can fly to either planet, but one will mostly fly to planet Z, and the other will mostly fly to planet M.\nThe planet a spaceship goes to most won't change during the game.\nPlanet Z has aliens L and Q, and planet M has aliens H and B on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "U": "Z",
+            "V": "M"
+          },
+          "ships": [
+            "V",
+            "U"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "I": [
+              "D",
+              "K"
+            ],
+            "M": [
+              "S",
+              "B"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships C or A to one of the planets M or I.\nThe spaceships can fly to either planet, but one will mostly fly to planet M, and the other will mostly fly to planet I.\nThe planet a spaceship goes to most won't change during the game.\nPlanet M has aliens S and B, and planet I has aliens D and K on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "A": "I",
+            "C": "M"
+          },
+          "ships": [
+            "C",
+            "A"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "J": [
+              "U",
+              "E"
+            ],
+            "W": [
+              "P",
+              "B"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships Y or R to one of the planets J or W.\nThe spaceships can fly to either planet, but one will mostly fly to planet J, and the other will mostly fly to planet W.\nThe planet a spaceship goes to most won't change during the game.\nPlanet J has aliens U and E, and planet W has aliens P and B on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "R": "W",
+            "Y": "J"
+          },
+          "ships": [
+            "R",
+            "Y"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "F": [
+              "M",
+              "R"
+            ],
+            "V": [
+              "O",
+              "A"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships J or Y to one of the planets F or V.\nThe spaceships can fly to either planet, but one will mostly fly to planet F, and the other will mostly fly to planet V.\nThe planet a spaceship goes to most won't change during the game.\nPlanet F has aliens M and R, and planet V has aliens O and A on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "J": "F",
+            "Y": "V"
+          },
+          "ships": [
+            "Y",
+            "J"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "D": [
+              "J",
+              "T"
+            ],
+            "O": [
+              "Z",
+              "I"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships H or E to one of the planets O or D.\nThe spaceships can fly to either planet, but one will mostly fly to planet O, and the other will mostly fly to planet D.\nThe planet a spaceship goes to most won't change during the game.\nPlanet O has aliens Z and I, and planet D has aliens J and T on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "E": "D",
+            "H": "O"
+          },
+          "ships": [
+            "E",
+            "H"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "D": [
+              "J",
+              "X"
+            ],
+            "L": [
+              "H",
+              "F"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships Y or C to one of the planets L or D.\nThe spaceships can fly to either planet, but one will mostly fly to planet L, and the other will mostly fly to planet D.\nThe planet a spaceship goes to most won't change during the game.\nPlanet L has aliens H and F, and planet D has aliens J and X on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "C": "D",
+            "Y": "L"
+          },
+          "ships": [
+            "C",
+            "Y"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "P": [
+              "Z",
+              "A"
+            ],
+            "S": [
+              "Y",
+              "I"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships U or K to one of the planets S or P.\nThe spaceships can fly to either planet, but one will mostly fly to planet S, and the other will mostly fly to planet P.\nThe planet a spaceship goes to most won't change during the game.\nPlanet S has aliens Y and I, and planet P has aliens Z and A on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "K": "P",
+            "U": "S"
+          },
+          "ships": [
+            "U",
+            "K"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "B": [
+              "P",
+              "O"
+            ],
+            "D": [
+              "S",
+              "C"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships N or R to one of the planets D or B.\nThe spaceships can fly to either planet, but one will mostly fly to planet D, and the other will mostly fly to planet B.\nThe planet a spaceship goes to most won't change during the game.\nPlanet D has aliens S and C, and planet B has aliens P and O on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "N": "D",
+            "R": "B"
+          },
+          "ships": [
+            "N",
+            "R"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "A": [
+              "D",
+              "B"
+            ],
+            "O": [
+              "M",
+              "X"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships T or P to one of the planets A or O.\nThe spaceships can fly to either planet, but one will mostly fly to planet A, and the other will mostly fly to planet O.\nThe planet a spaceship goes to most won't change during the game.\nPlanet A has aliens D and B, and planet O has aliens M and X on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "P": "O",
+            "T": "A"
+          },
+          "ships": [
+            "T",
+            "P"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "E": [
+              "K",
+              "I"
+            ],
+            "S": [
+              "U",
+              "Y"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships R or A to one of the planets E or S.\nThe spaceships can fly to either planet, but one will mostly fly to planet E, and the other will mostly fly to planet S.\nThe planet a spaceship goes to most won't change during the game.\nPlanet E has aliens K and I, and planet S has aliens U and Y on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "A": "S",
+            "R": "E"
+          },
+          "ships": [
+            "R",
+            "A"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "B": [
+              "G",
+              "H"
+            ],
+            "U": [
+              "P",
+              "Y"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships I or Q to one of the planets U or B.\nThe spaceships can fly to either planet, but one will mostly fly to planet U, and the other will mostly fly to planet B.\nThe planet a spaceship goes to most won't change during the game.\nPlanet U has aliens P and Y, and planet B has aliens G and H on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "I": "U",
+            "Q": "B"
+          },
+          "ships": [
+            "Q",
+            "I"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "X": [
+              "L",
+              "H"
+            ],
+            "Z": [
+              "K",
+              "S"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships D or P to one of the planets Z or X.\nThe spaceships can fly to either planet, but one will mostly fly to planet Z, and the other will mostly fly to planet X.\nThe planet a spaceship goes to most won't change during the game.\nPlanet Z has aliens K and S, and planet X has aliens L and H on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "D": "Z",
+            "P": "X"
+          },
+          "ships": [
+            "D",
+            "P"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "H": [
+              "Z",
+              "T"
+            ],
+            "L": [
+              "V",
+              "G"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships D or U to one of the planets L or H.\nThe spaceships can fly to either planet, but one will mostly fly to planet L, and the other will mostly fly to planet H.\nThe planet a spaceship goes to most won't change during the game.\nPlanet L has aliens V and G, and planet H has aliens Z and T on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "D": "L",
+            "U": "H"
+          },
+          "ships": [
+            "D",
+            "U"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "A": [
+              "C",
+              "Q"
+            ],
+            "O": [
+              "T",
+              "P"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships W or V to one of the planets O or A.\nThe spaceships can fly to either planet, but one will mostly fly to planet O, and the other will mostly fly to planet A.\nThe planet a spaceship goes to most won't change during the game.\nPlanet O has aliens T and P, and planet A has aliens C and Q on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "V": "A",
+            "W": "O"
+          },
+          "ships": [
+            "W",
+            "V"
+          ]
+        },
+        {
+          "aliens_by_planet": {
+            "G": [
+              "C",
+              "Y"
+            ],
+            "I": [
+              "H",
+              "A"
+            ]
+          },
+          "instruction": "You will be taking one of the spaceships K or F to one of the planets G or I.\nThe spaceships can fly to either planet, but one will mostly fly to planet G, and the other will mostly fly to planet I.\nThe planet a spaceship goes to most won't change during the game.\nPlanet G has aliens C and Y, and planet I has aliens H and A on it.\nEach alien has its own space treasure mine.\nWhen you arrive at each planet, you will ask one of the aliens for space treasure from their mines.\nThe treasure an alien can give will change slowly during the game.\nBefore you choose a spaceship, you will be told whether there is a treasure multiplier.\nIf there is a treasure multiplier and you find treasure, you will receive 5 treasure pieces.\nIf there is no treasure multiplier and you find treasure, you will receive 1 treasure piece.\nYou can take a spaceship or ask an alien for space treasure by pressing the corresponding key.\nYour goal is to get as much treasure as possible over the course of the next 200 days.",
+          "planet_by_ship": {
+            "F": "I",
+            "K": "G"
+          },
+          "ships": [
+            "F",
+            "K"
+          ]
+        }
+      ],
+      "ship_planet_skew": 0.8
+    },
+    "kind": "transcript_calibrated",
+    "notes": "Each episode samples a recorded session's ship/planet/alien topology.",
+    "sources": [
+      "paper:Kool2017",
+      "psych101:session_topologies"
+    ]
+  },
+  "lefebvre2017behavioural/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_casinos": 4,
+      "visits_per_casino": 25
+    },
+    "kind": "mixed",
+    "notes": "Casino visit structure from instructions; machine payoffs are simulated.",
+    "sources": [
+      "paper:Lefebvre2017",
+      "psych101:reward_pools"
+    ]
+  },
+  "lefebvre2017behavioural/exp2.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_casinos": 4,
+      "visits_per_casino": 25
+    },
+    "kind": "mixed",
+    "notes": "",
+    "sources": [
+      "paper:Lefebvre2017",
+      "psych101:reward_pools"
+    ]
+  },
+  "peterson2021using/exp1.csv": {
+    "caveats": [
+      "Displayed outcome probabilities are fixed at 0.5/0.5 placeholders until Corr joint sampling is implemented."
+    ],
+    "default_config": {
+      "n_blocks": 20,
+      "trials_per_block": 5
+    },
+    "kind": "mixed",
+    "notes": "Payoff magnitudes are resampled from recorded full-feedback blocks.",
+    "sources": [
+      "psych101:recorded_payoff_pairs",
+      "paper:Peterson2021"
+    ]
+  },
+  "plonsky2018when/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "no_feedback_trials": 150,
+      "trials_per_problem": 750
+    },
+    "kind": "transcript_calibrated",
+    "notes": "",
+    "sources": [
+      "paper:Plonsky2018",
+      "psych101:trial_counts"
+    ]
+  },
+  "schulz2020finding/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_arms": 8,
+      "n_rounds": 30,
+      "trials_per_round": 10
+    },
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Schulz2020",
+      "psych101:instruction"
+    ]
+  },
+  "schulz2020finding/exp2.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_arms": 8,
+      "n_rounds": 30,
+      "trials_per_round": 10
+    },
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Schulz2020",
+      "psych101:instruction"
+    ]
+  },
+  "schulz2020finding/exp3.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_arms": 8,
+      "n_rounds": 30,
+      "trials_per_round": 10
+    },
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Schulz2020",
+      "psych101:instruction"
+    ]
+  },
+  "schulz2020finding/exp4.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_arms": 8,
+      "n_rounds": 30,
+      "trials_per_round": 10
+    },
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Schulz2020",
+      "psych101:instruction"
+    ]
+  },
+  "schulz2020finding/exp5.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_arms": 8,
+      "n_rounds": 30,
+      "trials_per_round": 10
+    },
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Schulz2020",
+      "psych101:instruction"
+    ]
+  },
+  "speekenbrink2008learning/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_trials": 100
+    },
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Speekenbrink2008",
+      "psych101:card_rules"
+    ]
+  },
+  "steingroever2015data/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_trials": 100
+    },
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Steingroever2015",
+      "psych101:IGT_payoffs"
+    ]
+  },
+  "steingroever2015data/exp3.csv": {
+    "caveats": [],
+    "default_config": {
+      "n_trials": 100
+    },
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Steingroever2015",
+      "psych101:IGT_payoffs"
+    ]
+  },
+  "tomov2021multitask/exp1.csv": {
+    "caveats": [
+      "Generative graph is schematic, not transcript-isomorphic."
+    ],
+    "default_config": {},
+    "kind": "mixed",
+    "notes": "Simplified castle graph; not full transcript topology.",
+    "sources": [
+      "paper:Tomov2021",
+      "psych101:door_labels"
+    ]
+  },
+  "tomov2021multitask/exp3.csv": {
+    "caveats": [
+      "Generative graph is schematic, not transcript-isomorphic."
+    ],
+    "default_config": {},
+    "kind": "mixed",
+    "notes": "",
+    "sources": [
+      "paper:Tomov2021",
+      "psych101:door_labels"
+    ]
+  },
+  "wilson2014humans/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "free_trials_choices": [
+        30,
+        30
+      ],
+      "instructed_trials": 20,
+      "n_games": 3
+    },
+    "kind": "paper_documented",
+    "notes": "Two-arm slot task with instructed then free phases.",
+    "sources": [
+      "paper:Wilson2014",
+      "psych101:instruction"
+    ]
+  },
+  "wu2018generalisation/exp1.csv": {
+    "caveats": [],
+    "default_config": {
+      "choices_long": 10,
+      "choices_short": 5,
+      "n_environments": 16
+    },
+    "kind": "paper_documented",
+    "notes": "Spatially correlated 30-arm structure from task instructions.",
+    "sources": [
+      "paper:Wu2018",
+      "psych101:instruction"
+    ]
+  },
+  "wulff2018description/exp1.csv": {
+    "caveats": [],
+    "default_config": {},
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Wulff2018",
+      "psych101:lottery_lines"
+    ]
+  },
+  "wulff2018sampling/exp1.csv": {
+    "caveats": [],
+    "default_config": {},
+    "kind": "paper_documented",
+    "notes": "",
+    "sources": [
+      "paper:Wulff2018",
+      "psych101:KDX_phases"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+experiment_id: wilson2014humans/exp1.csv
+family: two_arm_bandit
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: points_only
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+  paper: "Wilson et al. (2014)"
+notes: >
+  Generative two-arm slot machines with instructed prefixes and free-choice trials.
+  Recorded-path TaskEnv uses the transcript game schedule; free-trial counterfactuals
+  use per-game mean payoffs for arms not chosen on that trial.

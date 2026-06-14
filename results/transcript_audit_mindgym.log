@@ -1,0 +1,49 @@
+[transcript-audit] 1000/44452 sessions (2.2%) line=999 exp=collsiöö2023MCPL/exp1.csv ok=1000 fail=0 elapsed=3s eta~146s
+[transcript-audit] 2000/44452 sessions (4.5%) line=2073 exp=enkavi2019adaptivenback/exp1.csv ok=2000 fail=0 elapsed=8s eta~177s
+[transcript-audit] 3000/44452 sessions (6.7%) line=3073 exp=enkavi2019recentprobes/exp1.csv ok=3000 fail=0 elapsed=13s eta~179s
+[transcript-audit] 4000/44452 sessions (9.0%) line=4073 exp=frey2017cct/exp1.csv ok=4000 fail=0 elapsed=47s eta~474s
+[transcript-audit] 5000/44452 sessions (11.2%) line=5073 exp=frey2017cct/exp1.csv ok=5000 fail=0 elapsed=63s eta~494s
+[transcript-audit] 6000/44452 sessions (13.5%) line=6073 exp=frey2017risk/exp1.csv ok=6000 fail=0 elapsed=72s eta~461s
+[transcript-audit] 7000/44452 sessions (15.7%) line=18195 exp=hilbig2014generalized/exp1.csv ok=7000 fail=0 elapsed=80s eta~426s
+[transcript-audit] 8000/44452 sessions (18.0%) line=22387 exp=krueger2022identifying/exp1.csv ok=8000 fail=0 elapsed=83s eta~380s
+[transcript-audit] 9000/44452 sessions (20.2%) line=23387 exp=krueger2022identifying/exp1.csv ok=9000 fail=0 elapsed=87s eta~341s
+[transcript-audit] 10000/44452 sessions (22.5%) line=25322 exp=peterson2021using/exp1.csv ok=10000 fail=0 elapsed=90s eta~311s
+[transcript-audit] 11000/44452 sessions (24.7%) line=26322 exp=peterson2021using/exp1.csv ok=11000 fail=0 elapsed=94s eta~285s
+[transcript-audit] 12000/44452 sessions (27.0%) line=27322 exp=peterson2021using/exp1.csv ok=12000 fail=0 elapsed=97s eta~263s
+[transcript-audit] 13000/44452 sessions (29.2%) line=28322 exp=peterson2021using/exp1.csv ok=13000 fail=0 elapsed=101s eta~244s
+[transcript-audit] 14000/44452 sessions (31.5%) line=29322 exp=peterson2021using/exp1.csv ok=14000 fail=0 elapsed=104s eta~226s
+[transcript-audit] 15000/44452 sessions (33.7%) line=30322 exp=peterson2021using/exp1.csv ok=15000 fail=0 elapsed=107s eta~210s
+[transcript-audit] 16000/44452 sessions (36.0%) line=31322 exp=peterson2021using/exp1.csv ok=16000 fail=0 elapsed=110s eta~196s
+[transcript-audit] 17000/44452 sessions (38.2%) line=32322 exp=peterson2021using/exp1.csv ok=17000 fail=0 elapsed=113s eta~183s
+[transcript-audit] 18000/44452 sessions (40.5%) line=33322 exp=peterson2021using/exp1.csv ok=18000 fail=0 elapsed=116s eta~171s
+[transcript-audit] 19000/44452 sessions (42.7%) line=34322 exp=peterson2021using/exp1.csv ok=19000 fail=0 elapsed=119s eta~160s
+[transcript-audit] 20000/44452 sessions (45.0%) line=35322 exp=peterson2021using/exp1.csv ok=20000 fail=0 elapsed=122s eta~149s
+[transcript-audit] 21000/44452 sessions (47.2%) line=36322 exp=peterson2021using/exp1.csv ok=21000 fail=0 elapsed=125s eta~139s
+[transcript-audit] 22000/44452 sessions (49.5%) line=37322 exp=peterson2021using/exp1.csv ok=22000 fail=0 elapsed=127s eta~130s
+[transcript-audit] 23000/44452 sessions (51.7%) line=38322 exp=peterson2021using/exp1.csv ok=23000 fail=0 elapsed=130s eta~121s
+[transcript-audit] 24000/44452 sessions (54.0%) line=39454 exp=ruggeri2022globalizability/exp1.csv ok=24000 fail=0 elapsed=140s eta~120s
+[transcript-audit] 25000/44452 sessions (56.2%) line=40454 exp=ruggeri2022globalizability/exp1.csv ok=25000 fail=0 elapsed=141s eta~109s
+[transcript-audit] 26000/44452 sessions (58.5%) line=41454 exp=ruggeri2022globalizability/exp1.csv ok=26000 fail=0 elapsed=141s eta~100s
+[transcript-audit] 27000/44452 sessions (60.7%) line=42454 exp=ruggeri2022globalizability/exp1.csv ok=27000 fail=0 elapsed=141s eta~91s
+[transcript-audit] 28000/44452 sessions (63.0%) line=43454 exp=ruggeri2022globalizability/exp1.csv ok=28000 fail=0 elapsed=141s eta~83s
+[transcript-audit] 29000/44452 sessions (65.2%) line=44454 exp=ruggeri2022globalizability/exp1.csv ok=29000 fail=0 elapsed=141s eta~75s
+[transcript-audit] 30000/44452 sessions (67.5%) line=45454 exp=ruggeri2022globalizability/exp1.csv ok=30000 fail=0 elapsed=142s eta~68s
+[transcript-audit] 31000/44452 sessions (69.7%) line=46454 exp=ruggeri2022globalizability/exp1.csv ok=31000 fail=0 elapsed=142s eta~62s
+[transcript-audit] 32000/44452 sessions (72.0%) line=47454 exp=ruggeri2022globalizability/exp1.csv ok=32000 fail=0 elapsed=142s eta~55s
+[transcript-audit] 33000/44452 sessions (74.2%) line=48454 exp=ruggeri2022globalizability/exp1.csv ok=33000 fail=0 elapsed=142s eta~49s
+[transcript-audit] 34000/44452 sessions (76.5%) line=49454 exp=ruggeri2022globalizability/exp1.csv ok=34000 fail=0 elapsed=143s eta~44s
+[transcript-audit] 35000/44452 sessions (78.7%) line=50454 exp=ruggeri2022globalizability/exp1.csv ok=35000 fail=0 elapsed=143s eta~39s
+[transcript-audit] 36000/44452 sessions (81.0%) line=51454 exp=schulz2020finding/exp5.csv ok=36000 fail=0 elapsed=157s eta~37s
+[transcript-audit] 37000/44452 sessions (83.2%) line=52454 exp=tomov2020discovery/exp5.csv ok=37000 fail=0 elapsed=185s eta~37s
+[transcript-audit] 38000/44452 sessions (85.5%) line=53454 exp=wilson2014humans/exp4.csv ok=38000 fail=0 elapsed=260s eta~44s
+[transcript-audit] 39000/44452 sessions (87.7%) line=54511 exp=wulff2018description/exp1.csv ok=39000 fail=0 elapsed=274s eta~38s
+[transcript-audit] 40000/44452 sessions (90.0%) line=55511 exp=wulff2018description/exp1.csv ok=40000 fail=0 elapsed=275s eta~31s
+[transcript-audit] 41000/44452 sessions (92.2%) line=56511 exp=wulff2018sampling/exp1.csv ok=41000 fail=0 elapsed=277s eta~23s
+[transcript-audit] 42000/44452 sessions (94.5%) line=57511 exp=wulff2018sampling/exp1.csv ok=42000 fail=0 elapsed=280s eta~16s
+[transcript-audit] 43000/44452 sessions (96.7%) line=58511 exp=wulff2018sampling/exp1.csv ok=43000 fail=0 elapsed=282s eta~10s
+[transcript-audit] 44000/44452 sessions (99.0%) line=59511 exp=wulff2018sampling/exp1.csv ok=44000 fail=0 elapsed=288s eta~3s
+[transcript-audit] done 44452/44452 sessions (100.0%) line=60091 exp=(done) ok=44452 fail=0 elapsed=294s
+Supported experiments: 64
+Sessions audited: 44452
+Failed sessions: 0
+Wrote results/transcript_human_path_audit_mindgym.json

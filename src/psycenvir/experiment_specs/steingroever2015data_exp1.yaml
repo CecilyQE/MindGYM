@@ -1,0 +1,14 @@
+experiment_id: steingroever2015data/exp1.csv
+family: iowa_gambling
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: play_money_net
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+notes: >
+  Iowa Gambling Task with pooled per-deck win/loss counterfactuals on the recorded path.

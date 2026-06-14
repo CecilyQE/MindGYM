@@ -1,0 +1,299 @@
+[
+  {
+    "experiment_id": "badham2017deficits/exp1.csv",
+    "seed": 0,
+    "steps": 1,
+    "total_reward": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "wu2018generalisation/exp1.csv",
+    "seed": 1,
+    "steps": 4,
+    "total_reward": 202.0,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "frey2017risk/exp1.csv",
+    "seed": 2,
+    "steps": 9,
+    "total_reward": 6.0,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "peterson2021using/exp1.csv",
+    "seed": 3,
+    "steps": 3,
+    "total_reward": 5.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "wilson2014humans/exp1.csv",
+    "seed": 4,
+    "steps": 5,
+    "total_reward": 268.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "lefebvre2017behavioural/exp1.csv",
+    "seed": 5,
+    "steps": 2,
+    "total_reward": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "lefebvre2017behavioural/exp2.csv",
+    "seed": 6,
+    "steps": 3,
+    "total_reward": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "gershman2020reward/exp1.csv",
+    "seed": 7,
+    "steps": 8,
+    "total_reward": 5.0,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "speekenbrink2008learning/exp1.csv",
+    "seed": 8,
+    "steps": 8,
+    "total_reward": 3.0,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "frey2017cct/exp1.csv",
+    "seed": 9,
+    "steps": 4,
+    "total_reward": -791.0,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "kool2016when/exp1.csv",
+    "seed": 10,
+    "steps": 1,
+    "total_reward": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "kool2016when/exp2.csv",
+    "seed": 11,
+    "steps": 1,
+    "total_reward": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "kool2017cost/exp1.csv",
+    "seed": 12,
+    "steps": 1,
+    "total_reward": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "gershman2018deconstructing/exp1.csv",
+    "seed": 13,
+    "steps": 1,
+    "total_reward": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "bahrami2020four/exp.csv",
+    "seed": 14,
+    "steps": 1,
+    "total_reward": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "hilbig2014generalized/exp1.csv",
+    "seed": 15,
+    "steps": 8,
+    "total_reward": 3.0,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "wulff2018description/exp1.csv",
+    "seed": 16,
+    "steps": 2,
+    "total_reward": -2.2,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "gershman2018deconstructing/exp2.csv",
+    "seed": 17,
+    "steps": 1,
+    "total_reward": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "wulff2018sampling/exp1.csv",
+    "seed": 18,
+    "steps": 2,
+    "total_reward": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "plonsky2018when/exp1.csv",
+    "seed": 19,
+    "steps": 1,
+    "total_reward": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "schulz2020finding/exp1.csv",
+    "seed": 20,
+    "steps": 10,
+    "total_reward": 338.7174383481739,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "schulz2020finding/exp2.csv",
+    "seed": 21,
+    "steps": 10,
+    "total_reward": 223.10620022698157,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "schulz2020finding/exp3.csv",
+    "seed": 22,
+    "steps": 10,
+    "total_reward": 254.85309484372993,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "schulz2020finding/exp4.csv",
+    "seed": 23,
+    "steps": 10,
+    "total_reward": 252.5663880129004,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "schulz2020finding/exp5.csv",
+    "seed": 24,
+    "steps": 10,
+    "total_reward": 319.03090716193185,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "tomov2021multitask/exp1.csv",
+    "seed": 25,
+    "steps": 4,
+    "total_reward": -85.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "tomov2021multitask/exp3.csv",
+    "seed": 26,
+    "steps": 1,
+    "total_reward": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "steingroever2015data/exp1.csv",
+    "seed": 27,
+    "steps": 10,
+    "total_reward": -242.69163648583122,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "cox2017information/exp1.csv",
+    "seed": 28,
+    "steps": 10,
+    "total_reward": 5.0,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "steingroever2015data/exp3.csv",
+    "seed": 29,
+    "steps": 10,
+    "total_reward": -226.5876790083411,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "flesch2018comparing/exp1.csv",
+    "seed": 30,
+    "steps": 10,
+    "total_reward": -125.0,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "enkavi2019digitspan/exp1.csv",
+    "seed": 31,
+    "steps": 10,
+    "total_reward": 2.0,
+    "terminated": true,
+    "truncated": false,
+    "fidelity_level": "generative_exact"
+  },
+  {
+    "experiment_id": "kool2017cost/exp2.csv",
+    "seed": 32,
+    "steps": 1,
+    "total_reward": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "fidelity_level": "generative_exact"
+  }
+]

@@ -1,0 +1,14 @@
+experiment_id: flesch2018comparing/exp1.csv
+family: category_learning
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: outcome
+phases: [instruction, training, test]
+action_parser: psych101_press
+payoff_rule:
+  type: accept_reject_tree_points
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+notes: >
+  North/South tree planting with session-specific accept/reject keys; explicit counterfactual feedback in training and pooled or silent test trials.

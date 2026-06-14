@@ -1,0 +1,14 @@
+experiment_id: wulff2018sampling/exp1.csv
+family: sampling_lottery
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: points_only
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+notes: >
+  Free K/D sampling draws (zero task reward) then X to stop and a final bonus draw.

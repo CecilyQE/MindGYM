@@ -1,0 +1,15 @@
+experiment_id: tomov2021multitask/exp1.csv
+family: castle_exploration
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: points_only
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+notes: >
+  Two-step castle rounds with market prices; generative resamples prices and resources.
+  Recorded path pools per-room door rewards for counterfactuals.

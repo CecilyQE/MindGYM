@@ -1,0 +1,21 @@
+experiment_id: enkavi2019recentprobes/exp1.csv
+family: recognition_memory
+implementation_status: implemented
+fidelity_level: exact_transition
+reward_mode: none
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: unknown
+  monetary_payoff_modeled: false
+ethics_recorded: null
+payoff_rule_recorded: unknown
+verbatim_text_available: null
+sources:
+  psych101: true
+notes: >
+  Probe correctness is deterministic from membership in the displayed
+  six-letter study set and the instruction-declared response mapping. The
+  source task exposes no trial feedback or points, so the causal environment
+  returns no scalar task reward and exposes objective accuracy only during
+  evaluation.

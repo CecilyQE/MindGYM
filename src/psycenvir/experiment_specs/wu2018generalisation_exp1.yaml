@@ -1,0 +1,15 @@
+experiment_id: wu2018generalisation/exp1.csv
+family: spatial_bandit
+implementation_status: implemented_generative
+fidelity_level: generative_exact
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: points_only
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+  paper: "Wu et al. (2018)"
+notes: >
+  Generative spatially correlated 30-arm bandit with 16 environments per episode.

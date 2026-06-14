@@ -1,0 +1,21 @@
+experiment_id: collsiöö2023MCPL/exp3.csv
+family: judgment_learning
+implementation_status: implemented
+fidelity_level: exact_transition
+reward_mode: correctness
+phases: [instruction, main_task]
+action_parser: psych101_say_that
+payoff_rule:
+  type: unknown
+  monetary_payoff_modeled: false
+ethics_recorded: null
+payoff_rule_recorded: unknown
+verbatim_text_available: null
+sources:
+  psych101: true
+notes: >
+  Every recorded exp3 trial exposes the correct Caldionine concentration after
+  the source response, allowing exact causal correctness feedback for any of
+  the nine instruction-declared responses on the recovered stimulus schedule.
+  This does not claim generation of novel stimulus schedules or model monetary
+  payoff.

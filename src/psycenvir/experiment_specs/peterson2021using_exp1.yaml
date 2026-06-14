@@ -1,0 +1,22 @@
+experiment_id: peterson2021using/exp1.csv
+family: gamble_choice
+implementation_status: implemented_recorded_feedback
+fidelity_level: partial_sim
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: random_trial_bonus
+  monetary_payoff_modeled: false
+ethics_recorded: true
+payoff_rule_recorded: documented
+verbatim_text_available: false
+sources:
+  psych101: true
+  paper: "Peterson et al. (2021)"
+  consent_payoff_confirmation: "Thomas et al. (2024)"
+notes: >
+  Feedback blocks contain chosen and counterfactual outcomes and can support
+  exact transitions on recorded trials. No-feedback blocks expose choices only.
+  Fresh outcome generation is withheld until the Corr-dependent joint payoff
+  sampling rule is implemented from source materials.

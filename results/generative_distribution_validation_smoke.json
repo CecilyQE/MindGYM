@@ -1,0 +1,376 @@
+{
+  "experiments": 5,
+  "max_steps": 120,
+  "results": [
+    {
+      "caveats": [],
+      "episodes": 2,
+      "episodes_sample": [
+        {
+          "actions": [
+            "M",
+            "Y",
+            "M",
+            "Y",
+            "M",
+            "Y",
+            "G",
+            "G",
+            "S",
+            "S",
+            "G",
+            "S"
+          ],
+          "fallback_used": false,
+          "issues": [],
+          "max_reward": 1.0,
+          "mean_reward": 1.0,
+          "min_reward": 1.0,
+          "ok": true,
+          "seed": 0,
+          "signature": -6019187051913864442,
+          "steps": 12,
+          "terminated": true,
+          "total_reward": 12.0,
+          "truncated": false
+        },
+        {
+          "actions": [
+            "E",
+            "S",
+            "S",
+            "S",
+            "E",
+            "S",
+            "P",
+            "P",
+            "A",
+            "A",
+            "P",
+            "P"
+          ],
+          "fallback_used": false,
+          "issues": [],
+          "max_reward": 1.0,
+          "mean_reward": 1.0,
+          "min_reward": 1.0,
+          "ok": true,
+          "seed": 1,
+          "signature": 123545645102034328,
+          "steps": 12,
+          "terminated": true,
+          "total_reward": 12.0,
+          "truncated": false
+        }
+      ],
+      "experiment_id": "badham2017deficits/exp1.csv",
+      "grounding": "paper_documented",
+      "issue_counts": {},
+      "ok_episodes": 2,
+      "seeds": [
+        0,
+        1
+      ],
+      "sources": [
+        "paper:Badham2017",
+        "psych101:stimulus_inventory"
+      ],
+      "status": "pass",
+      "steps_max": 12,
+      "steps_mean": 12,
+      "steps_min": 12,
+      "total_reward_mean": 12.0,
+      "total_reward_stdev": 0.0,
+      "unique_signatures": 2
+    },
+    {
+      "caveats": [],
+      "episodes": 2,
+      "episodes_sample": [
+        {
+          "actions": [
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A"
+          ],
+          "fallback_used": false,
+          "issues": [],
+          "max_reward": 0.0,
+          "mean_reward": -3.0,
+          "min_reward": -6.0,
+          "ok": true,
+          "seed": 0,
+          "signature": -8250581111015475927,
+          "steps": 6,
+          "terminated": true,
+          "total_reward": -18.0,
+          "truncated": false
+        },
+        {
+          "actions": [
+            "Z",
+            "Z",
+            "Z",
+            "Z",
+            "Z",
+            "Z"
+          ],
+          "fallback_used": false,
+          "issues": [],
+          "max_reward": 48.0,
+          "mean_reward": 24.333333333333332,
+          "min_reward": -7.0,
+          "ok": true,
+          "seed": 1,
+          "signature": 5058166559859069333,
+          "steps": 6,
+          "terminated": true,
+          "total_reward": 146.0,
+          "truncated": false
+        }
+      ],
+      "experiment_id": "peterson2021using/exp1.csv",
+      "grounding": "paper_documented",
+      "issue_counts": {},
+      "ok_episodes": 2,
+      "seeds": [
+        0,
+        1
+      ],
+      "sources": [
+        "choices13k:problem_schema",
+        "paper:Peterson2021"
+      ],
+      "status": "pass",
+      "steps_max": 6,
+      "steps_mean": 6,
+      "steps_min": 6,
+      "total_reward_mean": 64.0,
+      "total_reward_stdev": 82.0,
+      "unique_signatures": 2
+    },
+    {
+      "caveats": [],
+      "episodes": 2,
+      "episodes_sample": [
+        {
+          "actions": [
+            "A",
+            "A",
+            "C",
+            "C",
+            "A",
+            "A",
+            "C",
+            "C"
+          ],
+          "fallback_used": false,
+          "issues": [],
+          "max_reward": 80.0,
+          "mean_reward": 66.375,
+          "min_reward": 47.0,
+          "ok": true,
+          "seed": 0,
+          "signature": 4280284390005495575,
+          "steps": 8,
+          "terminated": true,
+          "total_reward": 531.0,
+          "truncated": false
+        },
+        {
+          "actions": [
+            "C",
+            "A",
+            "C",
+            "C",
+            "A",
+            "A",
+            "C",
+            "C"
+          ],
+          "fallback_used": false,
+          "issues": [],
+          "max_reward": 96.0,
+          "mean_reward": 78.125,
+          "min_reward": 57.0,
+          "ok": true,
+          "seed": 1,
+          "signature": 5157002959716889412,
+          "steps": 8,
+          "terminated": true,
+          "total_reward": 625.0,
+          "truncated": false
+        }
+      ],
+      "experiment_id": "wilson2014humans/exp1.csv",
+      "grounding": "paper_documented",
+      "issue_counts": {},
+      "ok_episodes": 2,
+      "seeds": [
+        0,
+        1
+      ],
+      "sources": [
+        "paper:Wilson2014",
+        "psych101:instruction"
+      ],
+      "status": "pass",
+      "steps_max": 8,
+      "steps_mean": 8,
+      "steps_min": 8,
+      "total_reward_mean": 578.0,
+      "total_reward_stdev": 47.0,
+      "unique_signatures": 2
+    },
+    {
+      "caveats": [],
+      "episodes": 2,
+      "episodes_sample": [
+        {
+          "actions": [
+            "P",
+            "P",
+            "M",
+            "M",
+            "M",
+            "P",
+            "M",
+            "P"
+          ],
+          "fallback_used": false,
+          "issues": [],
+          "max_reward": 0.5,
+          "mean_reward": 0.4375,
+          "min_reward": 0.0,
+          "ok": true,
+          "seed": 0,
+          "signature": 4945332022130444358,
+          "steps": 8,
+          "terminated": true,
+          "total_reward": 3.5,
+          "truncated": false
+        },
+        {
+          "actions": [
+            "D",
+            "D",
+            "E",
+            "E",
+            "E",
+            "E",
+            "D",
+            "D"
+          ],
+          "fallback_used": false,
+          "issues": [],
+          "max_reward": 0.5,
+          "mean_reward": 0.25,
+          "min_reward": 0.0,
+          "ok": true,
+          "seed": 1,
+          "signature": 6435506540988860103,
+          "steps": 8,
+          "terminated": true,
+          "total_reward": 2.0,
+          "truncated": false
+        }
+      ],
+      "experiment_id": "lefebvre2017behavioural/exp1.csv",
+      "grounding": "mixed",
+      "issue_counts": {},
+      "ok_episodes": 2,
+      "seeds": [
+        0,
+        1
+      ],
+      "sources": [
+        "paper:Lefebvre2017",
+        "psych101:reward_pools"
+      ],
+      "status": "pass",
+      "steps_max": 8,
+      "steps_mean": 8,
+      "steps_min": 8,
+      "total_reward_mean": 2.75,
+      "total_reward_stdev": 0.75,
+      "unique_signatures": 2
+    },
+    {
+      "caveats": [],
+      "episodes": 2,
+      "episodes_sample": [
+        {
+          "actions": [
+            "K",
+            "K",
+            "K",
+            "K",
+            "K"
+          ],
+          "fallback_used": false,
+          "issues": [],
+          "max_reward": 0.0,
+          "mean_reward": 0.0,
+          "min_reward": 0.0,
+          "ok": true,
+          "seed": 0,
+          "signature": 421541604208651309,
+          "steps": 5,
+          "terminated": false,
+          "total_reward": 0.0,
+          "truncated": true
+        },
+        {
+          "actions": [
+            "K",
+            "K",
+            "K",
+            "K",
+            "K"
+          ],
+          "fallback_used": false,
+          "issues": [],
+          "max_reward": 0.0,
+          "mean_reward": 0.0,
+          "min_reward": 0.0,
+          "ok": true,
+          "seed": 1,
+          "signature": 2972892710809990193,
+          "steps": 5,
+          "terminated": false,
+          "total_reward": 0.0,
+          "truncated": true
+        }
+      ],
+      "experiment_id": "wulff2018sampling/exp1.csv",
+      "grounding": "paper_documented",
+      "issue_counts": {},
+      "ok_episodes": 2,
+      "seeds": [
+        0,
+        1
+      ],
+      "sources": [
+        "paper:Wulff2018",
+        "psych101:KDX_phases"
+      ],
+      "status": "pass",
+      "steps_max": 5,
+      "steps_mean": 5,
+      "steps_min": 5,
+      "total_reward_mean": 0.0,
+      "total_reward_stdev": 0.0,
+      "unique_signatures": 2
+    }
+  ],
+  "seeds": [
+    0,
+    1
+  ],
+  "status_counts": {
+    "pass": 5
+  }
+}

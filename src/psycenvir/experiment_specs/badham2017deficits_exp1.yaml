@@ -1,0 +1,23 @@
+experiment_id: badham2017deficits/exp1.csv
+family: category_learning
+implementation_status: implemented
+fidelity_level: exact_transition
+reward_mode: correctness
+phases: [consent, instruction, main_task, debrief]
+action_parser: psych101_press
+payoff_rule:
+  type: fixed_or_course_credit
+  monetary_payoff_modeled: false
+ethics_recorded: true
+payoff_rule_recorded: documented
+verbatim_text_available: false
+sources:
+  psych101: true
+  paper: "Badham, Sanborn & Maylor (2017)"
+notes: >
+  Trial labels are reconstructed from explicit correct-category feedback.
+  Source human actions are evaluation metadata only. Valid response keys must
+  be recovered per participant transcript before strict action validation is
+  enabled: the published data randomizes the two response-key labels across
+  participants. Accuracy is a task score; compensation was not performance
+  contingent.

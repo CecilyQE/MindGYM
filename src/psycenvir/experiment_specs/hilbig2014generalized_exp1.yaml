@@ -1,0 +1,15 @@
+experiment_id: hilbig2014generalized/exp1.csv
+family: weighted_additive_choice
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: correctness
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: points_only
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+  paper: "Hilbig et al. (2014)"
+notes: >
+  Normative weighted-additive rule over four expert ratings; transcript shows ratings and press only.

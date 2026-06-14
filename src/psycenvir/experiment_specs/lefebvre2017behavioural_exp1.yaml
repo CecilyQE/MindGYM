@@ -1,0 +1,16 @@
+experiment_id: lefebvre2017behavioural/exp1.csv
+family: casino_bandit
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: points_only
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+  paper: "Lefebvre et al. (2017)"
+notes: >
+  Generative four-casino two-arm bandit with stochastic 0 / 0.5 outcomes.
+  Recorded-path TaskEnv pools outcomes per casino and machine pair for counterfactuals.

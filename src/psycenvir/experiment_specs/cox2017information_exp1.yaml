@@ -1,0 +1,14 @@
+experiment_id: cox2017information/exp1.csv
+family: pair_recognition
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: correctness
+phases: [instruction, study, test]
+action_parser: psych101_press
+payoff_rule:
+  type: correctness_only
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+notes: >
+  Twenty studied word pairs then D/N recognition tests with correctness reward.

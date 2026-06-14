@@ -1,0 +1,522 @@
+{
+  "audited_sessions": 44452,
+  "failures_sample": [],
+  "jsonl_path": "/Users/apple/Code/MindGYM/data/raw/prompts_training.jsonl",
+  "per_experiment": {
+    "badham2017deficits/exp1.csv": {
+      "failed": 0,
+      "ok": 85,
+      "sessions": 85,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "bahrami2020four/exp.csv": {
+      "failed": 0,
+      "ok": 869,
+      "sessions": 869,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "collsi\u00f6\u00f62023MCPL/exp1.csv": {
+      "failed": 0,
+      "ok": 70,
+      "sessions": 70,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "collsi\u00f6\u00f62023MCPL/exp3.csv": {
+      "failed": 0,
+      "ok": 88,
+      "sessions": 88,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "cox2017information/exp1.csv": {
+      "failed": 0,
+      "ok": 424,
+      "sessions": 424,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "enkavi2019adaptivenback/exp1.csv": {
+      "failed": 0,
+      "ok": 470,
+      "sessions": 470,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "enkavi2019digitspan/exp1.csv": {
+      "failed": 0,
+      "ok": 472,
+      "sessions": 472,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "enkavi2019gonogo/exp1.csv": {
+      "failed": 0,
+      "ok": 463,
+      "sessions": 463,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "enkavi2019recentprobes/exp1.csv": {
+      "failed": 0,
+      "ok": 471,
+      "sessions": 471,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "feng2021dynamics/exp1.csv": {
+      "failed": 0,
+      "ok": 26,
+      "sessions": 26,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "flesch2018comparing/exp1.csv": {
+      "failed": 0,
+      "ok": 320,
+      "sessions": 320,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "frey2017cct/exp1.csv": {
+      "failed": 0,
+      "ok": 1368,
+      "sessions": 1368,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "frey2017risk/exp1.csv": {
+      "failed": 0,
+      "ok": 1331,
+      "sessions": 1331,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "garcia2023experiential/exp1.csv": {
+      "failed": 0,
+      "ok": 87,
+      "sessions": 87,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "garcia2023experiential/exp2.csv": {
+      "failed": 0,
+      "ok": 87,
+      "sessions": 87,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "garcia2023experiential/exp3.csv": {
+      "failed": 0,
+      "ok": 86,
+      "sessions": 86,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "garcia2023experiential/exp4.csv": {
+      "failed": 0,
+      "ok": 86,
+      "sessions": 86,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "gershman2018deconstructing/exp1.csv": {
+      "failed": 0,
+      "ok": 40,
+      "sessions": 40,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "gershman2018deconstructing/exp2.csv": {
+      "failed": 0,
+      "ok": 40,
+      "sessions": 40,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "gershman2020reward/exp1.csv": {
+      "failed": 0,
+      "ok": 74,
+      "sessions": 74,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "hilbig2014generalized/exp1.csv": {
+      "failed": 0,
+      "ok": 73,
+      "sessions": 73,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "kool2016when/exp1.csv": {
+      "failed": 0,
+      "ok": 179,
+      "sessions": 179,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "kool2016when/exp2.csv": {
+      "failed": 0,
+      "ok": 188,
+      "sessions": 188,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "kool2017cost/exp1.csv": {
+      "failed": 0,
+      "ok": 93,
+      "sessions": 93,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "kool2017cost/exp2.csv": {
+      "failed": 0,
+      "ok": 88,
+      "sessions": 88,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "krueger2022identifying/exp1.csv": {
+      "failed": 0,
+      "ok": 1755,
+      "sessions": 1755,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "lefebvre2017behavioural/exp1.csv": {
+      "failed": 0,
+      "ok": 44,
+      "sessions": 44,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "lefebvre2017behavioural/exp2.csv": {
+      "failed": 0,
+      "ok": 33,
+      "sessions": 33,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "ludwig2023human/exp0.csv": {
+      "failed": 0,
+      "ok": 59,
+      "sessions": 59,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "ludwig2023human/exp1.csv": {
+      "failed": 0,
+      "ok": 19,
+      "sessions": 19,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "ludwig2023human/exp2.csv": {
+      "failed": 0,
+      "ok": 18,
+      "sessions": 18,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "peterson2021using/exp1.csv": {
+      "failed": 0,
+      "ok": 13735,
+      "sessions": 13735,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "plonsky2018when/exp1.csv": {
+      "failed": 0,
+      "ok": 216,
+      "sessions": 216,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "ruggeri2022globalizability/exp1.csv": {
+      "failed": 0,
+      "ok": 11937,
+      "sessions": 11937,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "sadeghiyeh2020temporal/exp1.csv": {
+      "failed": 0,
+      "ok": 78,
+      "sessions": 78,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "schulz2020finding/exp1.csv": {
+      "failed": 0,
+      "ok": 110,
+      "sessions": 110,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "schulz2020finding/exp2.csv": {
+      "failed": 0,
+      "ok": 72,
+      "sessions": 72,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "schulz2020finding/exp3.csv": {
+      "failed": 0,
+      "ok": 112,
+      "sessions": 112,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "schulz2020finding/exp4.csv": {
+      "failed": 0,
+      "ok": 99,
+      "sessions": 99,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "schulz2020finding/exp5.csv": {
+      "failed": 0,
+      "ok": 141,
+      "sessions": 141,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "somerville2017charting/exp1.csv": {
+      "failed": 0,
+      "ok": 78,
+      "sessions": 78,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "speekenbrink2008learning/exp1.csv": {
+      "failed": 0,
+      "ok": 23,
+      "sessions": 23,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "steingroever2015data/exp1.csv": {
+      "failed": 0,
+      "ok": 410,
+      "sessions": 410,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "steingroever2015data/exp2.csv": {
+      "failed": 0,
+      "ok": 13,
+      "sessions": 13,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "steingroever2015data/exp3.csv": {
+      "failed": 0,
+      "ok": 88,
+      "sessions": 88,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "tomov2020discovery/exp2.csv": {
+      "failed": 0,
+      "ok": 219,
+      "sessions": 219,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "tomov2020discovery/exp4.csv": {
+      "failed": 0,
+      "ok": 67,
+      "sessions": 67,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "tomov2020discovery/exp5.csv": {
+      "failed": 0,
+      "ok": 346,
+      "sessions": 346,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "tomov2020discovery/exp7.csv": {
+      "failed": 0,
+      "ok": 157,
+      "sessions": 157,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "tomov2021multitask/exp1.csv": {
+      "failed": 0,
+      "ok": 196,
+      "sessions": 196,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "tomov2021multitask/exp3.csv": {
+      "failed": 0,
+      "ok": 184,
+      "sessions": 184,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "waltz2020differential/exp1.csv": {
+      "failed": 0,
+      "ok": 36,
+      "sessions": 36,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "wilson2014humans/exp1.csv": {
+      "failed": 0,
+      "ok": 27,
+      "sessions": 27,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "wilson2014humans/exp2.csv": {
+      "failed": 0,
+      "ok": 7,
+      "sessions": 7,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "wilson2014humans/exp3.csv": {
+      "failed": 0,
+      "ok": 68,
+      "sessions": 68,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "wilson2014humans/exp4.csv": {
+      "failed": 0,
+      "ok": 80,
+      "sessions": 80,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "wilson2014humans/exp5.csv": {
+      "failed": 0,
+      "ok": 39,
+      "sessions": 39,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "wu2018generalisation/exp1.csv": {
+      "failed": 0,
+      "ok": 78,
+      "sessions": 78,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "wu2023chunking/exp1.csv": {
+      "failed": 0,
+      "ok": 132,
+      "sessions": 132,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "wu2023chunking/exp2.csv": {
+      "failed": 0,
+      "ok": 106,
+      "sessions": 106,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "wulff2018description/exp1.csv": {
+      "failed": 0,
+      "ok": 1981,
+      "sessions": 1981,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "wulff2018sampling/exp1.csv": {
+      "failed": 0,
+      "ok": 3942,
+      "sessions": 3942,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "xiong2023neural/exp1.csv": {
+      "failed": 0,
+      "ok": 30,
+      "sessions": 30,
+      "skipped": 0,
+      "skipped_setup": 0
+    },
+    "zorowitz2023data/exp1.csv": {
+      "failed": 0,
+      "ok": 139,
+      "sessions": 139,
+      "skipped": 0,
+      "skipped_setup": 0
+    }
+  },
+  "supported_experiments": 64,
+  "task_env_experiments": [
+    "badham2017deficits/exp1.csv",
+    "bahrami2020four/exp.csv",
+    "collsi\u00f6\u00f62023MCPL/exp1.csv",
+    "collsi\u00f6\u00f62023MCPL/exp3.csv",
+    "cox2017information/exp1.csv",
+    "enkavi2019adaptivenback/exp1.csv",
+    "enkavi2019digitspan/exp1.csv",
+    "enkavi2019gonogo/exp1.csv",
+    "enkavi2019recentprobes/exp1.csv",
+    "feng2021dynamics/exp1.csv",
+    "flesch2018comparing/exp1.csv",
+    "frey2017cct/exp1.csv",
+    "frey2017risk/exp1.csv",
+    "garcia2023experiential/exp1.csv",
+    "garcia2023experiential/exp2.csv",
+    "garcia2023experiential/exp3.csv",
+    "garcia2023experiential/exp4.csv",
+    "gershman2018deconstructing/exp1.csv",
+    "gershman2018deconstructing/exp2.csv",
+    "gershman2020reward/exp1.csv",
+    "hilbig2014generalized/exp1.csv",
+    "kool2016when/exp1.csv",
+    "kool2016when/exp2.csv",
+    "kool2017cost/exp1.csv",
+    "kool2017cost/exp2.csv",
+    "krueger2022identifying/exp1.csv",
+    "lefebvre2017behavioural/exp1.csv",
+    "lefebvre2017behavioural/exp2.csv",
+    "ludwig2023human/exp0.csv",
+    "ludwig2023human/exp1.csv",
+    "ludwig2023human/exp2.csv",
+    "peterson2021using/exp1.csv",
+    "plonsky2018when/exp1.csv",
+    "ruggeri2022globalizability/exp1.csv",
+    "sadeghiyeh2020temporal/exp1.csv",
+    "schulz2020finding/exp1.csv",
+    "schulz2020finding/exp2.csv",
+    "schulz2020finding/exp3.csv",
+    "schulz2020finding/exp4.csv",
+    "schulz2020finding/exp5.csv",
+    "somerville2017charting/exp1.csv",
+    "speekenbrink2008learning/exp1.csv",
+    "steingroever2015data/exp1.csv",
+    "steingroever2015data/exp2.csv",
+    "steingroever2015data/exp3.csv",
+    "tomov2020discovery/exp2.csv",
+    "tomov2020discovery/exp4.csv",
+    "tomov2020discovery/exp5.csv",
+    "tomov2020discovery/exp7.csv",
+    "tomov2021multitask/exp1.csv",
+    "tomov2021multitask/exp3.csv",
+    "waltz2020differential/exp1.csv",
+    "wilson2014humans/exp1.csv",
+    "wilson2014humans/exp2.csv",
+    "wilson2014humans/exp3.csv",
+    "wilson2014humans/exp4.csv",
+    "wilson2014humans/exp5.csv",
+    "wu2018generalisation/exp1.csv",
+    "wu2023chunking/exp1.csv",
+    "wu2023chunking/exp2.csv",
+    "wulff2018description/exp1.csv",
+    "wulff2018sampling/exp1.csv",
+    "xiong2023neural/exp1.csv",
+    "zorowitz2023data/exp1.csv"
+  ]
+}

@@ -1,0 +1,14 @@
+experiment_id: gershman2018deconstructing/exp2.csv
+family: competitive_bandit
+implementation_status: implemented_generative_and_recorded
+fidelity_level: generative_exact
+reward_mode: outcome
+phases: [instruction, main_task]
+action_parser: psych101_press
+payoff_rule:
+  type: points_only
+  monetary_payoff_modeled: false
+sources:
+  psych101: true
+notes: >
+  Two volatile arms per game with one stochastically better arm; recorded path pools per-game outcomes.
