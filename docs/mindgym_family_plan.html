@@ -309,6 +309,12 @@
       border-color: #f3d38b;
     }
 
+    .pill.gray {
+      background: #eef2f6;
+      color: #475467;
+      border-color: #d0d5dd;
+    }
+
     .pill.red {
       background: var(--red-bg);
       color: #9b1c12;
@@ -347,10 +353,10 @@
       border-color: #bde4da;
     }
 
-    .research-tag.yellow {
-      background: var(--amber-bg);
-      color: #875a0d;
-      border-color: #f3d38b;
+    .research-tag.gray {
+      background: #eef2f6;
+      color: #475467;
+      border-color: #d0d5dd;
     }
 
     .research-tag.blue {
@@ -1122,7 +1128,7 @@
               <p>
                 Yifei 页面有两层：8 个 <strong>domain family</strong> 和 38 个已实现的 <strong>task/env</strong>。
                 本表先按 8 个 family 分组；每个已实现任务直接用 Yifei 的 task/env 名作为 <strong>Task type</strong>，这样可以直接对应代码入口、runner 和 logs。
-                Yifei 尚未覆盖的研究任务用具体任务内容命名，并标为 <span class="pill amber">not implemented</span>。
+                Yifei 尚未覆盖的研究任务用具体任务内容命名，并标为 <span class="pill gray">not included in Yifei's task/env</span>。
               </p>
               <p>
                 每个 task type 下面再拆 <strong>subtype / engine</strong>。
@@ -1133,7 +1139,7 @@
               <p>
                 颜色是 <strong>subtype 层级</strong> 的覆盖状态，不是 task type 整体状态：
                 <span class="research-tag green">绿色</span> 表示 Cecily/Psych-101 已有可作为 generative/exact env 起点的底座；
-                <span class="research-tag yellow">黄色</span> 表示这个 research 在 Psych-101 里，但缺材料、condition 信息或 latent dynamics，暂时不能承诺 human-feedback-exact；
+                <span class="research-tag gray">灰色</span> 表示这个 research 在 Psych-101 里，但缺材料、condition 信息或 latent dynamics，暂时不能承诺 human-feedback-exact；
                 <span class="research-tag blue">蓝色</span> 表示它属于 Psych-201 扩展集、不在 Psych-101，Cecily 未覆盖，需要先确认材料和机制能否复原。
               </p>
               <p>
@@ -1215,11 +1221,11 @@
                 <td data-label="Task type"><code>intertemporal</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>sooner/later choice -> discounting / deferral metric。</div>
-                  <div class="subtype-block"><p class="subtype-title">delay discounting / intertemporal choice</p><p class="subtype-meta"><strong>继承 / 复用：</strong>binary choice parser and discount-rate/AUC scoring。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>amount, delay, gain/loss framing, country/context metadata。</p><div class="tag-list"><span class="research-tag yellow">ruggeri2022globalizability</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">delay discounting / intertemporal choice</p><p class="subtype-meta"><strong>继承 / 复用：</strong>binary choice parser and discount-rate/AUC scoring。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>amount, delay, gain/loss framing, country/context metadata。</p><div class="tag-list"><span class="research-tag gray">ruggeri2022globalizability</span></div></div>
                 </div></td>
               </tr>
               <tr>
-                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>context effects / multi-attribute choice</strong></td>
+                <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>context effects / multi-attribute choice</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>multi-option attribute table -> choice -> context-effect metric。</div>
                   <div class="subtype-block"><p class="subtype-title">attraction / compromise / similarity choice sets</p><p class="subtype-meta"><strong>继承 / 复用：</strong>multi-option choice parser、attribute table renderer、choice-share metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>decoy construction, attribute normalization, context condition, dominance relation。</p><div class="tag-list"><span class="research-tag blue">spektor2019contexteffects</span></div></div>
@@ -1232,7 +1238,7 @@
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>arm choice -> stochastic reward/feedback -> trial-level learning metrics。</div>
                   <div class="subtype-block"><p class="subtype-title">stationary / ordinary k-arm bandit</p><p class="subtype-meta"><strong>继承 / 复用：</strong>arm/action/reward loop、Q-learning/regret/switch metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>arm count、reward distribution、trial schedule、instruction framing。</p><div class="tag-list"><span class="research-tag green">bahrami2020four</span><span class="research-tag green">feng2021dynamics</span><span class="research-tag green">gershman2018deconstructing</span><span class="research-tag green">sadeghiyeh2020temporal</span><span class="research-tag green">somerville2017charting</span><span class="research-tag green">waltz2020differential</span><span class="research-tag blue">anvari2024armed_bandit</span><span class="research-tag blue">anllo2024weird</span><span class="research-tag blue">hartley2024twoarmedbandit</span><span class="research-tag blue">fan2022trait</span><span class="research-tag blue">rutledge2023happiness</span></div></div>
-                  <div class="subtype-block"><p class="subtype-title">non-stationary / instructed horizon bandit</p><p class="subtype-meta"><strong>继承 / 复用：</strong>bandit loop plus drift / horizon / instructed-exposure controls。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>reward-probability drift, instructed trials, horizon 1/6, safety or exploration constraints。</p><div class="tag-list"><span class="research-tag yellow">speekenbrink2008learning</span><span class="research-tag blue">dubois2022value</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">non-stationary / instructed horizon bandit</p><p class="subtype-meta"><strong>继承 / 复用：</strong>bandit loop plus drift / horizon / instructed-exposure controls。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>reward-probability drift, instructed trials, horizon 1/6, safety or exploration constraints。</p><div class="tag-list"><span class="research-tag gray">speekenbrink2008learning</span><span class="research-tag blue">dubois2022value</span></div></div>
                 </div></td>
               </tr>
               <tr>
@@ -1308,28 +1314,28 @@
                 </div></td>
               </tr>
               <tr>
-                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>planning / navigation</strong></td>
+                <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>planning / navigation</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>graph/map state -> navigation action -> goal/reward/planning metric。</div>
                   <div class="subtype-block"><p class="subtype-title">castle / graph navigation planning</p><p class="subtype-meta"><strong>继承 / 复用：</strong>graph transition engine, goal/reward state, planning metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>map, goal visibility, reward schedule, block structure, discovery condition。</p><div class="tag-list"><span class="research-tag green">tomov2020discovery</span></div></div>
                 </div></td>
               </tr>
               <tr>
-                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>multi-task RL / transfer</strong></td>
+                <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>multi-task RL / transfer</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>task blocks -> repeated action/reward learning -> transfer metric。</div>
                   <div class="subtype-block"><p class="subtype-title">multi-task graph transfer</p><p class="subtype-meta"><strong>继承 / 复用：</strong>task-switch runner, reward/action parser, transfer metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>latent task graph, transfer relation, task order, block schedule。</p><div class="tag-list"><span class="research-tag green">tomov2021multitask</span></div></div>
                 </div></td>
               </tr>
               <tr>
-                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>information sampling</strong></td>
+                <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>information sampling</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>buy/reveal information or answer -> cost/value bookkeeping -> sampling efficiency metric。</div>
                   <div class="subtype-block"><p class="subtype-title">buy information vs answer</p><p class="subtype-meta"><strong>继承 / 复用：</strong>buy-info/answer action parser、cost-sensitive sampling metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>information cost/value, reveal rule, answer scoring, memory subtask linkage。</p><div class="tag-list"><span class="research-tag green">cox2017information</span></div></div>
                 </div></td>
               </tr>
               <tr>
-                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>optional stopping / secretary search</strong></td>
+                <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>optional stopping / secretary search</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>sequential reveal/search -> stop or recall -> payoff and optimal-threshold metric。</div>
                   <div class="subtype-block"><p class="subtype-title">optional stopping with recall</p><p class="subtype-meta"><strong>继承 / 复用：</strong>sequential search parser and stopping-position metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>recall availability, opening cost, sequence length, reward distribution。</p><div class="tag-list"><span class="research-tag blue">optional_stopping_with_recall</span></div></div>
@@ -1358,7 +1364,7 @@
                 </div></td>
               </tr>
               <tr>
-                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>algorithmic advice / augmented decision</strong></td>
+                <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>algorithmic advice / augmented decision</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>base decision problem + optional advice/augmentation -> reliance and accuracy metric。</div>
                   <div class="subtype-block"><p class="subtype-title">algorithmic augmentation with arithmetic decisions</p><p class="subtype-meta"><strong>继承 / 复用：</strong>binary decision parser and advice-condition logging。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>subtraction/divisibility item generator, advice quality, time feedback, reliance scoring。</p><div class="tag-list"><span class="research-tag blue">xu2023augmenting</span></div></div>
@@ -1401,23 +1407,23 @@
                 </div></td>
               </tr>
               <tr>
-                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>recent-probe / intention / associative memory</strong></td>
+                <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>recent-probe / intention / associative memory</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>study phase -> delay/probe/test phase -> recall/recognition/source scoring。</div>
                   <div class="subtype-block"><p class="subtype-title">recent-probe working memory</p><p class="subtype-meta"><strong>继承 / 复用：</strong>study/test phase wrapper、probe presentation、accuracy/RT metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>probe lag, foil construction, response window, adaptive or fixed schedule。</p><div class="tag-list"><span class="research-tag green">enkavi2019recentprobes</span></div></div>
-                  <div class="subtype-block"><p class="subtype-title">intention / source-memory gap</p><p class="subtype-meta"><strong>继承 / 复用：</strong>memory phase wrapper and response parsing。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>missing source/intention materials and latent study/test mapping before exact env。</p><div class="tag-list"><span class="research-tag yellow">popov2023intent</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">intention / source-memory gap</p><p class="subtype-meta"><strong>继承 / 复用：</strong>memory phase wrapper and response parsing。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>missing source/intention materials and latent study/test mapping before exact env。</p><div class="tag-list"><span class="research-tag gray">popov2023intent</span></div></div>
                   <div class="subtype-block"><p class="subtype-title">associative / episodic / hindsight transfer memory</p><p class="subtype-meta"><strong>继承 / 复用：</strong>study-test scheduler and recall/recognition scoring shell。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>image/word materials, association graph, lures, transfer labels, free-recall scoring。</p><div class="tag-list"><span class="research-tag blue">gross2023hindsightTransferLearning</span><span class="research-tag blue">guenther2024associations</span><span class="research-tag blue">haridi2024memory_1</span><span class="research-tag blue">haridi2024memory_2</span><span class="research-tag blue">haridi2024memory_3</span><span class="research-tag blue">rausch_unpublished_replication</span></div></div>
                 </div></td>
               </tr>
               <tr>
-                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>memory / chunking</strong></td>
+                <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>memory / chunking</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>sequence presentation -> ordered response -> chunk-level scoring。</div>
                   <div class="subtype-block"><p class="subtype-title">sequence chunking / hierarchical chunks</p><p class="subtype-meta"><strong>继承 / 复用：</strong>sequence presentation, response capture, chunk-level scoring。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>chunk hierarchy, sequence grammar, response window, scoring decomposition。</p><div class="tag-list"><span class="research-tag green">wu2023chunking</span></div></div>
                 </div></td>
               </tr>
               <tr>
-                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>go / no-go response inhibition</strong></td>
+                <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>go / no-go response inhibition</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>stimulus -> respond/withhold -> commission/omission metrics。</div>
                   <div class="subtype-block"><p class="subtype-title">go / no-go</p><p class="subtype-meta"><strong>继承 / 复用：</strong>go/no-go state machine、commission/omission metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>stimulus-go mapping, timing, feedback, adaptive or fixed schedule。</p><div class="tag-list"><span class="research-tag green">enkavi2019gonogo</span><span class="research-tag blue">moutoussis2018pavlovian</span></div></div>
@@ -1460,7 +1466,7 @@
                 </div></td>
               </tr>
               <tr>
-                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>strategic / security / matrix games</strong></td>
+                <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>strategic / security / matrix games</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>strategic choice or monitoring decision -> payoff/risk feedback -> strategic metric。</div>
                   <div class="subtype-block"><p class="subtype-title">security / investment / one-shot matrix variants</p><p class="subtype-meta"><strong>继承 / 复用：</strong>payoff-matrix or strategic-choice runner。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>attack/defer monitoring risk, investment race payoff, one-shot matrix-game payoff structure。</p><div class="tag-list"><span class="research-tag blue">aggarwal2023</span><span class="research-tag blue">hunter2021increased</span><span class="research-tag blue">zhu2024games</span></div></div>
@@ -1475,21 +1481,21 @@
                 </div></td>
               </tr>
               <tr>
-                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>comprehension / substitution judgments</strong></td>
+                <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>comprehension / substitution judgments</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>text material -> forced-choice or judgment response -> semantic target scoring。</div>
                   <div class="subtype-block"><p class="subtype-title">comprehension / substitution</p><p class="subtype-meta"><strong>继承 / 复用：</strong>text material loader、forced-choice parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>sentence/item bank, substitution candidates, semantic correctness target。</p><div class="tag-list"><span class="research-tag blue">guenther2024comprehension</span><span class="research-tag blue">guenther2024substitutions</span></div></div>
                 </div></td>
               </tr>
               <tr>
-                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>reference-game reasoning / production</strong></td>
+                <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>reference-game reasoning / production</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>speaker/listener context -> message or referent choice -> pragmatic/reference success metric。</div>
                   <div class="subtype-block"><p class="subtype-title">reference-game reasoning / production</p><p class="subtype-meta"><strong>继承 / 复用：</strong>reference-game vignette runner and RSA-style listener/speaker scoring。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>speaker vs listener role, display composition, target object, message-option set。</p><div class="tag-list"><span class="research-tag blue">frankedegen2016reasoning-exp1</span><span class="research-tag blue">frankedegen2016reasoning-exp2</span><span class="research-tag blue">franke2024bayesian</span></div></div>
                 </div></td>
               </tr>
               <tr>
-                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>lexical / relational / grammaticality / association judgments</strong></td>
+                <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>lexical / relational / grammaticality / association judgments</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>lexical/text item -> judgment/free response -> label or semantic scoring。</div>
                   <div class="subtype-block"><p class="subtype-title">lexical and linguistic judgments</p><p class="subtype-meta"><strong>继承 / 复用：</strong>text material loader and lexical/free-response parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>lexical-decision target, sensibility/relational labels, grammaticality key, free-association scoring。</p><div class="tag-list"><span class="research-tag blue">guenther2020LDT</span><span class="research-tag blue">guenther2020TS</span><span class="research-tag blue">guenther2022Relational</span><span class="research-tag blue">guenther2023Grammaticality</span><span class="research-tag blue">guenther2024associations_individual</span><span class="research-tag blue">sun2025rat</span></div></div>
@@ -1500,7 +1506,7 @@
                 <td data-label="Task type"><code>metacognition</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>primary judgment/choice + confidence/rating -> calibration/discrimination metrics。</div>
-                  <div class="subtype-block"><p class="subtype-title">knowledge calibration / Dunning-Kruger</p><p class="subtype-meta"><strong>继承 / 复用：</strong>question-answer-confidence parser、calibration metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>question bank, ground truth, confidence scale, feedback policy。</p><div class="tag-list"><span class="research-tag yellow">jansen2021dunningkruger</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">knowledge calibration / Dunning-Kruger</p><p class="subtype-meta"><strong>继承 / 复用：</strong>question-answer-confidence parser、calibration metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>question bank, ground truth, confidence scale, feedback policy。</p><div class="tag-list"><span class="research-tag gray">jansen2021dunningkruger</span></div></div>
                   <div class="subtype-block"><p class="subtype-title">choice + confidence / latent belief tasks</p><p class="subtype-meta"><strong>继承 / 复用：</strong>choice runner plus confidence/belief report parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>belief latent state, confidence scale, sampling paradigm, calibration metric。</p><div class="tag-list"><span class="research-tag blue">anvari2024sampling_paradigm</span><span class="research-tag blue">baar2021latent</span><span class="research-tag blue">hellmann_unpublished_brightness</span><span class="research-tag blue">schiekiera2025metascience</span></div></div>
                 </div></td>
               </tr>
@@ -1508,7 +1514,7 @@
                 <td data-label="Task type"><code>multi_cue_judgment</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>cue vector -> criterion/category estimate -> cue-use/function-learning metric。</div>
-                  <div class="subtype-block"><p class="subtype-title">MCPL / cue-to-criterion learning</p><p class="subtype-meta"><strong>继承 / 复用：</strong>cue table parser、criterion response、learning/test split。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>cue validity, criterion function, feedback schedule, missing test labels。</p><div class="tag-list"><span class="research-tag yellow">collsiöö2023MCPL</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">MCPL / cue-to-criterion learning</p><p class="subtype-meta"><strong>继承 / 复用：</strong>cue table parser、criterion response、learning/test split。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>cue validity, criterion function, feedback schedule, missing test labels。</p><div class="tag-list"><span class="research-tag gray">collsiöö2023MCPL</span></div></div>
                   <div class="subtype-block"><p class="subtype-title">function estimation / shuffle / yes-no cue judgment</p><p class="subtype-meta"><strong>继承 / 复用：</strong>cue-to-response shell and feedback/test metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>function family, shuffled feedback, omission/yes-no bias scoring。</p><div class="tag-list"><span class="research-tag blue">barnby2022knowing</span><span class="research-tag blue">breslav2022shuffle</span><span class="research-tag blue">cheung2025omissionyesnobias</span></div></div>
                 </div></td>
               </tr>
@@ -1516,7 +1522,7 @@
                 <td data-label="Task type"><code>probability_estimation</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>probabilistic statement/cue -> numeric probability estimate -> calibration/error metric。</div>
-                  <div class="subtype-block"><p class="subtype-title">Bayesian / probabilistic estimation</p><p class="subtype-meta"><strong>继承 / 复用：</strong>continuous/numeric estimate parser and calibration metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>stimulus generation, posterior target, scoring rule。</p><div class="tag-list"><span class="research-tag yellow">zhu2020bayesian</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">Bayesian / probabilistic estimation</p><p class="subtype-meta"><strong>继承 / 复用：</strong>continuous/numeric estimate parser and calibration metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>stimulus generation, posterior target, scoring rule。</p><div class="tag-list"><span class="research-tag gray">zhu2020bayesian</span></div></div>
                   <div class="subtype-block"><p class="subtype-title">likelihood / probability / XOR judgments</p><p class="subtype-meta"><strong>继承 / 复用：</strong>probability judgment parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>premise format, target event, likelihood/rating scale, XOR structure。</p><div class="tag-list"><span class="research-tag blue">Ying2023NIPE</span><span class="research-tag blue">bhatia2024likelihoodratings</span><span class="research-tag blue">tsvilodub-2023xorsome</span></div></div>
                 </div></td>
               </tr>
@@ -1524,12 +1530,12 @@
                 <td data-label="Task type"><code>things_odd_one_out</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>triplet display -> odd-one-out / similarity choice -> similarity-reference scoring。</div>
-                  <div class="subtype-block"><p class="subtype-title">THINGS triplet odd-one-out</p><p class="subtype-meta"><strong>继承 / 复用：</strong>triplet choice parser and similarity-response metric。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>image/material mapping and ground-truth similarity structure。</p><div class="tag-list"><span class="research-tag yellow">hebart2023things</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">THINGS triplet odd-one-out</p><p class="subtype-meta"><strong>继承 / 复用：</strong>triplet choice parser and similarity-response metric。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>image/material mapping and ground-truth similarity structure。</p><div class="tag-list"><span class="research-tag gray">hebart2023things</span></div></div>
                   <div class="subtype-block"><p class="subtype-title">visual semantic / spatial triplets</p><p class="subtype-meta"><strong>继承 / 复用：</strong>triplet/odd-one-out runner。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>visual materials, semantic embedding target, answer key or human-reference scoring。</p><div class="tag-list"><span class="research-tag blue">guenther2023ViSpa</span></div></div>
                 </div></td>
               </tr>
               <tr>
-                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>perceptual / detection</strong></td>
+                <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>perceptual / detection</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>stimulus -> detection/classification response -> accuracy or discrimination metric。</div>
                   <div class="subtype-block"><p class="subtype-title">Navon / perceptual detection</p><p class="subtype-meta"><strong>继承 / 复用：</strong>classification runner、accuracy/RT parsing。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>visual stimuli, congruency/detail feedback, correct label generation。</p><div class="tag-list"><span class="research-tag blue">busch2024_navon</span></div></div>
@@ -1538,11 +1544,11 @@
                 </div></td>
               </tr>
               <tr>
-                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>category learning</strong></td>
+                <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>category learning</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>stimulus -> category response -> feedback/test accuracy。</div>
-                  <div class="subtype-block"><p class="subtype-title">rule-based category learning</p><p class="subtype-meta"><strong>继承 / 复用：</strong>stimulus-feedback loop、category-response parser、accuracy metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>category rule, stimulus generator, block/test schedule。</p><div class="tag-list"><span class="research-tag green">badham2017deficits</span><span class="research-tag yellow">flesch2018comparing</span></div></div>
-                  <div class="subtype-block"><p class="subtype-title">revisiting / category variant gap</p><p class="subtype-meta"><strong>继承 / 复用：</strong>category learning shell。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>exact materials/rules, feedback timing, transfer/test construction。</p><div class="tag-list"><span class="research-tag yellow">levering2020revisiting</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">rule-based category learning</p><p class="subtype-meta"><strong>继承 / 复用：</strong>stimulus-feedback loop、category-response parser、accuracy metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>category rule, stimulus generator, block/test schedule。</p><div class="tag-list"><span class="research-tag green">badham2017deficits</span><span class="research-tag gray">flesch2018comparing</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">revisiting / category variant gap</p><p class="subtype-meta"><strong>继承 / 复用：</strong>category learning shell。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>exact materials/rules, feedback timing, transfer/test construction。</p><div class="tag-list"><span class="research-tag gray">levering2020revisiting</span></div></div>
                 </div></td>
               </tr>
             </tbody>

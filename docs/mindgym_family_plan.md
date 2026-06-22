@@ -79,11 +79,11 @@ Tags: recorded, inferred, unknown
 
 顶层 **Task type** 指心理学任务范式：被试/agent 看见什么、能做什么动作、收到什么 feedback，以及用什么指标和 human transcripts 对齐。 这样分是因为本 study 要比较 baseline LLM、skill agent 和 matched humans 在同一 observation-action-feedback 结构下的行为距离。
 
-Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/env**。 本表先按 8 个 family 分组；每个已实现任务直接用 Yifei 的 task/env 名作为 **Task type**，这样可以直接对应代码入口、runner 和 logs。 Yifei 尚未覆盖的研究任务用具体任务内容命名，并标为 not implemented。
+Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/env**。 本表先按 8 个 family 分组；每个已实现任务直接用 Yifei 的 task/env 名作为 **Task type**，这样可以直接对应代码入口、runner 和 logs。 Yifei 尚未覆盖的研究任务用具体任务内容命名，并标为 not included in Yifei's task/env。
 
 每个 task type 下面再拆 **subtype / engine**。 **Task type 共用底座** 是该类任务共享的最小 runner、action parser、feedback loop 和通用 metric。 **继承 / 复用** 表示可从相近 engine 起步。 **本 subtype 改** 表示必须按具体 paper/condition 重建的部分，例如 reward schedule、stimulus materials、latent transition、scoring rule、group/condition metadata。
 
-颜色是 **subtype 层级** 的覆盖状态，不是 task type 整体状态： 绿色 表示 Cecily/Psych-101 已有可作为 generative/exact env 起点的底座； 黄色 表示这个 research 在 Psych-101 里，但缺材料、condition 信息或 latent dynamics，暂时不能承诺 human-feedback-exact； 蓝色 表示它属于 Psych-201 扩展集、不在 Psych-101，Cecily 未覆盖，需要先确认材料和机制能否复原。
+颜色是 **subtype 层级** 的覆盖状态，不是 task type 整体状态： 绿色 表示 Cecily/Psych-101 已有可作为 generative/exact env 起点的底座； 灰色 表示这个 research 在 Psych-101 里，但缺材料、condition 信息或 latent dynamics，暂时不能承诺 human-feedback-exact； 蓝色 表示它属于 Psych-201 扩展集、不在 Psych-101，Cecily 未覆盖，需要先确认材料和机制能否复原。
 
 **other / uncategorized** 不保留为 task type，因为它不是心理学任务范式。 能判断范式的条目已放到对应 task type；仍需核实的条目放在最接近的 subtype 下并标蓝，表示需要确认材料和机制能否复原。
 
@@ -191,9 +191,9 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**binary choice parser and discount-rate/AUC scoring。
 - **本 subtype 改：**amount, delay, gain/loss framing, country/context metadata。
-- Coverage (101 missing materials): ruggeri2022globalizability
+- Coverage (101 material/condition gap): ruggeri2022globalizability
 
-#### not implemented; **context effects / multi-attribute choice**
+#### not included in Yifei's task/env; **context effects / multi-attribute choice**
 
 **Task type 共用底座：**multi-option attribute table -> choice -> context-effect metric。
 
@@ -226,7 +226,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**bandit loop plus drift / horizon / instructed-exposure controls。
 - **本 subtype 改：**reward-probability drift, instructed trials, horizon 1/6, safety or exploration constraints。
-- Coverage (101 missing materials): speekenbrink2008learning
+- Coverage (101 material/condition gap): speekenbrink2008learning
 - Coverage (not in 101 / confirm): dubois2022value
 
 #### `counterfactual_bandit`
@@ -341,7 +341,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **本 subtype 改：**horizon length, information asymmetry, payoff setup, block schedule。
 - Coverage (Cecily done): wilson2014humans
 
-#### not implemented; **planning / navigation**
+#### not included in Yifei's task/env; **planning / navigation**
 
 **Task type 共用底座：**graph/map state -> navigation action -> goal/reward/planning metric。
 
@@ -351,7 +351,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **本 subtype 改：**map, goal visibility, reward schedule, block structure, discovery condition。
 - Coverage (Cecily done): tomov2020discovery
 
-#### not implemented; **multi-task RL / transfer**
+#### not included in Yifei's task/env; **multi-task RL / transfer**
 
 **Task type 共用底座：**task blocks -> repeated action/reward learning -> transfer metric。
 
@@ -361,7 +361,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **本 subtype 改：**latent task graph, transfer relation, task order, block schedule。
 - Coverage (Cecily done): tomov2021multitask
 
-#### not implemented; **information sampling**
+#### not included in Yifei's task/env; **information sampling**
 
 **Task type 共用底座：**buy/reveal information or answer -> cost/value bookkeeping -> sampling efficiency metric。
 
@@ -371,7 +371,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **本 subtype 改：**information cost/value, reveal rule, answer scoring, memory subtask linkage。
 - Coverage (Cecily done): cox2017information
 
-#### not implemented; **optional stopping / secretary search**
+#### not included in Yifei's task/env; **optional stopping / secretary search**
 
 **Task type 共用底座：**sequential reveal/search -> stop or recall -> payoff and optimal-threshold metric。
 
@@ -413,7 +413,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **本 subtype 改：**graph structure, outcome generator, intervention costs, scoring rule。
 - Coverage (not in 101 / confirm): cohen2020causal, witte2024interventionStudy, bramley2017
 
-#### not implemented; **algorithmic advice / augmented decision**
+#### not included in Yifei's task/env; **algorithmic advice / augmented decision**
 
 **Task type 共用底座：**base decision problem + optional advice/augmentation -> reliance and accuracy metric。
 
@@ -475,7 +475,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **本 subtype 改：**color-word materials, congruent/incongruent mapping, timing/RT policy, interference metric。
 - Coverage (not in 101 / confirm): busch2024_stroop
 
-#### not implemented; **recent-probe / intention / associative memory**
+#### not included in Yifei's task/env; **recent-probe / intention / associative memory**
 
 **Task type 共用底座：**study phase -> delay/probe/test phase -> recall/recognition/source scoring。
 
@@ -489,7 +489,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**memory phase wrapper and response parsing。
 - **本 subtype 改：**missing source/intention materials and latent study/test mapping before exact env。
-- Coverage (101 missing materials): popov2023intent
+- Coverage (101 material/condition gap): popov2023intent
 
 ##### associative / episodic / hindsight transfer memory
 
@@ -497,7 +497,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **本 subtype 改：**image/word materials, association graph, lures, transfer labels, free-recall scoring。
 - Coverage (not in 101 / confirm): gross2023hindsightTransferLearning, guenther2024associations, haridi2024memory_1, haridi2024memory_2, haridi2024memory_3, rausch_unpublished_replication
 
-#### not implemented; **memory / chunking**
+#### not included in Yifei's task/env; **memory / chunking**
 
 **Task type 共用底座：**sequence presentation -> ordered response -> chunk-level scoring。
 
@@ -507,7 +507,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **本 subtype 改：**chunk hierarchy, sequence grammar, response window, scoring decomposition。
 - Coverage (Cecily done): wu2023chunking
 
-#### not implemented; **go / no-go response inhibition**
+#### not included in Yifei's task/env; **go / no-go response inhibition**
 
 **Task type 共用底座：**stimulus -> respond/withhold -> commission/omission metrics。
 
@@ -570,7 +570,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **本 subtype 改：**competence/popularity grid, person materials, training pairs, test-distance scoring。
 - Coverage (not in 101 / confirm): park2021socialhierarchy
 
-#### not implemented; **strategic / security / matrix games**
+#### not included in Yifei's task/env; **strategic / security / matrix games**
 
 **Task type 共用底座：**strategic choice or monitoring decision -> payoff/risk feedback -> strategic metric。
 
@@ -592,7 +592,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **本 subtype 改：**context construction, literal/pragmatic target, speaker/listener role, answer key。
 - Coverage (not in 101 / confirm): hu2023lm-pragmatics, tesslerfranke_2018_not_unreasonable, vantiel2020-probabilistic_pragmatics, vantiel2020probabilistic_pragmatics, vantiel2021probabilisticpragmatics, vantiel2022meaninguse
 
-#### not implemented; **comprehension / substitution judgments**
+#### not included in Yifei's task/env; **comprehension / substitution judgments**
 
 **Task type 共用底座：**text material -> forced-choice or judgment response -> semantic target scoring。
 
@@ -602,7 +602,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **本 subtype 改：**sentence/item bank, substitution candidates, semantic correctness target。
 - Coverage (not in 101 / confirm): guenther2024comprehension, guenther2024substitutions
 
-#### not implemented; **reference-game reasoning / production**
+#### not included in Yifei's task/env; **reference-game reasoning / production**
 
 **Task type 共用底座：**speaker/listener context -> message or referent choice -> pragmatic/reference success metric。
 
@@ -612,7 +612,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **本 subtype 改：**speaker vs listener role, display composition, target object, message-option set。
 - Coverage (not in 101 / confirm): frankedegen2016reasoning-exp1, frankedegen2016reasoning-exp2, franke2024bayesian
 
-#### not implemented; **lexical / relational / grammaticality / association judgments**
+#### not included in Yifei's task/env; **lexical / relational / grammaticality / association judgments**
 
 **Task type 共用底座：**lexical/text item -> judgment/free response -> label or semantic scoring。
 
@@ -632,7 +632,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**question-answer-confidence parser、calibration metrics。
 - **本 subtype 改：**question bank, ground truth, confidence scale, feedback policy。
-- Coverage (101 missing materials): jansen2021dunningkruger
+- Coverage (101 material/condition gap): jansen2021dunningkruger
 
 ##### choice + confidence / latent belief tasks
 
@@ -648,7 +648,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**cue table parser、criterion response、learning/test split。
 - **本 subtype 改：**cue validity, criterion function, feedback schedule, missing test labels。
-- Coverage (101 missing materials): collsiöö2023MCPL
+- Coverage (101 material/condition gap): collsiöö2023MCPL
 
 ##### function estimation / shuffle / yes-no cue judgment
 
@@ -664,7 +664,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**continuous/numeric estimate parser and calibration metrics。
 - **本 subtype 改：**stimulus generation, posterior target, scoring rule。
-- Coverage (101 missing materials): zhu2020bayesian
+- Coverage (101 material/condition gap): zhu2020bayesian
 
 ##### likelihood / probability / XOR judgments
 
@@ -680,7 +680,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**triplet choice parser and similarity-response metric。
 - **本 subtype 改：**image/material mapping and ground-truth similarity structure。
-- Coverage (101 missing materials): hebart2023things
+- Coverage (101 material/condition gap): hebart2023things
 
 ##### visual semantic / spatial triplets
 
@@ -688,7 +688,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **本 subtype 改：**visual materials, semantic embedding target, answer key or human-reference scoring。
 - Coverage (not in 101 / confirm): guenther2023ViSpa
 
-#### not implemented; **perceptual / detection**
+#### not included in Yifei's task/env; **perceptual / detection**
 
 **Task type 共用底座：**stimulus -> detection/classification response -> accuracy or discrimination metric。
 
@@ -710,7 +710,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **本 subtype 改：**email/web materials, ground-truth labels, feedback wording, risk metric。
 - Coverage (not in 101 / confirm): singh2019phishing
 
-#### not implemented; **category learning**
+#### not included in Yifei's task/env; **category learning**
 
 **Task type 共用底座：**stimulus -> category response -> feedback/test accuracy。
 
@@ -719,13 +719,13 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **继承 / 复用：**stimulus-feedback loop、category-response parser、accuracy metrics。
 - **本 subtype 改：**category rule, stimulus generator, block/test schedule。
 - Coverage (Cecily done): badham2017deficits
-- Coverage (101 missing materials): flesch2018comparing
+- Coverage (101 material/condition gap): flesch2018comparing
 
 ##### revisiting / category variant gap
 
 - **继承 / 复用：**category learning shell。
 - **本 subtype 改：**exact materials/rules, feedback timing, transfer/test construction。
-- Coverage (101 missing materials): levering2020revisiting
+- Coverage (101 material/condition gap): levering2020revisiting
 
 ## Cecily / Yifei 同步怎么改
 
