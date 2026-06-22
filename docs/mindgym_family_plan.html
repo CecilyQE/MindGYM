@@ -1,0 +1,2139 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MindGYM Task Type Integration Plan</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1f2933;
+      --muted: #5b6774;
+      --line: #d7dde5;
+      --paper: #f6f8fb;
+      --panel: #ffffff;
+      --blue: #2563eb;
+      --green: #0f8b6f;
+      --amber: #b7791f;
+      --red: #b42318;
+      --violet: #6d5bd0;
+      --teal-bg: #e8f6f2;
+      --blue-bg: #eaf1ff;
+      --amber-bg: #fff5db;
+      --red-bg: #fff0ee;
+      --violet-bg: #f0edff;
+      --shadow: 0 12px 30px rgba(20, 31, 46, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .shell {
+      min-height: 100vh;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 12px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 220px;
+      font-weight: 760;
+    }
+
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 7px;
+      background: #1f2933;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      padding: 7px 9px;
+      border-radius: 6px;
+    }
+
+    .nav-links a:hover {
+      background: #eef2f6;
+      color: var(--ink);
+    }
+
+    .hero {
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 44px 22px 28px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+      gap: 30px;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: 40px;
+      line-height: 1.08;
+      letter-spacing: 0;
+      max-width: 780px;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 780px;
+    }
+
+    .summary-strip {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 780px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      background: #fbfcfe;
+      min-height: 92px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 22px;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .diagram {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfe;
+      box-shadow: var(--shadow);
+      padding: 12px;
+      min-height: 320px;
+    }
+
+    .diagram svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 22px 56px;
+    }
+
+    section {
+      margin: 0 0 28px;
+      scroll-margin-top: 78px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 12px;
+    }
+
+    .section-head > div {
+      width: 100%;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .section-note {
+      margin: 4px 0 0;
+      color: var(--muted);
+      max-width: none;
+    }
+
+    .section-note p {
+      margin: 0 0 8px;
+    }
+
+    .section-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    .band {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .band-body {
+      padding: 18px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .item {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .item h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    .item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      border-radius: 999px;
+      padding: 3px 9px;
+      font-size: 12px;
+      border: 1px solid var(--line);
+      background: #f8fafc;
+      color: #344054;
+      white-space: nowrap;
+    }
+
+    .pill.blue {
+      background: var(--blue-bg);
+      color: #174ea6;
+      border-color: #c8d8ff;
+    }
+
+    .pill.green {
+      background: var(--teal-bg);
+      color: #08705a;
+      border-color: #bde4da;
+    }
+
+    .pill.amber {
+      background: var(--amber-bg);
+      color: #875a0d;
+      border-color: #f3d38b;
+    }
+
+    .pill.red {
+      background: var(--red-bg);
+      color: #9b1c12;
+      border-color: #f4c4bd;
+    }
+
+    .pill.violet {
+      background: var(--violet-bg);
+      color: #5142a3;
+      border-color: #d6ceff;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .research-tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 12px;
+      border: 1px solid var(--line);
+      background: #f8fafc;
+      color: #344054;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+
+    .research-tag.green {
+      background: var(--teal-bg);
+      color: #08705a;
+      border-color: #bde4da;
+    }
+
+    .research-tag.yellow {
+      background: var(--amber-bg);
+      color: #875a0d;
+      border-color: #f3d38b;
+    }
+
+    .research-tag.blue {
+      background: var(--blue-bg);
+      color: #174ea6;
+      border-color: #c8d8ff;
+    }
+
+    .subtype-stack {
+      display: grid;
+      gap: 10px;
+    }
+
+    .subtype-block {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      background: #fbfcfe;
+    }
+
+    .subtype-title {
+      margin: 0 0 6px;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .subtype-meta {
+      margin: 0 0 7px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .type-base-block {
+      border: 1px solid #c8d8ff;
+      border-radius: 8px;
+      padding: 10px;
+      background: var(--blue-bg);
+      font-size: 12px;
+      color: #174ea6;
+    }
+
+    .type-base-block strong {
+      color: #123f8c;
+    }
+
+    .type-base-block em {
+      display: block;
+      margin-top: 4px;
+      color: #3f5f9c;
+      font-style: normal;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .taxonomy-table th:nth-child(1),
+    .taxonomy-table td:nth-child(1) {
+      width: 24%;
+    }
+
+    .taxonomy-table th:nth-child(2),
+    .taxonomy-table td:nth-child(2) {
+      width: 76%;
+    }
+
+    .taxonomy-table tr.yifei-family-row td {
+      width: auto;
+      background: #1f2933;
+      color: #ffffff;
+      font-weight: 760;
+      font-size: 14px;
+      padding: 0;
+    }
+
+    .taxonomy-table tr.yifei-family-row span {
+      color: rgba(255, 255, 255, 0.78);
+      font-weight: 500;
+      margin-left: 6px;
+    }
+
+    .family-toggle {
+      width: 100%;
+      min-height: 42px;
+      border: 0;
+      border-radius: 0;
+      padding: 9px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .family-toggle:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .family-toggle:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: -3px;
+    }
+
+    .family-toggle-label {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .family-toggle-icon {
+      flex: 0 0 auto;
+      font-size: 14px;
+      transition: transform 0.16s ease;
+    }
+
+    .yifei-family-row.is-collapsed .family-toggle-icon {
+      transform: rotate(-90deg);
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f7f9fc;
+      color: #344054;
+      font-size: 13px;
+      font-weight: 760;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+      background: #eef2f6;
+      padding: 1px 5px;
+      border-radius: 5px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .steps {
+      counter-reset: step;
+      display: grid;
+      gap: 10px;
+    }
+
+    .step {
+      counter-increment: step;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 8px;
+      padding: 14px 14px 14px 52px;
+      position: relative;
+      min-height: 74px;
+    }
+
+    .step::before {
+      content: counter(step);
+      position: absolute;
+      left: 14px;
+      top: 14px;
+      width: 26px;
+      height: 26px;
+      border-radius: 7px;
+      display: grid;
+      place-items: center;
+      background: #1f2933;
+      color: #fff;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .step h3 {
+      margin: 0 0 5px;
+      font-size: 15px;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .priority-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .priority {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 13px;
+      background: #fff;
+    }
+
+    .rank {
+      width: 84px;
+      text-align: center;
+      border-radius: 7px;
+      padding: 6px 8px;
+      background: var(--blue-bg);
+      color: #174ea6;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .priority:nth-child(2) .rank {
+      background: var(--teal-bg);
+      color: #08705a;
+    }
+
+    .priority:nth-child(3) .rank {
+      background: var(--amber-bg);
+      color: #875a0d;
+    }
+
+    .priority h3 {
+      margin: 0 0 5px;
+      font-size: 15px;
+    }
+
+    .priority p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .callout {
+      border-left: 4px solid var(--green);
+      background: #f1fbf8;
+      padding: 14px 16px;
+      color: #22443d;
+    }
+
+    .callout strong {
+      color: #0b5f4d;
+    }
+
+    .file-refs {
+      display: grid;
+      gap: 10px;
+    }
+
+    .file-ref {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 12px 14px;
+      display: grid;
+      gap: 5px;
+    }
+
+    .file-ref strong {
+      font-size: 14px;
+    }
+
+    .file-ref span {
+      color: var(--muted);
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .footer {
+      color: var(--muted);
+      font-size: 13px;
+      padding: 8px 0 0;
+    }
+
+    .compact-list {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+
+    .nowrap {
+      white-space: nowrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .split,
+      .grid.two,
+      .grid.three {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
+        padding-top: 30px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .summary-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        border-bottom: 1px solid var(--line);
+        padding: 8px 0;
+      }
+
+      tbody tr:last-child {
+        border-bottom: 0;
+      }
+
+      td {
+        border: 0;
+        padding: 8px 12px;
+      }
+
+      td::before {
+        content: attr(data-label);
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 760;
+        margin-bottom: 3px;
+      }
+
+      .priority {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 9mm;
+      }
+
+      body {
+        background: #ffffff;
+        font-size: 9px;
+        line-height: 1.32;
+      }
+
+      .topbar,
+      .diagram {
+        display: none;
+      }
+
+      .hero,
+      section {
+        border: 0;
+        break-inside: auto;
+      }
+
+      .hero-inner,
+      main {
+        max-width: none;
+        padding: 0;
+      }
+
+      .hero-inner {
+        display: block;
+      }
+
+      h1 {
+        font-size: 22px;
+        margin-bottom: 6px;
+      }
+
+      h2 {
+        font-size: 15px;
+      }
+
+      h3,
+      .item h3,
+      .step h3,
+      .priority h3,
+      .subtype-title {
+        font-size: 10px;
+      }
+
+      .lead,
+      .section-note,
+      .item p,
+      .step p,
+      .priority p,
+      .subtype-meta,
+      .compact-list,
+      .footer {
+        font-size: 8.5px;
+      }
+
+      .summary-strip {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        margin-top: 8px;
+      }
+
+      .metric,
+      .item,
+      .step,
+      .priority,
+      .type-base-block,
+      .subtype-block,
+      .callout {
+        padding: 6px;
+        min-height: 0;
+      }
+
+      .metric strong {
+        font-size: 13px;
+      }
+
+      .metric span,
+      .pill,
+      .research-tag,
+      .rank {
+        font-size: 7.5px;
+      }
+
+      section {
+        padding: 8px 0 0;
+      }
+
+      .section-head,
+      .band,
+      .band-body,
+      .split,
+      .grid,
+      .priority-list,
+      .steps,
+      .subtype-stack {
+        gap: 5px;
+      }
+
+      .section-head,
+      .band,
+      .band-body {
+        margin: 0;
+        padding: 6px 0;
+        box-shadow: none;
+      }
+
+      table {
+        font-size: 7.5px;
+      }
+
+      th,
+      td {
+        padding: 4px 5px;
+      }
+
+      .research-tag,
+      .pill {
+        padding: 2px 4px;
+      }
+
+      .section-note p {
+        margin-bottom: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <nav class="nav" aria-label="页面导航">
+        <div class="brand">
+          <div class="brand-mark">MG</div>
+          <span>MindGYM Integration Notes</span>
+        </div>
+        <div class="nav-links">
+          <a href="#conclusion">结论</a>
+          <a href="#study">研究目标</a>
+          <a href="#coverage">覆盖</a>
+          <a href="#taxonomy">Task Type</a>
+          <!-- <a href="#gaps">未覆盖</a> -->
+          <a href="#cecily">同步改造</a>
+          <a href="#roadmap">路线</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <h1>MindGYM Task Type Integration Plan</h1>
+          <p class="lead">
+            主要目标是搭建一个和人类被试得到同类 feedback 的 LLM harness：
+            在同一 task、同一 condition、同一 latent dynamics 下跑 baseline LLM 和加 skill 的 agent，
+            看行为是否更接近 human transcripts。Psych-201 catalog 用作入口，但 raw <code>other / uncategorized</code> 先按 reference 描述清洗归类。
+          </p>
+          <div class="summary-strip" aria-label="核心统计">
+            <div class="metric">
+              <strong>76 / 76</strong>
+              <span>Psych-101 experiment_id 在 Psych-201 catalog 中 exact match</span>
+            </div>
+            <div class="metric">
+              <strong>8 + 38</strong>
+              <span>8 个 Yifei family + 38 个 Yifei task/env；额外未实现任务按具体内容命名</span>
+            </div>
+            <div class="metric">
+              <strong>LLM + skill</strong>
+              <span>比较 baseline agent、skill agent 和 human 行为距离</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="diagram" aria-label="集成架构图">
+          <svg viewBox="0 0 760 520" role="img" aria-labelledby="diagram-title diagram-desc">
+            <title id="diagram-title">MindGYM family integration architecture</title>
+            <desc id="diagram-desc">Cecily exact envs and Yifei evaluation harness combine through a family catalog, mechanism engines, and LLM adapters.</desc>
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#52606d"></path>
+              </marker>
+            </defs>
+            <rect x="18" y="18" width="724" height="484" rx="12" fill="#ffffff" stroke="#d7dde5"></rect>
+            <rect x="54" y="64" width="220" height="92" rx="10" fill="#e8f6f2" stroke="#bde4da"></rect>
+            <text x="164" y="98" text-anchor="middle" font-size="20" font-weight="800" fill="#0b5f4d">Cecily</text>
+            <text x="164" y="124" text-anchor="middle" font-size="15" fill="#22443d">真实实验机制</text>
+            <text x="164" y="146" text-anchor="middle" font-size="15" fill="#22443d">paper/source grounded</text>
+
+            <rect x="486" y="64" width="220" height="92" rx="10" fill="#eaf1ff" stroke="#c8d8ff"></rect>
+            <text x="596" y="98" text-anchor="middle" font-size="20" font-weight="800" fill="#174ea6">Yifei</text>
+            <text x="596" y="124" text-anchor="middle" font-size="15" fill="#344054">LLM 评测产品层</text>
+            <text x="596" y="146" text-anchor="middle" font-size="15" fill="#344054">runner / metrics / logs</text>
+
+            <rect x="245" y="210" width="270" height="70" rx="10" fill="#f0edff" stroke="#d6ceff"></rect>
+            <text x="380" y="238" text-anchor="middle" font-size="18" font-weight="800" fill="#5142a3">Psych-201 Task Types</text>
+            <text x="380" y="262" text-anchor="middle" font-size="14" fill="#5b6774">primary_task_type / subtype / tier / fidelity</text>
+
+            <rect x="74" y="340" width="176" height="72" rx="10" fill="#fff5db" stroke="#f3d38b"></rect>
+            <text x="162" y="370" text-anchor="middle" font-size="17" font-weight="800" fill="#875a0d">Subtype Engines</text>
+            <text x="162" y="394" text-anchor="middle" font-size="14" fill="#5b6774">TwoStep / Bandit / BART</text>
+
+            <rect x="292" y="340" width="176" height="72" rx="10" fill="#ffffff" stroke="#d7dde5"></rect>
+            <text x="380" y="370" text-anchor="middle" font-size="17" font-weight="800" fill="#1f2933">Experiment Specs</text>
+            <text x="380" y="394" text-anchor="middle" font-size="14" fill="#5b6774">condition / schedule / metric</text>
+
+            <rect x="510" y="340" width="176" height="72" rx="10" fill="#fff0ee" stroke="#f4c4bd"></rect>
+            <text x="598" y="370" text-anchor="middle" font-size="17" font-weight="800" fill="#9b1c12">LLM Adapter</text>
+            <text x="598" y="394" text-anchor="middle" font-size="14" fill="#5b6774">legal actions / Action:int</text>
+
+            <line x1="274" y1="112" x2="343" y2="210" stroke="#52606d" stroke-width="2" marker-end="url(#arrow)"></line>
+            <line x1="486" y1="112" x2="417" y2="210" stroke="#52606d" stroke-width="2" marker-end="url(#arrow)"></line>
+            <line x1="330" y1="280" x2="194" y2="340" stroke="#52606d" stroke-width="2" marker-end="url(#arrow)"></line>
+            <line x1="380" y1="280" x2="380" y2="340" stroke="#52606d" stroke-width="2" marker-end="url(#arrow)"></line>
+            <line x1="430" y1="280" x2="566" y2="340" stroke="#52606d" stroke-width="2" marker-end="url(#arrow)"></line>
+
+            <text x="380" y="462" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2933">
+              目标：human-feedback-equivalent harness + skill intervention benchmark
+            </text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section id="conclusion">
+        <div class="section-head">
+          <div>
+            <h2>核心结论</h2>
+            <p class="section-note">到目前为止，关于 MindGYM 两个版本和 family 化改造的判断。</p>
+          </div>
+        </div>
+        <div class="band">
+          <div class="band-body grid three">
+            <article class="item">
+              <h3>Cecily 适合作为底层 env</h3>
+              <p>Cecily 的目标更接近真实人类实验模拟：paper/source grounded、transcript audited，并且对 LLM 未在 transcript 中出现的合法动作也应能按 latent dynamics 反馈。</p>
+              <div class="pill-row">
+                <span class="pill green">机制保真</span>
+                <span class="pill green">exact env</span>
+              </div>
+            </article>
+            <article class="item">
+              <h3>Yifei 适合作为测评层</h3>
+              <p>Yifei 的强项是统一动作接口、runner、logs、seed/batch、metric aggregation 和 leaderboard。它更像 paper-inspired benchmark，不是严格复现实验设计。</p>
+              <div class="pill-row">
+                <span class="pill blue">LLM runner</span>
+                <span class="pill blue">工程统一</span>
+              </div>
+            </article>
+            <article class="item">
+              <h3>两层体系最稳</h3>
+              <p>清洗后的 task type 负责 catalog / coverage；mechanism subtype 负责 env engine 复用；experiment spec 负责 paper、condition、group 和 variant 差异。</p>
+              <div class="pill-row">
+                <span class="pill violet">primary_task_type</span>
+                <span class="pill violet">mechanism template</span>
+                <span class="pill amber">per-experiment spec</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="study">
+        <div class="section-head">
+          <div>
+            <h2>研究目标</h2>
+            <p class="section-note">
+              这个 study 的核心不是替代所有人类实验，而是先验证：如果 LLM/agent 得到和人类被试同构的 observation、action space、feedback 和 history，它的行为能否复现人类的 task-level 与 condition-level 行为模式；再测试加 skill 后是否更接近 human transcripts。
+            </p>
+          </div>
+        </div>
+        <div class="band">
+          <div class="band-body grid two">
+            <article class="item">
+              <h3>Harness 要保证什么</h3>
+              <p>同一 paper / condition 下，agent 每一步看到的信息、可选动作、reward/feedback、phase 转换和历史长度，要和人类被试 transcript 对齐。没有这个底座，skill 是否“更像人”无法解释。</p>
+              <div class="pill-row">
+                <span class="pill green">same feedback</span>
+                <span class="pill green">same latent dynamics</span>
+                <span class="pill green">same metrics</span>
+              </div>
+            </article>
+            <article class="item">
+              <h3>Skill 实验怎么问</h3>
+              <p>比较 baseline LLM、LLM + skill、human data 三者在 trial choice、learning curve、condition effect、switch/stay、exploration、confidence calibration 等指标上的距离，而不是只看总分。</p>
+              <div class="pill-row">
+                <span class="pill violet">baseline agent</span>
+                <span class="pill violet">skill agent</span>
+                <span class="pill violet">human distance</span>
+              </div>
+            </article>
+            <article class="item">
+              <h3>Control group 够不够</h3>
+              <p>不一定只能看 control group。原则是 agent 必须和被比较的人类 subset 处在同一个 condition。control group 最干净；experimental groups 也能用，但必须有 condition metadata 或能从 transcript/prompt/feedback schedule 可靠识别。</p>
+              <div class="pill-row">
+                <span class="pill amber">condition-matched</span>
+                <span class="pill amber">not pooled blindly</span>
+              </div>
+            </article>
+            <article class="item">
+              <h3>Transcript 能不能推断 group</h3>
+              <p>能，但要分级：metadata 明确记录 group 最可靠；prompt 文案、block schedule、reward mapping、feedback type 可唯一识别时可 inferred；如果只能从行为反推，就只能标 weak-inferred，不能做 exact condition claim。</p>
+              <div class="pill-row">
+                <span class="pill green">recorded</span>
+                <span class="pill amber">inferred</span>
+                <span class="pill red">unknown</span>
+              </div>
+            </article>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>组件</th>
+                <th>现在缺什么</th>
+                <th>融合后负责什么</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="组件"><strong>Yifei / Psych-201</strong></td>
+                <td data-label="现在缺什么">缺 paper-faithful latent dynamics、condition/group fidelity、transcript-grounded feedback generator；很多任务是 paper-inspired parser/benchmark，能跑但不一定和人类被试经历一致。</td>
+                <td data-label="融合后负责什么">负责大 catalog、batch runner、LLM action interface、logging、baseline aggregation、leaderboard 和 psych201 额外 research 的入口。</td>
+              </tr>
+              <tr>
+                <td data-label="组件"><strong>Cecily / Psych-101</strong></td>
+                <td data-label="现在缺什么">缺大规模 LLM harness、统一 action adapter、skill-agent 比较层、condition/group metadata 标准化；覆盖面也小于 Psych-201。</td>
+                <td data-label="融合后负责什么">负责 exact / generative env、human-feedback-equivalent dynamics、transcript audit、fidelity tier、paper-level VariantSpec。</td>
+              </tr>
+              <tr>
+                <td data-label="组件"><strong>融合层</strong></td>
+                <td data-label="现在缺什么">缺一个明确 contract：哪些 experiment 是 exact human feedback，哪些只是 paradigm_sim；哪些 transcript 有 group，哪些 group 是 inferred。</td>
+                <td data-label="融合后负责什么">建立 <code>VariantSpec</code> + <code>ConditionSpec</code> + <code>LLMEnvAdapter</code> + <code>SkillAgentRunner</code>，让同一个 env 能跑 human replay、baseline LLM、skill agent。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="coverage">
+        <div class="section-head">
+          <div>
+            <h2>覆盖关系</h2>
+            <p class="section-note">本地 catalog 检查得到的关系：Psych-101 可以作为 Psych-201 的严格子集底座。</p>
+          </div>
+        </div>
+        <div class="band">
+          <table>
+            <thead>
+              <tr>
+                <th>对象</th>
+                <th>当前理解</th>
+                <th>融合含义</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="对象"><strong>Cecily / Psych-101</strong></td>
+                <td data-label="当前理解">约 76 个 experiment_id；已有 generative env、tiers、experiment specs 和 transcript-aware 逻辑。</td>
+                <td data-label="融合含义">优先作为 exact / generative env 底座，尤其 Tier A。</td>
+              </tr>
+              <tr>
+                <td data-label="对象"><strong>Yifei / Psych-201</strong></td>
+                <td data-label="当前理解">约 264 个 experiment variants；包含 Psych-101 的 76/76 个 exact experiment_id。</td>
+                <td data-label="融合含义">用来补更大 catalog、runner、baseline parsing、metric aggregation。</td>
+              </tr>
+              <tr>
+                <td data-label="对象"><strong>重合部分</strong></td>
+                <td data-label="当前理解">不是少量 overlap，而是 Psych-101 被 Psych-201 catalog 完整包含。</td>
+                <td data-label="融合含义">先让重合的 76 个 experiment 在 Cecily exact env 上跑通 LLM benchmark。</td>
+              </tr>
+              <tr>
+                <td data-label="对象"><strong>Psych-201 额外部分</strong></td>
+                <td data-label="当前理解">超出 Psych-101 的 variants 不能直接承诺 exact。</td>
+                <td data-label="融合含义">同机制则新增 VariantSpec；规则不同则标 paradigm_sim 或 Tier C。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="taxonomy">
+        <div class="section-head">
+          <div>
+            <h2>Task Type</h2>
+            <div class="section-note">
+              <p>
+                顶层 <strong>Task type</strong> 指心理学任务范式：被试/agent 看见什么、能做什么动作、收到什么 feedback，以及用什么指标和 human transcripts 对齐。
+                这样分是因为本 study 要比较 baseline LLM、skill agent 和 matched humans 在同一 observation-action-feedback 结构下的行为距离。
+              </p>
+              <p>
+                Yifei 页面有两层：8 个 <strong>domain family</strong> 和 38 个已实现的 <strong>task/env</strong>。
+                本表先按 8 个 family 分组；每个已实现任务直接用 Yifei 的 task/env 名作为 <strong>Task type</strong>，这样可以直接对应代码入口、runner 和 logs。
+                Yifei 尚未覆盖的研究任务用具体任务内容命名，并标为 <span class="pill amber">not implemented</span>。
+              </p>
+              <p>
+                每个 task type 下面再拆 <strong>subtype / engine</strong>。
+                <strong>Task type 共用底座</strong> 是该类任务共享的最小 runner、action parser、feedback loop 和通用 metric。
+                <strong>继承 / 复用</strong> 表示可从相近 engine 起步。
+                <strong>本 subtype 改</strong> 表示必须按具体 paper/condition 重建的部分，例如 reward schedule、stimulus materials、latent transition、scoring rule、group/condition metadata。
+              </p>
+              <p>
+                颜色是 <strong>subtype 层级</strong> 的覆盖状态，不是 task type 整体状态：
+                <span class="research-tag green">绿色</span> 表示 Cecily/Psych-101 已有可作为 generative/exact env 起点的底座；
+                <span class="research-tag yellow">黄色</span> 表示这个 research 在 Psych-101 里，但缺材料、condition 信息或 latent dynamics，暂时不能承诺 human-feedback-exact；
+                <span class="research-tag blue">蓝色</span> 表示它属于 Psych-201 扩展集、不在 Psych-101，Cecily 未覆盖，需要先确认材料和机制能否复原。
+              </p>
+              <p>
+                <strong>other / uncategorized</strong> 不保留为 task type，因为它不是心理学任务范式。
+                能判断范式的条目已放到对应 task type；仍需核实的条目放在最接近的 subtype 下并标蓝，表示需要确认材料和机制能否复原。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="band">
+          <table class="taxonomy-table">
+            <thead>
+              <tr>
+                <th>Task type</th>
+                <th>Task type 共用底座 + Subtype / engine 级别复用、改动和覆盖</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="yifei-family-row"><td colspan="2"><strong>Risk & Value-based Decision</strong> <span>(10 groups)</span></td></tr>
+              <tr>
+                <td data-label="Task type"><code>risk_mpl</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>described price-list lottery -> switching choice -> risk-aversion summary。<em>与 risky_choice 共用 lottery parser，但 MPL 重点是 staircase/switching metric。</em></div>
+                  <div class="subtype-block"><p class="subtype-title">multiple price list / lottery battery</p><p class="subtype-meta"><strong>继承 / 复用：</strong>described lottery parser、risk preference summary metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>price list staircase, switching metric, gain/loss framing, payoff conversion。</p><div class="tag-list"><span class="research-tag blue">frey2017mpl</span><span class="research-tag blue">frey2017lotteries</span><span class="research-tag blue">spektor2024lossaversion</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>risky_choice</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>described gamble / lottery display -> option choice -> EV/CPT-style feature extraction。<em>这是静态 described-risk choice 的主 engine。</em></div>
+                  <div class="subtype-block"><p class="subtype-title">static described gamble choice</p><p class="subtype-meta"><strong>继承 / 复用：</strong>two-option gamble renderer、EV/CPT features、choice parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>stimulus set, probability/payoff format, feedback policy, theory-specific metrics。</p><div class="tag-list"><span class="research-tag green">krueger2022identifying</span><span class="research-tag green">wulff2018description</span><span class="research-tag green">xiong2023neural</span><span class="research-tag green">peterson2021using</span><span class="research-tag blue">Thoma_et_al_2025_risky_choice</span><span class="research-tag blue">hussain2024risk</span><span class="research-tag blue">pirrone_unpublished_lottery</span><span class="research-tag blue">russek2024heuristics</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">value-based two-option choice</p><p class="subtype-meta"><strong>继承 / 复用：</strong>two-option choice parser and value-feature extraction。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>food/value stimulus set, reaction-time use, no stochastic outcome unless paper specifies one。</p><div class="tag-list"><span class="research-tag blue">pirrone_unpublished_food</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>skewness_choice</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>described risky stimuli with skewness manipulation -> option choice -> skewness preference metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">skewness / optimized risky stimuli</p><p class="subtype-meta"><strong>继承 / 复用：</strong>static gamble choice and value-feature extraction。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>skewness manipulation, optimized stimulus generation, theory-discriminating contrasts。</p><div class="tag-list"><span class="research-tag blue">olschewski2024skewness</span><span class="research-tag blue">olschewski2025optimal</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>moral_machine</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>moral dilemma vignette -> forced choice -> moral-dimension aggregation。<em>Yifei 放在 Risk family；机制上仍是 moral/social judgment。</em></div>
+                  <div class="subtype-block"><p class="subtype-title">moral machine / sacrificial dilemma</p><p class="subtype-meta"><strong>继承 / 复用：</strong>vignette/choice runner and condition parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>scenario materials, moral dimensions, response labels, scoring interpretation。</p><div class="tag-list"><span class="research-tag blue">awad2018moral</span><span class="research-tag blue">ciranka_vandenbos_2024</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>bart</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>pump/cash action -> explosion or accumulated reward -> risk-taking metrics。</div>
+                  <div class="subtype-block"><p class="subtype-title">classic BART</p><p class="subtype-meta"><strong>继承 / 复用：</strong>pump/cash state machine、explosion/cashout metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>threshold distribution, balloon count, money conversion, instructions。</p><div class="tag-list"><span class="research-tag green">frey2017risk</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">clinical BART variant</p><p class="subtype-meta"><strong>继承 / 复用：</strong>BART pump/cash engine。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>clinical metadata, instruction framing, variant-specific thresholds or outcomes。</p><div class="tag-list"><span class="research-tag blue">pike2023catastrophizing</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>sampling_choice</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>latent lottery -> sample/description exposure -> final risky choice。</div>
+                  <div class="subtype-block"><p class="subtype-title">decisions from experience</p><p class="subtype-meta"><strong>继承 / 复用：</strong>lottery latent state, sample history, final choice parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>sample-then-feedback rule, description/experience condition, stopping/free-sampling rule。</p><div class="tag-list"><span class="research-tag green">garcia2023experiential</span><span class="research-tag green">plonsky2018when</span><span class="research-tag green">wulff2018sampling</span><span class="research-tag blue">frey2017dfe</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>columbia_card</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>sequential card flip / stop -> gain-loss feedback -> risk-taking sensitivity metrics。</div>
+                  <div class="subtype-block"><p class="subtype-title">CCT card-flipping risk task</p><p class="subtype-meta"><strong>继承 / 复用：</strong>sequential risk state machine and early-stop parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>loss-card probability, gain/loss amount, fresh deck generation, money conversion。</p><div class="tag-list"><span class="research-tag green">frey2017cct</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>iowa</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>four-deck draw -> gain/loss feedback -> advantageous deck preference metrics。</div>
+                  <div class="subtype-block"><p class="subtype-title">classic IGT deck schedules</p><p class="subtype-meta"><strong>继承 / 复用：</strong>four-deck draw loop, gain/loss bookkeeping, deck-preference metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>deck payoff schedule, instructions, block metrics, variant-specific deck labels。</p><div class="tag-list"><span class="research-tag green">steingroever2015data</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>intertemporal</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>sooner/later choice -> discounting / deferral metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">delay discounting / intertemporal choice</p><p class="subtype-meta"><strong>继承 / 复用：</strong>binary choice parser and discount-rate/AUC scoring。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>amount, delay, gain/loss framing, country/context metadata。</p><div class="tag-list"><span class="research-tag yellow">ruggeri2022globalizability</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>context effects / multi-attribute choice</strong></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>multi-option attribute table -> choice -> context-effect metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">attraction / compromise / similarity choice sets</p><p class="subtype-meta"><strong>继承 / 复用：</strong>multi-option choice parser、attribute table renderer、choice-share metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>decoy construction, attribute normalization, context condition, dominance relation。</p><div class="tag-list"><span class="research-tag blue">spektor2019contexteffects</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">consumer multi-attribute choice / search or deferral</p><p class="subtype-meta"><strong>继承 / 复用：</strong>attribute-table choice parser and option/search/deferral action vocabulary。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>hotel/price-history materials, search option, buy-now vs defer target, price-change history。</p><div class="tag-list"><span class="research-tag blue">evangelidis2023upscaling</span><span class="research-tag blue">gunadi2021deferral</span></div></div>
+                </div></td>
+              </tr>
+              <tr class="yifei-family-row"><td colspan="2"><strong>Reinforcement Learning</strong> <span>(7 groups)</span></td></tr>
+              <tr>
+                <td data-label="Task type"><code>k_armed</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>arm choice -> stochastic reward/feedback -> trial-level learning metrics。</div>
+                  <div class="subtype-block"><p class="subtype-title">stationary / ordinary k-arm bandit</p><p class="subtype-meta"><strong>继承 / 复用：</strong>arm/action/reward loop、Q-learning/regret/switch metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>arm count、reward distribution、trial schedule、instruction framing。</p><div class="tag-list"><span class="research-tag green">bahrami2020four</span><span class="research-tag green">feng2021dynamics</span><span class="research-tag green">gershman2018deconstructing</span><span class="research-tag green">sadeghiyeh2020temporal</span><span class="research-tag green">somerville2017charting</span><span class="research-tag green">waltz2020differential</span><span class="research-tag blue">anvari2024armed_bandit</span><span class="research-tag blue">anllo2024weird</span><span class="research-tag blue">hartley2024twoarmedbandit</span><span class="research-tag blue">fan2022trait</span><span class="research-tag blue">rutledge2023happiness</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">non-stationary / instructed horizon bandit</p><p class="subtype-meta"><strong>继承 / 复用：</strong>bandit loop plus drift / horizon / instructed-exposure controls。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>reward-probability drift, instructed trials, horizon 1/6, safety or exploration constraints。</p><div class="tag-list"><span class="research-tag yellow">speekenbrink2008learning</span><span class="research-tag blue">dubois2022value</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>counterfactual_bandit</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>bandit choice loop + chosen/unchosen feedback -> counterfactual learning metrics。</div>
+                  <div class="subtype-block"><p class="subtype-title">counterfactual feedback bandit</p><p class="subtype-meta"><strong>继承 / 复用：</strong>bandit choice loop、chosen reward update。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>unchosen-arm feedback, counterfactual logging, learning metric。</p><div class="tag-list"><span class="research-tag blue">chambon2020feedback</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>reward_learning</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>reward observation under different scale/range conditions -> range adaptation metrics。</div>
+                  <div class="subtype-block"><p class="subtype-title">range / magnitude adaptation bandit</p><p class="subtype-meta"><strong>继承 / 复用：</strong>bandit loop、reward observation、choice parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>reward scale, range normalization, magnitude condition。</p><div class="tag-list"><span class="research-tag blue">bavard2018magnitude</span><span class="research-tag blue">bavard2021range</span><span class="research-tag blue">bavard2023functional</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>probability_learning</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>stimulus -> response -> probabilistic feedback -> matching/maximizing metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">probability learning / zero-outcome variants</p><p class="subtype-meta"><strong>继承 / 复用：</strong>stimulus-response-feedback loop、learning-rate and bias metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>rewarded response, probability schedule, omission/zero outcome semantics。</p><div class="tag-list"><span class="research-tag blue">Thoma_et_al_2025_probability_learning</span><span class="research-tag blue">jagadish2023zero</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>reversal_learning</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>stimulus-response learning with changing contingencies -> reversal adaptation metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">reversal / flexibility learning</p><p class="subtype-meta"><strong>继承 / 复用：</strong>instrumental learning skeleton and block/phase parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>reversal schedule, criterion, feedback semantics, perseveration metric。</p><div class="tag-list"><span class="research-tag blue">reversal_learning</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>optimism_learning</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>probabilistic feedback learning -> asymmetric update / optimism bias metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">optimism / asymmetric RL</p><p class="subtype-meta"><strong>继承 / 复用：</strong>stimulus-response-feedback loop、learning-rate and bias metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>positive/negative update asymmetry, belief report, feedback schedule。</p><div class="tag-list"><span class="research-tag green">lefebvre2017behavioural</span><span class="research-tag blue">optimism_learning</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>reward_pairs</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>action-outcome learning -> devaluation/manipulation -> goal-directed vs habit metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">outcome devaluation / goal-directed choice</p><p class="subtype-meta"><strong>继承 / 复用：</strong>action-outcome mapping and choice parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>devaluation phase, habit/goal metric, clinical grouping, stimulus set。</p><div class="tag-list"><span class="research-tag blue">gillan2016characterizing</span><span class="research-tag blue">holton2024goalcommitment</span><span class="research-tag blue">reward_pairs</span></div></div>
+                </div></td>
+              </tr>
+              <tr class="yifei-family-row"><td colspan="2"><strong>Explore-Exploit & Model-Based RL</strong> <span>(8 groups)</span></td></tr>
+              <tr>
+                <td data-label="Task type"><code>two_step</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>stage-1 action -> latent transition -> stage-2 choice/reward -> model-based/model-free readout。</div>
+                  <div class="subtype-block"><p class="subtype-title">canonical two-step</p><p class="subtype-meta"><strong>继承 / 复用：</strong>stage-1 transition、stage-2 reward drift、stay/MB index。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>stimulus theme、trial count、transition/reward schedule。</p><div class="tag-list"><span class="research-tag green">kool2016when</span><span class="research-tag green">zorowitz2023data</span><span class="research-tag blue">decker2016twostep</span><span class="research-tag blue">potter2017twostep</span><span class="research-tag blue">shahar2019twosteptask</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">cost / instruction / clinical two-step</p><p class="subtype-meta"><strong>继承 / 复用：</strong>two-step transition skeleton、model-based/model-free readout。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>cost calculation、instruction/debrief condition、clinical group metadata、block schedule。</p><div class="tag-list"><span class="research-tag green">kool2017cost</span><span class="research-tag blue">castro_rodrigues2022twostep</span><span class="research-tag blue">sandbrink2024metacontrol</span><span class="research-tag blue">nussenbaum2020twostep</span><span class="research-tag blue">phaneuf-hadd_2025_cogeff</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>spatial_search</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>grid or spatial latent function -> reveal/search action -> exploration/generalization metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">grid search / spatial generalization</p><p class="subtype-meta"><strong>继承 / 复用：</strong>grid-state representation、query action parser、spatial generalization metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>kernel/function prior, payoff landscape, query budget, developmental or empowerment condition。</p><div class="tag-list"><span class="research-tag green">wu2018generalisation</span><span class="research-tag blue">Meder (2021)</span><span class="research-tag blue">Schulz (2019)</span><span class="research-tag blue">braendle2023empowerment</span><span class="research-tag blue">giron2023developmentalExploration</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>observe_or_bet</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>observe information or place bet -> hidden-state belief update -> value-of-information metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">observe action vs bet action</p><p class="subtype-meta"><strong>继承 / 复用：</strong>information-value action parser and belief/update metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>hidden urn/generative process, observe cost, bet payoff, color/state schedule。</p><div class="tag-list"><span class="research-tag blue">anvari2024observe_bet</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>horizon</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>forced-choice prelude -> horizon-limited free choice -> directed/random exploration metrics。</div>
+                  <div class="subtype-block"><p class="subtype-title">forced-choice prelude + horizon 1/6</p><p class="subtype-meta"><strong>继承 / 复用：</strong>two-arm payoff sampler、forced schedule、directed/random exploration metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>horizon length, information asymmetry, payoff setup, block schedule。</p><div class="tag-list"><span class="research-tag green">wilson2014humans</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>planning / navigation</strong></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>graph/map state -> navigation action -> goal/reward/planning metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">castle / graph navigation planning</p><p class="subtype-meta"><strong>继承 / 复用：</strong>graph transition engine, goal/reward state, planning metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>map, goal visibility, reward schedule, block structure, discovery condition。</p><div class="tag-list"><span class="research-tag green">tomov2020discovery</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>multi-task RL / transfer</strong></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>task blocks -> repeated action/reward learning -> transfer metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">multi-task graph transfer</p><p class="subtype-meta"><strong>继承 / 复用：</strong>task-switch runner, reward/action parser, transfer metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>latent task graph, transfer relation, task order, block schedule。</p><div class="tag-list"><span class="research-tag green">tomov2021multitask</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>information sampling</strong></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>buy/reveal information or answer -> cost/value bookkeeping -> sampling efficiency metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">buy information vs answer</p><p class="subtype-meta"><strong>继承 / 复用：</strong>buy-info/answer action parser、cost-sensitive sampling metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>information cost/value, reveal rule, answer scoring, memory subtask linkage。</p><div class="tag-list"><span class="research-tag green">cox2017information</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>optional stopping / secretary search</strong></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>sequential reveal/search -> stop or recall -> payoff and optimal-threshold metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">optional stopping with recall</p><p class="subtype-meta"><strong>继承 / 复用：</strong>sequential search parser and stopping-position metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>recall availability, opening cost, sequence length, reward distribution。</p><div class="tag-list"><span class="research-tag blue">optional_stopping_with_recall</span></div></div>
+                </div></td>
+              </tr>
+              <tr class="yifei-family-row"><td colspan="2"><strong>Reasoning</strong> <span>(4 groups)</span></td></tr>
+              <tr>
+                <td data-label="Task type"><code>crt</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>short problem statement -> answer -> accuracy / intuitive-lure metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">Cognitive Reflection Test</p><p class="subtype-meta"><strong>继承 / 复用：</strong>multiple-choice/free-answer parser、correctness scoring、lure-choice metric。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>item bank, numeric answer normalization, intuitive-lure labels, external human baseline。</p><div class="tag-list"><span class="research-tag blue">crt</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>matrix_reasoning</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>visual/symbolic pattern matrix -> option choice -> rule-consistency scoring。</div>
+                  <div class="subtype-block"><p class="subtype-title">Raven-style matrix reasoning</p><p class="subtype-meta"><strong>继承 / 复用：</strong>matrix/item renderer、option parser、accuracy metric。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>pattern generator, rule dimensions, distractor construction, visual/text rendering fidelity。</p><div class="tag-list"><span class="research-tag blue">matrix_reasoning</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>causal_inference</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>causal structure -> intervention/prediction response -> outcome/scoring rule。</div>
+                  <div class="subtype-block"><p class="subtype-title">causal prediction / intervention</p><p class="subtype-meta"><strong>继承 / 复用：</strong>causal graph / intervention API, prediction parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>graph structure, outcome generator, intervention costs, scoring rule。</p><div class="tag-list"><span class="research-tag blue">cohen2020causal</span><span class="research-tag blue">witte2024interventionStudy</span><span class="research-tag blue">bramley2017</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>algorithmic advice / augmented decision</strong></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>base decision problem + optional advice/augmentation -> reliance and accuracy metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">algorithmic augmentation with arithmetic decisions</p><p class="subtype-meta"><strong>继承 / 复用：</strong>binary decision parser and advice-condition logging。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>subtraction/divisibility item generator, advice quality, time feedback, reliance scoring。</p><div class="tag-list"><span class="research-tag blue">xu2023augmenting</span></div></div>
+                </div></td>
+              </tr>
+              <tr class="yifei-family-row"><td colspan="2"><strong>Memory & Cognitive Control</strong> <span>(8 groups)</span></td></tr>
+              <tr>
+                <td data-label="Task type"><code>drm</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>semantic word-list study -> recall/recognition -> false-memory metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">DRM false memory</p><p class="subtype-meta"><strong>继承 / 复用：</strong>study-list -> recognition/free-recall wrapper。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>semantic lure lists, false-alarm scoring, external human baseline。</p><div class="tag-list"><span class="research-tag blue">drm</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>source_monitoring</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>study episode with source labels -> source recognition -> source-memory accuracy。</div>
+                  <div class="subtype-block"><p class="subtype-title">source monitoring</p><p class="subtype-meta"><strong>继承 / 复用：</strong>study/test memory wrapper and source-choice parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>speaker/source assignment, source labels, lure construction, external human baseline。</p><div class="tag-list"><span class="research-tag blue">source_monitoring</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>digit_span</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>ordered sequence presentation -> immediate reproduction -> span length / accuracy metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">digit span</p><p class="subtype-meta"><strong>继承 / 复用：</strong>sequence presentation, ordered response parser, span/accuracy metric。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>sequence length, forward/backward rule, adaptive schedule, scoring tolerance。</p><div class="tag-list"><span class="research-tag green">enkavi2019digitspan</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>nback</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>sequential stimuli -> n-back target/non-target response -> accuracy/adaptation metrics。</div>
+                  <div class="subtype-block"><p class="subtype-title">adaptive n-back</p><p class="subtype-meta"><strong>继承 / 复用：</strong>n-back sequence engine、target/non-target parser、accuracy metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>adaptive schedule, n-level rule, target mapping, timing。</p><div class="tag-list"><span class="research-tag green">enkavi2019adaptivenback</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>stroop</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>stimulus -> automatic response conflict -> interference-control metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">Stroop / interference control</p><p class="subtype-meta"><strong>继承 / 复用：</strong>stimulus-response classification runner、congruency-condition metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>color-word materials, congruent/incongruent mapping, timing/RT policy, interference metric。</p><div class="tag-list"><span class="research-tag blue">busch2024_stroop</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>recent-probe / intention / associative memory</strong></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>study phase -> delay/probe/test phase -> recall/recognition/source scoring。</div>
+                  <div class="subtype-block"><p class="subtype-title">recent-probe working memory</p><p class="subtype-meta"><strong>继承 / 复用：</strong>study/test phase wrapper、probe presentation、accuracy/RT metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>probe lag, foil construction, response window, adaptive or fixed schedule。</p><div class="tag-list"><span class="research-tag green">enkavi2019recentprobes</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">intention / source-memory gap</p><p class="subtype-meta"><strong>继承 / 复用：</strong>memory phase wrapper and response parsing。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>missing source/intention materials and latent study/test mapping before exact env。</p><div class="tag-list"><span class="research-tag yellow">popov2023intent</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">associative / episodic / hindsight transfer memory</p><p class="subtype-meta"><strong>继承 / 复用：</strong>study-test scheduler and recall/recognition scoring shell。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>image/word materials, association graph, lures, transfer labels, free-recall scoring。</p><div class="tag-list"><span class="research-tag blue">gross2023hindsightTransferLearning</span><span class="research-tag blue">guenther2024associations</span><span class="research-tag blue">haridi2024memory_1</span><span class="research-tag blue">haridi2024memory_2</span><span class="research-tag blue">haridi2024memory_3</span><span class="research-tag blue">rausch_unpublished_replication</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>memory / chunking</strong></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>sequence presentation -> ordered response -> chunk-level scoring。</div>
+                  <div class="subtype-block"><p class="subtype-title">sequence chunking / hierarchical chunks</p><p class="subtype-meta"><strong>继承 / 复用：</strong>sequence presentation, response capture, chunk-level scoring。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>chunk hierarchy, sequence grammar, response window, scoring decomposition。</p><div class="tag-list"><span class="research-tag green">wu2023chunking</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>go / no-go response inhibition</strong></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>stimulus -> respond/withhold -> commission/omission metrics。</div>
+                  <div class="subtype-block"><p class="subtype-title">go / no-go</p><p class="subtype-meta"><strong>继承 / 复用：</strong>go/no-go state machine、commission/omission metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>stimulus-go mapping, timing, feedback, adaptive or fixed schedule。</p><div class="tag-list"><span class="research-tag green">enkavi2019gonogo</span><span class="research-tag blue">moutoussis2018pavlovian</span></div></div>
+                </div></td>
+              </tr>
+              <tr class="yifei-family-row"><td colspan="2"><strong>Social & Economic Games</strong> <span>(6 groups)</span></td></tr>
+              <tr>
+                <td data-label="Task type"><code>ultimatum</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>economic game role/action -> payoff and fairness metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">ultimatum responder / proposer variant</p><p class="subtype-meta"><strong>继承 / 复用：</strong>role/action parser and payoff bookkeeping。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>offer distribution, responder/proposer role, acceptance threshold metric。</p><div class="tag-list"><span class="research-tag blue">heffner2022economicgames</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>repeated_games</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>repeated 2x2 payoff matrix -> action choice -> cooperation/strategy metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">repeated matrix games</p><p class="subtype-meta"><strong>继承 / 复用：</strong>game-action runner and payoff aggregation。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>payoff matrix, partner model, repetition, history window, strategy metric。</p><div class="tag-list"><span class="research-tag blue">akata2023repeatedgames</span><span class="research-tag blue">heffner2022economicgames</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>contribution_game</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>public-goods contribution -> group payoff feedback -> cooperation metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">public goods game</p><p class="subtype-meta"><strong>继承 / 复用：</strong>contribution parser and group-payoff aggregation。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>group size, multiplier, feedback visibility, round structure。</p><div class="tag-list"><span class="research-tag blue">alsobay2025publicGoodsGame</span><span class="research-tag blue">heffner2022economicgames</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>dictator_game</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>allocation choice -> recipient/self payoff -> generosity metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">dictator allocation</p><p class="subtype-meta"><strong>继承 / 复用：</strong>allocation parser and payoff bookkeeping。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>stake size, recipient framing, anonymity/context manipulation。</p><div class="tag-list"><span class="research-tag green">hilbig2014generalized</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>social_hierarchy</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>pairwise social comparison -> hidden rank/grid update -> transitive-inference metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">social rank / hierarchy learning</p><p class="subtype-meta"><strong>继承 / 复用：</strong>pairwise comparison parser、training/test phase wrapper、transitive inference metric。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>competence/popularity grid, person materials, training pairs, test-distance scoring。</p><div class="tag-list"><span class="research-tag blue">park2021socialhierarchy</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>strategic / security / matrix games</strong></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>strategic choice or monitoring decision -> payoff/risk feedback -> strategic metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">security / investment / one-shot matrix variants</p><p class="subtype-meta"><strong>继承 / 复用：</strong>payoff-matrix or strategic-choice runner。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>attack/defer monitoring risk, investment race payoff, one-shot matrix-game payoff structure。</p><div class="tag-list"><span class="research-tag blue">aggarwal2023</span><span class="research-tag blue">hunter2021increased</span><span class="research-tag blue">zhu2024games</span></div></div>
+                </div></td>
+              </tr>
+              <tr class="yifei-family-row"><td colspan="2"><strong>Language & Pragmatics</strong> <span>(4 groups)</span></td></tr>
+              <tr>
+                <td data-label="Task type"><code>rsa_pragmatics</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>text context/question -> choice/rating/free-text response -> pragmatic target scoring。</div>
+                  <div class="subtype-block"><p class="subtype-title">probabilistic pragmatics / RSA-style judgments</p><p class="subtype-meta"><strong>继承 / 复用：</strong>text prompt runner、choice/rating parser、condition-level aggregation。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>context construction, literal/pragmatic target, speaker/listener role, answer key。</p><div class="tag-list"><span class="research-tag blue">hu2023lm-pragmatics</span><span class="research-tag blue">tesslerfranke_2018_not_unreasonable</span><span class="research-tag blue">vantiel2020-probabilistic_pragmatics</span><span class="research-tag blue">vantiel2020probabilistic_pragmatics</span><span class="research-tag blue">vantiel2021probabilisticpragmatics</span><span class="research-tag blue">vantiel2022meaninguse</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>comprehension / substitution judgments</strong></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>text material -> forced-choice or judgment response -> semantic target scoring。</div>
+                  <div class="subtype-block"><p class="subtype-title">comprehension / substitution</p><p class="subtype-meta"><strong>继承 / 复用：</strong>text material loader、forced-choice parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>sentence/item bank, substitution candidates, semantic correctness target。</p><div class="tag-list"><span class="research-tag blue">guenther2024comprehension</span><span class="research-tag blue">guenther2024substitutions</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>reference-game reasoning / production</strong></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>speaker/listener context -> message or referent choice -> pragmatic/reference success metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">reference-game reasoning / production</p><p class="subtype-meta"><strong>继承 / 复用：</strong>reference-game vignette runner and RSA-style listener/speaker scoring。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>speaker vs listener role, display composition, target object, message-option set。</p><div class="tag-list"><span class="research-tag blue">frankedegen2016reasoning-exp1</span><span class="research-tag blue">frankedegen2016reasoning-exp2</span><span class="research-tag blue">franke2024bayesian</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>lexical / relational / grammaticality / association judgments</strong></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>lexical/text item -> judgment/free response -> label or semantic scoring。</div>
+                  <div class="subtype-block"><p class="subtype-title">lexical and linguistic judgments</p><p class="subtype-meta"><strong>继承 / 复用：</strong>text material loader and lexical/free-response parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>lexical-decision target, sensibility/relational labels, grammaticality key, free-association scoring。</p><div class="tag-list"><span class="research-tag blue">guenther2020LDT</span><span class="research-tag blue">guenther2020TS</span><span class="research-tag blue">guenther2022Relational</span><span class="research-tag blue">guenther2023Grammaticality</span><span class="research-tag blue">guenther2024associations_individual</span><span class="research-tag blue">sun2025rat</span></div></div>
+                </div></td>
+              </tr>
+              <tr class="yifei-family-row"><td colspan="2"><strong>Judgment & Metacognition</strong> <span>(6 groups)</span></td></tr>
+              <tr>
+                <td data-label="Task type"><code>metacognition</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>primary judgment/choice + confidence/rating -> calibration/discrimination metrics。</div>
+                  <div class="subtype-block"><p class="subtype-title">knowledge calibration / Dunning-Kruger</p><p class="subtype-meta"><strong>继承 / 复用：</strong>question-answer-confidence parser、calibration metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>question bank, ground truth, confidence scale, feedback policy。</p><div class="tag-list"><span class="research-tag yellow">jansen2021dunningkruger</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">choice + confidence / latent belief tasks</p><p class="subtype-meta"><strong>继承 / 复用：</strong>choice runner plus confidence/belief report parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>belief latent state, confidence scale, sampling paradigm, calibration metric。</p><div class="tag-list"><span class="research-tag blue">anvari2024sampling_paradigm</span><span class="research-tag blue">baar2021latent</span><span class="research-tag blue">hellmann_unpublished_brightness</span><span class="research-tag blue">schiekiera2025metascience</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>multi_cue_judgment</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>cue vector -> criterion/category estimate -> cue-use/function-learning metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">MCPL / cue-to-criterion learning</p><p class="subtype-meta"><strong>继承 / 复用：</strong>cue table parser、criterion response、learning/test split。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>cue validity, criterion function, feedback schedule, missing test labels。</p><div class="tag-list"><span class="research-tag yellow">collsiöö2023MCPL</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">function estimation / shuffle / yes-no cue judgment</p><p class="subtype-meta"><strong>继承 / 复用：</strong>cue-to-response shell and feedback/test metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>function family, shuffled feedback, omission/yes-no bias scoring。</p><div class="tag-list"><span class="research-tag blue">barnby2022knowing</span><span class="research-tag blue">breslav2022shuffle</span><span class="research-tag blue">cheung2025omissionyesnobias</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>probability_estimation</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>probabilistic statement/cue -> numeric probability estimate -> calibration/error metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">Bayesian / probabilistic estimation</p><p class="subtype-meta"><strong>继承 / 复用：</strong>continuous/numeric estimate parser and calibration metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>stimulus generation, posterior target, scoring rule。</p><div class="tag-list"><span class="research-tag yellow">zhu2020bayesian</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">likelihood / probability / XOR judgments</p><p class="subtype-meta"><strong>继承 / 复用：</strong>probability judgment parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>premise format, target event, likelihood/rating scale, XOR structure。</p><div class="tag-list"><span class="research-tag blue">Ying2023NIPE</span><span class="research-tag blue">bhatia2024likelihoodratings</span><span class="research-tag blue">tsvilodub-2023xorsome</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><code>things_odd_one_out</code></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>triplet display -> odd-one-out / similarity choice -> similarity-reference scoring。</div>
+                  <div class="subtype-block"><p class="subtype-title">THINGS triplet odd-one-out</p><p class="subtype-meta"><strong>继承 / 复用：</strong>triplet choice parser and similarity-response metric。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>image/material mapping and ground-truth similarity structure。</p><div class="tag-list"><span class="research-tag yellow">hebart2023things</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">visual semantic / spatial triplets</p><p class="subtype-meta"><strong>继承 / 复用：</strong>triplet/odd-one-out runner。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>visual materials, semantic embedding target, answer key or human-reference scoring。</p><div class="tag-list"><span class="research-tag blue">guenther2023ViSpa</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>perceptual / detection</strong></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>stimulus -> detection/classification response -> accuracy or discrimination metric。</div>
+                  <div class="subtype-block"><p class="subtype-title">Navon / perceptual detection</p><p class="subtype-meta"><strong>继承 / 复用：</strong>classification runner、accuracy/RT parsing。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>visual stimuli, congruency/detail feedback, correct label generation。</p><div class="tag-list"><span class="research-tag blue">busch2024_navon</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">perceptual numerosity / dot decision</p><p class="subtype-meta"><strong>继承 / 复用：</strong>perceptual forced-choice parser and accuracy/RT metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>dot-array generator, numerosity or motion ratio, speed-accuracy tradeoff scoring。</p><div class="tag-list"><span class="research-tag blue">pirrone_2018_dots</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">phishing / real-world detection</p><p class="subtype-meta"><strong>继承 / 复用：</strong>classification runner and binary/graded decision parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>email/web materials, ground-truth labels, feedback wording, risk metric。</p><div class="tag-list"><span class="research-tag blue">singh2019phishing</span></div></div>
+                </div></td>
+              </tr>
+              <tr>
+                <td data-label="Task type"><span class="pill amber">not implemented</span><br><strong>category learning</strong></td>
+                <td data-label="Subtype / engine"><div class="subtype-stack">
+                  <div class="type-base-block"><strong>Task type 共用底座：</strong>stimulus -> category response -> feedback/test accuracy。</div>
+                  <div class="subtype-block"><p class="subtype-title">rule-based category learning</p><p class="subtype-meta"><strong>继承 / 复用：</strong>stimulus-feedback loop、category-response parser、accuracy metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>category rule, stimulus generator, block/test schedule。</p><div class="tag-list"><span class="research-tag green">badham2017deficits</span><span class="research-tag yellow">flesch2018comparing</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">revisiting / category variant gap</p><p class="subtype-meta"><strong>继承 / 复用：</strong>category learning shell。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>exact materials/rules, feedback timing, transfer/test construction。</p><div class="tag-list"><span class="research-tag yellow">levering2020revisiting</span></div></div>
+                </div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!--
+      <section id="gaps">
+        <div class="section-head">
+          <div>
+            <h2>未覆盖与 Latent Dynamics</h2>
+            <p class="section-note">
+              这里要分清两件事：Psych-201 超出 Psych-101 的 research 不等于信息不足；Cecily/Psych-101 内部被标为 Tier C、pending、blocked 的部分，才更接近“缺材料或 latent dynamics 不足，暂时不能承诺 exact env”。
+              原始 Psych-201 的 other / uncategorized 已经在上面的 Task Type 表里重分配，不再作为任务分类展示。
+            </p>
+          </div>
+        </div>
+        <div class="band">
+          <div class="band-body grid two">
+            <article class="item">
+              <h3>Psych-201 额外 188 variants</h3>
+              <p>这是范围差异：它们没有进入 Cecily/Psych-101 的 76 个 exact subset，不代表一定不能搭 env。很多 bandit、two-step、静态风险选择其实机制清楚，可以后续作为 VariantSpec 接入。</p>
+              <div class="pill-row">
+                <span class="pill blue">尚未纳入</span>
+                <span class="pill blue">尚未复核</span>
+                <span class="pill amber">不等于没法搭</span>
+              </div>
+            </article>
+            <article class="item">
+              <h3>Cecily/Psych-101 blocked / pending</h3>
+              <p>这类更符合你说的情况：source 信息、刺激材料、payoff schedule、反馈规则、phase 结构或 scoring rule 不完整，导致不能可靠构造反事实 latent dynamics。</p>
+              <div class="pill-row">
+                <span class="pill red">latent dynamics 缺口</span>
+                <span class="pill red">不能承诺 exact</span>
+              </div>
+            </article>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th class="nowrap">Raw Psych-201 task type（other 已重分配）</th>
+                <th class="nowrap">总 variants</th>
+                <th class="nowrap">Psych-101 覆盖</th>
+                <th class="nowrap">101 未覆盖的 201 variants</th>
+                <th>101 未覆盖的 201 research / paper_key</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>multi-armed bandit</strong></td>
+                <td data-label="总 variants">47</td>
+                <td data-label="Psych-101 覆盖">7</td>
+                <td data-label="101 未覆盖"><span class="pill amber">40</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">agrawal2024stress, anllo2024weird, anvari2024armed_bandit, bavard2018magnitude, bavard2021range, bavard2023functional, chambon2020feedback, fan2022trait, haines2020, hartley2024twoarmedbandit, nasioulas2024feedback, palminteri2017confirmation, rosenbaum2022valence, rutledge2023happiness, suthaharan2021paranoia, vandendriessche2022depression, witte_thalmann2024exploration</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>two-step / model-based RL</strong></td>
+                <td data-label="总 variants">35</td>
+                <td data-label="Psych-101 覆盖">5</td>
+                <td data-label="101 未覆盖"><span class="pill amber">30</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">anvari2024alien, binz2022heuristics, castro_rodrigues2022twostep, decker2016twostep, nussenbaum2020twostep, phaneuf-hadd_2025_cogeff, potter2017twostep, sandbrink2024metacontrol, shahar2019twosteptask</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>language / pragmatics</strong></td>
+                <td data-label="总 variants">17</td>
+                <td data-label="Psych-101 覆盖">0</td>
+                <td data-label="101 未覆盖"><span class="pill violet">17</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">frankedegen2016reasoning-exp1, guenther2024comprehension, guenther2024substitutions, hu2023lm-pragmatics, tesslerfranke_2018_not_unreasonable, vantiel2020-probabilistic_pragmatics, vantiel2020probabilistic_pragmatics, vantiel2021probabilisticpragmatics, vantiel2022meaninguse</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>risky choice (described)</strong></td>
+                <td data-label="总 variants">20</td>
+                <td data-label="Psych-101 覆盖">4</td>
+                <td data-label="101 未覆盖"><span class="pill amber">16</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">frey2017lotteries, frey2017mpl, hussain2024risk, olschewski2024skewness, olschewski2025optimal, pirrone_unpublished_lottery, spektor2024lossaversion</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>memory / recall / recognition</strong></td>
+                <td data-label="总 variants">13</td>
+                <td data-label="Psych-101 覆盖">5</td>
+                <td data-label="101 未覆盖"><span class="pill blue">8</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">busch2024_stroop, gross2023hindsightTransferLearning, guenther2024associations, haridi2024memory_1, haridi2024memory_2, haridi2024memory_3, rausch_unpublished_replication</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>metacognition / confidence</strong></td>
+                <td data-label="总 variants">9</td>
+                <td data-label="Psych-101 覆盖">1</td>
+                <td data-label="101 未覆盖"><span class="pill blue">8</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">anvari2024sampling_paradigm, baar2021latent, hellmann_unpublished_brightness, schiekiera2025metascience</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>moral / social</strong></td>
+                <td data-label="总 variants">8</td>
+                <td data-label="Psych-101 覆盖">1</td>
+                <td data-label="101 未覆盖"><span class="pill violet">7</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">akata2023repeatedgames, alsobay2025publicGoodsGame, awad2018moral, ciranka_vandenbos_2024, heffner2022economicgames</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>probabilistic instrumental learning</strong></td>
+                <td data-label="总 variants">8</td>
+                <td data-label="Psych-101 覆盖">3</td>
+                <td data-label="101 未覆盖"><span class="pill blue">5</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">Thoma_et_al_2025_probability_learning, jagadish2023zero</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>context effects / multi-attribute choice</strong></td>
+                <td data-label="总 variants">5</td>
+                <td data-label="Psych-101 覆盖">0</td>
+                <td data-label="101 未覆盖"><span class="pill blue">5</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">spektor2019contexteffects</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>active search / grid</strong></td>
+                <td data-label="总 variants">9</td>
+                <td data-label="Psych-101 覆盖">5</td>
+                <td data-label="101 未覆盖"><span class="pill green">4</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">Meder (2021), Schulz (2019), braendle2023empowerment, giron2023developmentalExploration</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>multi-cue judgment / function learning</strong></td>
+                <td data-label="总 variants">7</td>
+                <td data-label="Psych-101 覆盖">3</td>
+                <td data-label="101 未覆盖"><span class="pill green">4</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">barnby2022knowing, breslav2022shuffle, cheung2025omissionyesnobias</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>probabilistic estimation</strong></td>
+                <td data-label="总 variants">6</td>
+                <td data-label="Psych-101 覆盖">2</td>
+                <td data-label="101 未覆盖"><span class="pill green">4</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">Ying2023NIPE, bhatia2024likelihoodratings, tsvilodub-2023xorsome</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>perceptual / detection</strong></td>
+                <td data-label="总 variants">4</td>
+                <td data-label="Psych-101 覆盖">0</td>
+                <td data-label="101 未覆盖"><span class="pill green">4</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">busch2024_navon, singh2019phishing</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>causal reasoning</strong></td>
+                <td data-label="总 variants">2</td>
+                <td data-label="Psych-101 覆盖">0</td>
+                <td data-label="101 未覆盖"><span class="pill green">2</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">cohen2020causal, witte2024interventionStudy</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>habit vs goal-directed</strong></td>
+                <td data-label="总 variants">2</td>
+                <td data-label="Psych-101 覆盖">0</td>
+                <td data-label="101 未覆盖"><span class="pill green">2</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">gillan2016characterizing</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>BART / balloon risk</strong></td>
+                <td data-label="总 variants">2</td>
+                <td data-label="Psych-101 覆盖">1</td>
+                <td data-label="101 未覆盖"><span class="pill green">1</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">pike2023catastrophizing</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>odd-one-out / triplet</strong></td>
+                <td data-label="总 variants">2</td>
+                <td data-label="Psych-101 覆盖">1</td>
+                <td data-label="101 未覆盖"><span class="pill green">1</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">guenther2023ViSpa</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>observe-or-bet</strong></td>
+                <td data-label="总 variants">1</td>
+                <td data-label="Psych-101 覆盖">0</td>
+                <td data-label="101 未覆盖"><span class="pill green">1</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">anvari2024observe_bet</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>horizon task / explore-exploit</strong></td>
+                <td data-label="总 variants">5</td>
+                <td data-label="Psych-101 覆盖">5</td>
+                <td data-label="101 未覆盖"><span class="pill green">0</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">无</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>experience vs description (risky choice)</strong></td>
+                <td data-label="总 variants">4</td>
+                <td data-label="Psych-101 覆盖">4</td>
+                <td data-label="101 未覆盖"><span class="pill green">0</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">无</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>planning / navigation</strong></td>
+                <td data-label="总 variants">4</td>
+                <td data-label="Psych-101 覆盖">4</td>
+                <td data-label="101 未覆盖"><span class="pill green">0</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">无</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>category learning</strong></td>
+                <td data-label="总 variants">3</td>
+                <td data-label="Psych-101 覆盖">3</td>
+                <td data-label="101 未覆盖"><span class="pill green">0</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">无</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>Iowa gambling task</strong></td>
+                <td data-label="总 variants">3</td>
+                <td data-label="Psych-101 覆盖">3</td>
+                <td data-label="101 未覆盖"><span class="pill green">0</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">无</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>memory / chunking</strong></td>
+                <td data-label="总 variants">2</td>
+                <td data-label="Psych-101 覆盖">2</td>
+                <td data-label="101 未覆盖"><span class="pill green">0</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">无</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>multi-task RL / transfer</strong></td>
+                <td data-label="总 variants">2</td>
+                <td data-label="Psych-101 覆盖">2</td>
+                <td data-label="101 未覆盖"><span class="pill green">0</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">无</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>go / no-go</strong></td>
+                <td data-label="总 variants">1</td>
+                <td data-label="Psych-101 覆盖">1</td>
+                <td data-label="101 未覆盖"><span class="pill green">0</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">无</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>information sampling</strong></td>
+                <td data-label="总 variants">1</td>
+                <td data-label="Psych-101 覆盖">1</td>
+                <td data-label="101 未覆盖"><span class="pill green">0</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">无</p></td>
+              </tr>
+              <tr>
+                <td data-label="Raw Psych-201 task type"><strong>memory / n-back</strong></td>
+                <td data-label="总 variants">1</td>
+                <td data-label="Psych-101 覆盖">1</td>
+                <td data-label="101 未覆盖"><span class="pill green">0</span></td>
+                <td data-label="未覆盖 research"><p class="compact-list">无</p></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="band-body" style="border-top: 1px solid var(--line);">
+            <div class="callout">
+              <strong>注意：</strong>
+              这张表是严格的 <code>Psych-201 variants - Psych-101 experiment_id</code> 差集。
+              它回答“101 没覆盖 201 的哪些 research”，不等于这些 research 都缺 latent dynamics。
+            </div>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th class="nowrap">Cecily/Psych-101 family</th>
+                <th>目前不该承诺 exact env 的 research / experiment</th>
+                <th>主要缺口</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Cecily/Psych-101 family"><strong>MCPL / judgment learning</strong></td>
+                <td data-label="research / experiment"><code>collsiöö2023MCPL/exp1.csv</code>, <code>exp2.csv</code></td>
+                <td data-label="主要缺口">test 阶段反馈停止，部分 test stimuli 没有 recovered label；无法完整还原 correctness dynamics。</td>
+              </tr>
+              <tr>
+                <td data-label="Cecily/Psych-101 family"><strong>Episodic memory battery</strong></td>
+                <td data-label="research / experiment"><code>cox2017information/exp1.csv</code></td>
+                <td data-label="主要缺口">pair recognition、item recognition、free recall 混在 session 中；需要子任务 parser 和 recall scoring rule。</td>
+              </tr>
+              <tr>
+                <td data-label="Cecily/Psych-101 family"><strong>BART / balloon risk</strong></td>
+                <td data-label="research / experiment"><code>frey2017risk/exp1.csv</code></td>
+                <td data-label="主要缺口">explosion threshold distribution、精确 money conversion / payoff rule 需要恢复。</td>
+              </tr>
+              <tr>
+                <td data-label="Cecily/Psych-101 family"><strong>Stimulus-response learning</strong></td>
+                <td data-label="research / experiment"><code>gershman2020reward/exp1.csv</code></td>
+                <td data-label="主要缺口">大部分 stimulus label 可恢复，但有少数 session-local stimuli 从未暴露 rewarded response，阻断 full transition registration。</td>
+              </tr>
+              <tr>
+                <td data-label="Cecily/Psych-101 family"><strong>Spatial bandit</strong></td>
+                <td data-label="research / experiment"><code>wu2018generalisation/exp1.csv</code></td>
+                <td data-label="主要缺口">numeric reward mechanism 清楚，但 generator details、compensation / source 细节仍需恢复。</td>
+              </tr>
+              <tr>
+                <td data-label="Cecily/Psych-101 family"><strong>Odd-one-out / THINGS</strong></td>
+                <td data-label="research / experiment"><code>hebart2023things/exp1.csv</code></td>
+                <td data-label="主要缺口">需要完整 stimulus/material mapping 和 response scoring，不适合直接从 transcript 推 latent dynamics。</td>
+              </tr>
+              <tr>
+                <td data-label="Cecily/Psych-101 family"><strong>Metacognition / Dunning-Kruger</strong></td>
+                <td data-label="research / experiment"><code>jansen2021dunningkruger/exp1.csv</code></td>
+                <td data-label="主要缺口">信心/自评类任务需要明确 question bank、ground truth、scoring 和 feedback policy。</td>
+              </tr>
+              <tr>
+                <td data-label="Cecily/Psych-101 family"><strong>Pattern / grid detection</strong></td>
+                <td data-label="research / experiment"><code>kumar2023disentangling/exp1.csv</code></td>
+                <td data-label="主要缺口">视觉/网格刺激生成规则与正确答案映射不足。</td>
+              </tr>
+              <tr>
+                <td data-label="Cecily/Psych-101 family"><strong>Category learning variants</strong></td>
+                <td data-label="research / experiment"><code>levering2020revisiting/exp1.csv</code>, <code>exp2.csv</code></td>
+                <td data-label="主要缺口">category rule、stimulus generator、feedback schedule 需要逐实验恢复。</td>
+              </tr>
+              <tr>
+                <td data-label="Cecily/Psych-101 family"><strong>Intentional memory</strong></td>
+                <td data-label="research / experiment"><code>popov2023intent/exp1.csv</code>, <code>exp2.csv</code>, <code>exp3.csv</code></td>
+                <td data-label="主要缺口">study/test phase、item materials、recall/recognition scoring 需要完整材料支持。</td>
+              </tr>
+              <tr>
+                <td data-label="Cecily/Psych-101 family"><strong>Planning / navigation</strong></td>
+                <td data-label="research / experiment"><code>tomov2020discovery/exp2.csv</code>, <code>exp4.csv</code>, <code>exp5.csv</code>, <code>exp7.csv</code></td>
+                <td data-label="主要缺口">map/task graph、state transitions、goal/reward structure 需要完整恢复。</td>
+              </tr>
+              <tr>
+                <td data-label="Cecily/Psych-101 family"><strong>Multi-task RL / transfer</strong></td>
+                <td data-label="research / experiment"><code>tomov2021multitask/exp1.csv</code>, <code>exp3.csv</code></td>
+                <td data-label="主要缺口">跨任务 transfer 结构、latent task graph 和 block schedule 复杂，不能只靠 transcript。</td>
+              </tr>
+              <tr>
+                <td data-label="Cecily/Psych-101 family"><strong>Aversive reversal / attention</strong></td>
+                <td data-label="research / experiment"><code>wise2019acomputational/exp1.csv</code></td>
+                <td data-label="主要缺口">aversive outcome、reversal schedule、attention manipulation 需要 source-level 规则。</td>
+              </tr>
+              <tr>
+                <td data-label="Cecily/Psych-101 family"><strong>Bayesian / probabilistic estimation</strong></td>
+                <td data-label="research / experiment"><code>zhu2020bayesian/exp1.csv</code>, <code>exp2.csv</code></td>
+                <td data-label="主要缺口">连续估计任务需要 stimulus generation、posterior target、scoring 规则，不只是离散动作反馈。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      -->
+
+      <section id="cecily">
+        <div class="section-head">
+          <div>
+            <h2>Cecily / Yifei 同步怎么改</h2>
+            <p class="section-note">目标是两边同时推进：Cecily 保住 exact feedback/env，Yifei 补齐可批量运行、可对比 skill-agent 的 benchmark 层。两边通过同一套 VariantSpec / ConditionSpec / metric contract 对齐。</p>
+          </div>
+        </div>
+        <div class="split">
+          <div class="band">
+            <div class="band-body">
+              <h3 style="margin: 0 0 10px; font-size: 18px;">Cecily 侧要加什么</h3>
+              <div class="steps">
+                <div class="step">
+                  <h3>先补 VariantSpec / ConditionSpec</h3>
+                  <p>每个 experiment 明确 paper、condition、group、phase、reward/feedback schedule、action set、metric。group 记录为 <code>recorded</code>、<code>inferred</code> 或 <code>unknown</code>。</p>
+                </div>
+                <div class="step">
+                  <h3>加 human transcript replay</h3>
+                  <p>用同一个 env 重放 human transcript，检查 observation、legal action、feedback、phase transition 是否和记录一致；这是 LLM harness 的验收测试。</p>
+                </div>
+                <div class="step">
+                  <h3>加 LLMEnvAdapter</h3>
+                  <p>把真实实验动作包装成统一 LLM action schema，但不改变 latent dynamics。adapter 负责 prompt、legal actions、parse、invalid action policy、history window。</p>
+                </div>
+                <div class="step">
+                  <h3>加 SkillAgentRunner</h3>
+                  <p>同一 VariantSpec 下运行 baseline LLM 和 LLM + skill，输出 trial-level log 和 condition-level human-distance metrics。</p>
+                </div>
+                <div class="step">
+                  <h3>保留 fidelity / claim 标记</h3>
+                  <p>每个结果标 <code>human_feedback_exact</code>、<code>condition_matched</code>、<code>paradigm_sim</code> 或 <code>transcript_bound</code>，避免把可跑 benchmark 误写成可替代人类被试。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="band">
+            <div class="band-body">
+              <h3 style="margin: 0 0 10px; font-size: 18px;">Yifei 侧要加什么</h3>
+              <div class="steps">
+                <div class="step">
+                  <h3>补 psych201 condition catalog</h3>
+                  <p>在现有 <code>psych201_catalog.json</code> 外增加 condition/group 字段：control/experimental、provenance、feedback type、phase schedule、human subset filter。</p>
+                </div>
+                <div class="step">
+                  <h3>加 Cecily exact-env bridge</h3>
+                  <p>runner 不能只调 Yifei 自己的简化 parser；要能按 experiment_id 调 Cecily exact env，或通过 adapter RPC/package 调用同一套 step/feedback。</p>
+                </div>
+                <div class="step">
+                  <h3>保留 benchmark fidelity</h3>
+                  <p>每个 task 标 <code>human_feedback_exact</code>、<code>condition_matched</code>、<code>paradigm_sim</code>。Yifei 原有 simplified env 可以保留，但只能作为 paradigm baseline。</p>
+                </div>
+                <div class="step">
+                  <h3>加 skill-agent experiment runner</h3>
+                  <p>同一 VariantSpec 下批量跑 baseline LLM、skill agent、ablation skill；输出 trial logs、condition metrics、human-distance summary。</p>
+                </div>
+                <div class="step">
+                  <h3>加 crosswalk / cleaning layer</h3>
+                  <p>维护 raw Psych-201 paper_key -> cleaned task type -> Cecily experiment_id / engine 的映射，特别处理原始 other / uncategorized。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="band" style="margin-top: 12px;">
+          <div class="band-body">
+            <h3 style="margin: 0 0 10px; font-size: 18px;">两边共享的 contract</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>模块</th>
+                    <th>Cecily 负责</th>
+                    <th>Yifei 负责</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="模块"><strong>VariantSpec</strong></td>
+                    <td data-label="Cecily 负责">定义 exact env 参数、latent dynamics、feedback/reward generator、paper-level metric。</td>
+                    <td data-label="Yifei 负责">引用同一 spec 做 catalog、batch selection、leaderboard grouping、Psych-201 crosswalk。</td>
+                  </tr>
+                  <tr>
+                    <td data-label="模块"><strong>ConditionSpec</strong></td>
+                    <td data-label="Cecily 负责">验证 condition 是否能生成 human-equivalent feedback；标 group provenance。</td>
+                    <td data-label="Yifei 负责">按 condition 过滤 human subset，不再只做 pooled baseline。</td>
+                  </tr>
+                  <tr>
+                    <td data-label="模块"><strong>Human replay</strong></td>
+                    <td data-label="Cecily 负责">重放 transcript，检查 step feedback、phase、reward 和 legal action。</td>
+                    <td data-label="Yifei 负责">导出/规范化 transcript 和 group metadata，接收 replay pass/fail 状态。</td>
+                  </tr>
+                  <tr>
+                    <td data-label="模块"><strong>LLMEnvAdapter</strong></td>
+                    <td data-label="Cecily 负责">把 exact env 包成 observation/legal_actions/step，不改变 dynamics。</td>
+                    <td data-label="Yifei 负责">统一模型调用、prompt template、invalid action policy、parallel runner。</td>
+                  </tr>
+                  <tr>
+                    <td data-label="模块"><strong>SkillAgentRunner</strong></td>
+                    <td data-label="Cecily 负责">提供可复现 env seeds、trial-level feedback、human-comparable metrics。</td>
+                    <td data-label="Yifei 负责">运行 baseline、skill、ablation，生成 human-distance report。</td>
+                  </tr>
+                  <tr>
+                    <td data-label="模块"><strong>Fidelity labels</strong></td>
+                    <td data-label="Cecily 负责">标 <code>human_feedback_exact</code> / <code>transcript_bound</code> / blocked reason。</td>
+                    <td data-label="Yifei 负责">在结果和 leaderboard 中显示 fidelity，不把 paradigm_sim 混入 exact claim。</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </section>
+
+      <section id="roadmap">
+        <div class="section-head">
+          <div>
+            <h2>实施优先级</h2>
+            <p class="section-note">Cecily 和 Yifei 要并行推进：Cecily 先证明 same-feedback exactness，Yifei 同时把 runner/catalog 改成能消费这些 exact specs。</p>
+          </div>
+        </div>
+        <div class="band">
+          <div class="band-body priority-list">
+            <div class="priority">
+              <div class="rank">Phase 1</div>
+              <div>
+                <h3>双仓对齐最小 contract</h3>
+                <p>Cecily 定义 VariantSpec / ConditionSpec 和 replay pass/fail；Yifei 同步加 crosswalk、condition fields、fidelity labels，确保同一个 experiment_id 在两边含义一致。</p>
+              </div>
+            </div>
+            <div class="priority">
+              <div class="rank">Phase 2</div>
+              <div>
+                <h3>选 5-10 个 Tier A exact env 做端到端试跑</h3>
+                <p>Cecily 用 human transcript replay 验证每一步 feedback；Yifei 调 Cecily adapter 跑 baseline LLM 和最小 skill agent，先用 bandit、two-step、BART/CCT 这类 metric 清楚的任务。</p>
+              </div>
+            </div>
+            <div class="priority">
+              <div class="rank">Phase 3</div>
+              <div>
+                <h3>补 group / condition provenance audit</h3>
+                <p>Cecily 负责判断 feedback/condition 是否 exact；Yifei 负责在 catalog 和 human subset filter 里落地 <code>recorded</code>、<code>inferred</code>、<code>weak_inferred</code>、<code>unknown</code>。</p>
+              </div>
+            </div>
+            <div class="priority">
+              <div class="rank">Phase 4</div>
+              <div>
+                <h3>再接 Psych-201 额外 variants</h3>
+                <p>Yifei 按清洗后 task type 提供候选和 human data；Cecily 判断能否复原 latent dynamics。同机制且 feedback generator 可复原的才升级为 exact；其余保留 <code>paradigm_sim</code>。</p>
+              </div>
+            </div>
+            <div class="priority">
+              <div class="rank">Phase 5</div>
+              <div>
+                <h3>评估“是否可能减少人类被试”</h3>
+                <p>只在 condition-matched、human-feedback-exact、skill agent 明显缩小 human distance 的任务上讨论。结论应限定到具体 task family 和 metric，不能泛化到所有心理学实验。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="principles">
+        <div class="section-head">
+          <div>
+            <h2>保真原则</h2>
+            <p class="section-note">这些原则决定什么时候能做 human-matched claim，什么时候只能说是 benchmark 或范式模拟。</p>
+          </div>
+        </div>
+        <div class="band">
+          <div class="band-body grid two">
+            <article class="item">
+              <h3>Same-feedback 才能比较</h3>
+              <p>agent 必须看到和 human subset 同构的 observation、legal actions、feedback、reward、history 和 phase transition。只共享题目文本或 headline metric 不够。</p>
+              <div class="pill-row">
+                <span class="pill green">observation</span>
+                <span class="pill green">feedback</span>
+                <span class="pill green">history</span>
+              </div>
+            </article>
+            <article class="item">
+              <h3>Condition 不能乱 pooled</h3>
+              <p>control group 最干净，但 experimental group 也能用；关键是 group/condition 必须 recorded 或从 prompt、schedule、feedback type 强推断。unknown 不能做 condition claim。</p>
+              <div class="pill-row">
+                <span class="pill green">recorded</span>
+                <span class="pill amber">inferred</span>
+                <span class="pill red">unknown</span>
+              </div>
+            </article>
+            <article class="item">
+              <h3>Skill claim 要看距离</h3>
+              <p>skill 有效不是看得分更高，而是看它是否把 agent 的 choice distribution、learning curve、switch/stay、exploration 或 confidence calibration 拉近 matched humans。</p>
+              <div class="pill-row">
+                <span class="pill violet">human distance</span>
+                <span class="pill violet">condition effect</span>
+              </div>
+            </article>
+            <article class="item">
+              <h3>能跑不等于能替代人类</h3>
+              <p>Yifei 风格 parser/runner 可以做大规模 benchmark；但只有 exact feedback、condition provenance、human-distance improvement 都成立时，才能讨论某类 research 是否减少人类被试需求。</p>
+              <div class="pill-row">
+                <span class="pill blue">benchmark</span>
+                <span class="pill amber">paradigm_sim</span>
+                <span class="pill green">human_feedback_exact</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="final">
+        <div class="band">
+          <div class="band-body callout">
+            <strong>最终建议：</strong>
+            以 Cecily 的 exact/generative env 做 human-feedback-equivalent harness，以 Yifei 的 runner/catalog/metrics 做 LLM 批量测评层。
+            每个实验必须有 VariantSpec 和 ConditionSpec，记录 group 是 recorded、inferred 还是 unknown；然后比较 baseline LLM、skill agent 和 matched human subset 的行为距离。
+            Psych-201 的额外任务只有在 latent dynamics 和 feedback 可复原时才进入“是否可减少人类被试需求”的主结论。
+          </div>
+        </div>
+        <div class="footer">
+          生成时间：2026-06-18。内容来源：当前 Codex 会话中关于 MindGYM / Cecily / Yifei 的讨论归纳。
+        </div>
+      </section>
+    </main>
+  </div>
+  <script>
+    document.querySelectorAll('.taxonomy-table .yifei-family-row').forEach((familyRow, index) => {
+      const cell = familyRow.querySelector('td');
+      const label = cell ? cell.innerHTML.trim() : '';
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'family-toggle';
+      button.setAttribute('aria-expanded', 'true');
+      button.innerHTML = `<span class="family-toggle-label">${label}</span><span class="family-toggle-icon" aria-hidden="true">▼</span>`;
+      cell.replaceChildren(button);
+
+      const controlledRows = [];
+      let row = familyRow.nextElementSibling;
+      while (row && !row.classList.contains('yifei-family-row')) {
+        controlledRows.push(row);
+        row = row.nextElementSibling;
+      }
+      controlledRows.forEach((controlledRow) => {
+        controlledRow.dataset.familyGroup = `yifei-family-${index + 1}`;
+      });
+
+      button.addEventListener('click', () => {
+        const collapsed = !familyRow.classList.contains('is-collapsed');
+        familyRow.classList.toggle('is-collapsed', collapsed);
+        button.setAttribute('aria-expanded', String(!collapsed));
+        controlledRows.forEach((controlledRow) => {
+          controlledRow.hidden = collapsed;
+        });
+      });
+    });
+  </script>
+</body>
+</html>
