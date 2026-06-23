@@ -83,7 +83,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 每个 task type 下面再拆 **subtype / engine**。 **Task type 共用底座** 是该类任务共享的最小 runner、action parser、feedback loop 和通用 metric。 **继承 / 复用** 表示可从相近 engine 起步。 **本 subtype 改** 表示必须按具体 paper/condition 重建的部分，例如 reward schedule、stimulus materials、latent transition、scoring rule、group/condition metadata。
 
-颜色是 **subtype 层级** 的覆盖状态，不是 task type 整体状态： 绿色 表示 Cecily/Psych-101 已有可作为 generative/exact env 起点的底座； 灰色 表示这个 research 在 Psych-101 里，但缺材料、condition 信息或 latent dynamics，暂时不能承诺 human-feedback-exact； 蓝色 表示它属于 Psych-201 扩展集、不在 Psych-101，Cecily 未覆盖，需要先确认材料和机制能否复原。
+颜色是 **subtype 层级** 的覆盖状态，不是 task type 整体状态： 绿色 表示 Cecily/Psych-101 已有可作为 generative/exact env 起点的底座； 灰色 表示这个 research 在 Psych-101 里缺材料/condition/latent dynamics，或在下方审计中被判定不能只靠 paper + Psych-201 transcript 搭完整 exact env； 蓝色 表示它属于 Psych-201 扩展集、不在 Psych-101，Cecily 未覆盖，需要先确认材料和机制能否复原。
 
 **other / uncategorized** 不保留为 task type，因为它不是心理学任务范式。 能判断范式的条目已放到对应 task type；仍需核实的条目放在最接近的 subtype 下并标蓝，表示需要确认材料和机制能否复原。
 
@@ -726,6 +726,180 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **继承 / 复用：**category learning shell。
 - **本 subtype 改：**exact materials/rules, feedback timing, transfer/test construction。
 - Coverage (101 material/condition gap): levering2020revisiting
+
+
+## Cecily 未做类别的 env 可搭建性审计
+
+当前 Task Type 表中没有任何绿色 Cecily/Psych-101 底座的类别共 33 个。下面每类选 1-3 篇代表 paper，判断是否能只依靠 paper 描述和 Psych-201 transcript 的 observation/action/feedback 格式搭出完整 text-env。
+
+判定标准：必须能复原 trial generator 或 replay item bank、legal action、feedback/latent schedule、phase transition 和主要 metric。`可完整搭` 表示可作为下一批 Cecily env；`不能完整搭` 表示只能做 transcript replay、text proxy，或需要额外材料，网页中标灰。
+
+### risk_mpl
+- frey2017mpl: 可完整搭。MPL 行、A/B lottery、无即时反馈、switching metric 都在 transcript/paper 中可复原。
+- frey2017lotteries: 可完整搭。两选 described lottery，概率/金额/动作齐全；随机兑现可按 paper 作为末端 bonus rule。
+- spektor2024lossaversion: 可完整搭。50/50 mixed-gamble 对、session/context 与动作键在 transcript 中显式出现。
+- Cecily next step: 新增 lottery/MPL VariantSpec；复用 risky-choice parser，补 switching/loss-aversion metric。
+
+### skewness_choice
+- olschewski2024skewness: 不能完整搭。自动呈现的 dividend experience stream 和 stock-market latent distribution 不能只靠截断 transcript 稳定生成。
+- olschewski2025optimal: 可完整搭。described lottery / sampling block 的 A/B 选择、概率、金额和 sample rule 可从 transcript/paper 实现。
+- Cecily next step: 先做 olschewski2025optimal；olschewski2024 只做 transcript replay 或等原始 outcome stream。
+
+### moral_machine
+- awad2018moral: 可完整搭。两种 outcome vignette、人物属性、law status、forced choice 全在 trial text 中。
+- ciranka_vandenbos_2024: 可完整搭。jar choice、safe/risky rule、bonus、belief/report action 都在 transcript 中，feedback rule 可复原。
+- Cecily next step: 可先做 vignette/binary-choice shell，再接 marble-jar social-info variant。
+
+### intertemporal
+- ruggeri2022globalizability: 可完整搭。SS/LL 金额、delay、gain/loss framing 与按键都在 transcript 中；无动态 feedback。
+- Cecily next step: 新增 delay-discounting VariantSpec 和 AUC/discount-rate metric。
+
+### context effects / multi-attribute choice
+- spektor2019contexteffects: 可完整搭。2/3-option choice set、option labels、反馈值和 block 结构在 transcript 中。
+- evangelidis2023upscaling: 可完整搭。hotel attributes + search action 是单轮 choice，可直接生成/replay。
+- gunadi2021deferral: 可完整搭。price history、buy-now/defer action 明确，属于静态 vignette choice。
+- Cecily next step: 做 attribute-table renderer；condition 记录 attraction/compromise/search/deferral。
+
+### counterfactual_bandit
+- chambon2020feedback: 可完整搭。free/forced choice、chosen feedback、complete/partial feedback 文本足够搭 bandit loop。
+- Cecily next step: 复用 k-arm bandit，补 forced trial 和 unchosen-feedback logging。
+
+### reward_learning
+- bavard2018magnitude: 可完整搭。stimulus pair、reward/punishment magnitude、learning/transfer phase 在 transcript 中。
+- bavard2021range: 可完整搭。contextual magnitude/range 条件、training/test feedback 可从 transcript/paper 参数化。
+- bavard2023functional: 可完整搭。complete feedback for all stimuli 已出现在 transcript，适合做 range/frequency adaptation env。
+- Cecily next step: 建立 probabilistic-instrumental-learning shell，单独配置 partial/complete feedback。
+
+### probability_learning
+- Thoma_et_al_2025_probability_learning: 可完整搭。two-house prediction、single/both/none outcome 与 trial feedback 齐全。
+- jagadish2023zero: 可完整搭。casino/slot-machine options、5-trial blocks、coins feedback 和 zero-outcome semantics 可复原。
+- Cecily next step: 补 binary prediction + multi-option zero-outcome 两个 subtype。
+
+### reversal_learning
+- suthaharan2021paranoia: 可完整搭。3-arm reward probabilities、block/reversal-like belief updating、feedback 可由 transcript replay/parameterize。
+- wise2019acomputational: 不能完整搭。aversive reversal 的 shock-probability belief reports、eye-tracking/attention components不能只靠 transcript 完整复原。
+- full_REV_data.csv: 不能完整搭。当前是文件名级条目，缺 paper-level condition/source mapping，不能承诺 exact env。
+- Cecily next step: 先做 suthaharan；把 generic reversal_learning tag 拆成具体 paper 后再接。
+
+### reward_pairs
+- holton2024goalcommitment: 可完整搭。seafood/net state、changing availability、goal switching cost 和 reward 可由 transcript 搭。
+- gillan2016characterizing: 可完整搭。实际更接近 two-step；可复用 two_step skeleton，不应作为 reward_pairs 主代表。
+- reward_pairs: 不能完整搭。当前 HTML 只有 generic env id，没有映射到具体 Psych-201 paper/transcript。
+- Cecily next step: 把 gillan 迁回 two-step；reward_pairs 需先补具体 source。
+
+### observe_or_bet
+- anvari2024observe_bet: 可完整搭。observe/guess action、latent color probability、block change和 feedback 文本完整。
+- Cecily next step: 直接新增 observe/bet HMM-like VariantSpec。
+
+### optional stopping / secretary search
+- optional_stopping_with_recall: 可完整搭。box values、opening cost、stop/continue/recall payoff rule 在 transcript/paper 中可搭。
+- Cecily next step: 实现 sequential search state machine，记录 opening cost 和 recalled best value。
+
+### crt
+- crt: 不能完整搭。当前 HTML/Yifei env 是 generic id；Psych-201 catalog 中没有明确 CRT paper/transcript 对应。
+- Cecily next step: 先补 paper_key 和 item bank，否则不做 exact claim。
+
+### matrix_reasoning
+- matrix_reasoning: 不能完整搭。当前没有 Psych-201 paper/transcript 映射；矩阵图片/选项生成规则不在 HTML 中。
+- Cecily next step: 需要 source materials 或生成规则后再搭。
+
+### causal_inference
+- cohen2020causal: 可完整搭。gold/rock feedback、territory/intervener rule、yes/no intervention questions在 transcript 中。
+- witte2024interventionStudy: 不能完整搭。novel intervention game 的 tutorial/round mechanics 很长，当前 transcript 不足以复原完整 latent game generator。
+- bramley2017: 不能完整搭。当前无本地 Psych-201 transcript entry，只能作为待查 paper。
+- Cecily next step: 先做 cohen；witte/bramley 标 gray。
+
+### algorithmic advice / augmented decision
+- xu2023augmenting: 可完整搭。N1/N2/N3 arithmetic item、time-feedback condition、binary correct key 都在 transcript。
+- Cecily next step: 可搭 arithmetic/advice shell，condition 记录 augmentation/time feedback。
+
+### drm
+- drm: 不能完整搭。当前只有 Yifei env id，没有对应 Psych-201 paper/transcript；缺 word-list materials 和 lure structure。
+- Cecily next step: 需要具体 DRM paper/list materials。
+
+### source_monitoring
+- source_monitoring: 不能完整搭。当前只有 env id，没有具体 source-memory paper/transcript mapping；缺 study/test item-source map。
+- Cecily next step: 先补 material provenance。
+
+### stroop
+- busch2024_stroop: 可完整搭。color-word stimulus、congruency、correct key、timing/RT policy 可从 transcript/paper 搭 text-env。
+- Cecily next step: 复用 classification runner，RT 只作 metadata。
+
+### ultimatum
+- heffner2022economicgames: 可完整搭。ultimatum/proposer-responder payoff and action format 可从 economic-games variants 生成。
+- Cecily next step: 从 heffner battery 中拆 ultimatum VariantSpec。
+
+### repeated_games
+- akata2023repeatedgames: 可完整搭。2x2 payoff matrix、same-partner repeated rounds、opponent action/payoff feedback齐全。
+- heffner2022economicgames: 可完整搭。economic-games battery 里的 repeated games 可按 payoff matrix replay/生成。
+- Cecily next step: 复用 game-action runner，固定或脚本化 opponent schedule。
+
+### contribution_game
+- heffner2022economicgames: 可完整搭。4-player public-goods contribution/payoff formula 清楚，可用 fixed other-player schedule。
+- alsobay2025publicGoodsGame: 不能完整搭。20-player online game含奖励/惩罚/其他玩家动态；没有完整对手 policy 就不能承诺 counterfactual exact feedback。
+- Cecily next step: 先做 heffner PGG；alsobay 仅 replay 或需完整 group logs。
+
+### social_hierarchy
+- park2021socialhierarchy: 不能完整搭。当前本地 catalog 没有 experiment transcript；缺 person materials、training pairs 和 test grid。
+- Cecily next step: 等 transcript/materials 后再搭。
+
+### strategic / security / matrix games
+- aggarwal2023: 可完整搭。IAG target reward/penalty/mProb、attack/defer、monitoring feedback 可搭。
+- hunter2021increased: 可完整搭。patent-race endowment/prize/opponent investment/payoff 在 transcript 中。
+- zhu2024games: 可完整搭。one-shot 2x2 payoff matrix 和 row choice 完整；无需动态 feedback。
+- Cecily next step: 补 security/investment/matrix payoff engines。
+
+### rsa_pragmatics
+- hu2023lm-pragmatics: 可完整搭。story、question、multiple-choice options完整，适合 text harness。
+- tesslerfranke_2018_not_unreasonable: 可完整搭。gradable predicate/scalar vignette可由 transcript item bank replay。
+- vantiel2021probabilisticpragmatics: 可完整搭。scalar/pragmatic inference rating task可按 item text + rating scale搭。
+- Cecily next step: 做 pragmatic text-item runner，metric 对 human response distribution。
+
+### comprehension / substitution judgments
+- guenther2024comprehension: 可完整搭。sentence、question、one-word answer action完整。
+- guenther2024substitutions: 可完整搭。sentence/substitution candidates and judgment response可由 transcript搭。
+- Cecily next step: 补 text material loader 和 yes/no/free-response normalizer。
+
+### reference-game reasoning / production
+- frankedegen2016reasoning-exp1: 可完整搭。display 被 transcript 文本化为 creature/accessory descriptions，可搭 text reference game。
+- frankedegen2016reasoning-exp2: 可完整搭。production/display variants可按 transcript 生成。
+- franke2024bayesian: 可完整搭。Bayesian reference-game items可按 vignette/options replay。
+- Cecily next step: 若要视觉 exact 需图片；LLM text-env 可先做。
+
+### lexical / relational / grammaticality / association judgments
+- guenther2020LDT: 可完整搭。word/nonword item、K/M action、lexical decision labels完整。
+- guenther2022Relational: 可完整搭。compound relation selection item/options可搭。
+- guenther2023Grammaticality: 可完整搭。sentence grammaticality item and binary/choice response可搭。
+- Cecily next step: 优先做 closed-form lexical/grammaticality；free association 单独做 distribution metric。
+
+### metacognition
+- jansen2021dunningkruger: 可完整搭。pre/post confidence、20-item quiz、percentile estimate和 answers 可搭。
+- baar2021latent: 可完整搭。social prediction game、confidence rating、feedback可由 transcript搭。
+- hellmann_unpublished_brightness: 不能完整搭。brightness discrimination依赖视觉刺激和 joystick confidence；text transcript不能保真 human observation。
+- Cecily next step: 先做 quiz/social-prediction；视觉 psychophysics 标 gray。
+
+### multi_cue_judgment
+- collsiöö2023MCPL: 可完整搭。cue values、criterion estimate、feedback/no-feedback phase齐全。
+- barnby2022knowing: 可完整搭。trust/dictator payoff choices和反馈可搭，虽然应迁到 social/economic subtype。
+- breslav2022shuffle: 不能完整搭。当前 transcript显示 deck sequence/revealed cards，缺 shuffle/generator rule，不能生成完整 counterfactual env。
+- Cecily next step: 先做 MCPL；barnby 迁类；breslav 需 source rule。
+
+### probability_estimation
+- zhu2020bayesian: 可完整搭。probability query text、numeric response scale完整。
+- Ying2023NIPE: 可完整搭。inverse-planning scenario、candidate goal、1-7 rating完整。
+- tsvilodub-2023xorsome: 可完整搭。story、statement、0-100 slider可搭；attention checks按 transcript处理。
+- Cecily next step: 补 numeric/rating parser；objective scoring按 paper model或 human distribution。
+
+### things_odd_one_out
+- hebart2023things: 不能完整搭。triplet object names足够 replay text task，但原始 THINGS image/material index和完整 similarity reference不在 paper+transcript内。
+- guenther2023ViSpa: 可完整搭。word-pair visual-similarity judgments以文本呈现，可按 item set和rating/choice搭。
+- Cecily next step: THINGS exact 需 material index；ViSpa text-env 可先做。
+
+### perceptual / detection
+- busch2024_navon: 不能完整搭。Navon 依赖大/小字母视觉图形、mask和位置；文字描述会改变 observation。
+- pirrone_2018_dots: 不能完整搭。dot-array视觉/数量感知和RT是核心，人类看到的刺激不能只用文本等价。
+- singh2019phishing: 可完整搭。email sender/subject/body、ham/phishing label、feedback phase完整。
+- Cecily next step: 先做 phishing；视觉 psychophysics 只做非保真 text proxy。
 
 ## Cecily / Yifei 同步怎么改
 
