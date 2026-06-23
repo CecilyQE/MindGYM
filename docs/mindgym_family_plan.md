@@ -83,9 +83,34 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 每个 task type 下面再拆 **subtype / engine**。 **Task type 共用底座** 是该类任务共享的最小 runner、action parser、feedback loop 和通用 metric。 **继承 / 复用** 表示可从相近 engine 起步。 **本 subtype 改** 表示必须按具体 paper/condition 重建的部分，例如 reward schedule、stimulus materials、latent transition、scoring rule、group/condition metadata。
 
-颜色是 **subtype 层级** 的覆盖状态，不是 task type 整体状态： 绿色 表示 Cecily/Psych-101 已有可作为 generative/exact env 起点的底座； 灰色 表示这个 research 在 Psych-101 里，但缺材料、condition 信息或 latent dynamics，暂时不能承诺 human-feedback-exact； 蓝色 表示它属于 Psych-201 扩展集、不在 Psych-101，Cecily 未覆盖，需要先确认材料和机制能否复原。
+颜色是 **subtype 层级** 的覆盖状态，不是 task type 整体状态： 绿色 表示 Cecily/Psych-101 已有底座，或本轮 Psych-201 representative env 已通过 transcript action-bound 和 feedback-content validation； 灰色 表示本轮 validation fail、partial 或缺 transcript payload，暂时不能承诺 human-feedback-exact； 蓝色 表示它属于 Psych-201 扩展集、不在 Psych-101，且尚未完成这轮 validation。
 
 **other / uncategorized** 不保留为 task type，因为它不是心理学任务范式。 能判断范式的条目已放到对应 task type；仍需核实的条目放在最接近的 subtype 下并标蓝，表示需要确认材料和机制能否复原。
+
+### Psych-201 representative env validation
+
+这 18 个是当前为 Cecily 未覆盖 Psych-201 类别挑出的代表 env。绿色表示 transcript action-bound 和 feedback-content validation 已 pass；灰色表示 fail、partial 或缺 Psych-201 transcript payload。
+
+| Research / env | Status | Validation note |
+|---|---|---|
+| awad2018moral | green / pass | 33102/33102 feedback-content checks passed after transcript-level option binding. |
+| olschewski2025optimal | green / pass | 240/240 lottery transcripts pass. |
+| evangelidis2023upscaling | green / pass | 2014/2014 one-shot product/search transcripts pass after per-session labels bind. |
+| gunadi2021deferral | green / pass | 802/802 buy-now/defer transcripts pass after per-session labels bind. |
+| suthaharan2021paranoia | green / pass | 1012/1012 bandit point-feedback transcripts pass after arm-label binding. |
+| anvari2024observe_bet | green / pass | 926/926 observe/bet transcripts pass. |
+| anvari2024optional_stopping | gray / partial | 911/932 pass; 21 transcripts have internal best-value / payoff inconsistencies. |
+| cohen2020causal | green / pass | 101/101 causal mining transcripts pass after two-stage action binding. |
+| xu2023augmenting | green / pass | 79/79 arithmetic/advice transcripts pass after per-session response-label binding. |
+| busch2024_stroop | green / pass | 125/125 Stroop transcripts pass. |
+| heffner2022economicgames | green / pass | 1491/1491 ultimatum/public-goods transcripts pass after subtype/action binding. |
+| akata2023repeatedgames | gray / fail | 0/195 feedback-content checks pass; reported payoffs do not match transcript-stated payoff rules. |
+| zhu2024games | green / pass | 4673/4673 one-shot matrix-game transcripts pass. |
+| tesslerfranke_2018_not_unreasonable | green / pass | 829/829 continuous slider transcripts pass. |
+| guenther2020LDT | green / pass | 146/146 lexical-decision transcripts pass after per-session key binding. |
+| baar2022latent | green / pass | 150/150 social-prediction confidence transcripts pass after option-label binding. |
+| zhu2020bayesian | gray / missing | No local Psych-201 prompts payload; likely Zhu/Sanborn/Chater Bayesian Sampler data must be regenerated from external source. |
+| singh2019phishing | green / pass | 818/818 phishing score-feedback transcripts pass after per-session ham/phishing key binding. |
 
 ### Risk & Value-based Decision (10 groups)
 
@@ -124,7 +149,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**static gamble choice and value-feature extraction。
 - **本 subtype 改：**skewness manipulation, optimized stimulus generation, theory-discriminating contrasts。
-- Coverage (not in 101 / confirm): olschewski2024skewness, olschewski2025optimal
+- Coverage (not in 101 / confirm): olschewski2024skewness
+- Coverage (Psych-201 representative validation pass): olschewski2025optimal
 
 #### `moral_machine`
 
@@ -134,7 +160,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**vignette/choice runner and condition parser。
 - **本 subtype 改：**scenario materials, moral dimensions, response labels, scoring interpretation。
-- Coverage (not in 101 / confirm): awad2018moral, ciranka_vandenbos_2024
+- Coverage (Psych-201 representative validation pass): awad2018moral
+- Coverage (not in 101 / confirm): ciranka_vandenbos_2024
 
 #### `bart`
 
@@ -207,7 +234,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**attribute-table choice parser and option/search/deferral action vocabulary。
 - **本 subtype 改：**hotel/price-history materials, search option, buy-now vs defer target, price-change history。
-- Coverage (not in 101 / confirm): evangelidis2023upscaling, gunadi2021deferral
+- Coverage (Psych-201 representative validation pass): evangelidis2023upscaling, gunadi2021deferral
 
 ### Reinforcement Learning (7 groups)
 
@@ -220,6 +247,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **继承 / 复用：**arm/action/reward loop、Q-learning/regret/switch metrics。
 - **本 subtype 改：**arm count、reward distribution、trial schedule、instruction framing。
 - Coverage (Cecily done): bahrami2020four, feng2021dynamics, gershman2018deconstructing, sadeghiyeh2020temporal, somerville2017charting, waltz2020differential
+- Coverage (Psych-201 representative validation pass): suthaharan2021paranoia
 - Coverage (not in 101 / confirm): anvari2024armed_bandit, anllo2024weird, hartley2024twoarmedbandit, fan2022trait, rutledge2023happiness
 
 ##### non-stationary / instructed horizon bandit
@@ -329,7 +357,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**information-value action parser and belief/update metrics。
 - **本 subtype 改：**hidden urn/generative process, observe cost, bet payoff, color/state schedule。
-- Coverage (not in 101 / confirm): anvari2024observe_bet
+- Coverage (Psych-201 representative validation pass): anvari2024observe_bet
 
 #### `horizon`
 
@@ -379,7 +407,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**sequential search parser and stopping-position metrics。
 - **本 subtype 改：**recall availability, opening cost, sequence length, reward distribution。
-- Coverage (not in 101 / confirm): optional_stopping_with_recall
+- Coverage (Psych-201 representative validation partial): anvari2024optional_stopping
 
 ### Reasoning (4 groups)
 
@@ -411,7 +439,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**causal graph / intervention API, prediction parser。
 - **本 subtype 改：**graph structure, outcome generator, intervention costs, scoring rule。
-- Coverage (not in 101 / confirm): cohen2020causal, witte2024interventionStudy, bramley2017
+- Coverage (Psych-201 representative validation pass): cohen2020causal
+- Coverage (not in 101 / confirm): witte2024interventionStudy, bramley2017
 
 #### not included in Yifei's task/env; **algorithmic advice / augmented decision**
 
@@ -421,7 +450,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**binary decision parser and advice-condition logging。
 - **本 subtype 改：**subtraction/divisibility item generator, advice quality, time feedback, reliance scoring。
-- Coverage (not in 101 / confirm): xu2023augmenting
+- Coverage (Psych-201 representative validation pass): xu2023augmenting
 
 ### Memory & Cognitive Control (8 groups)
 
@@ -473,7 +502,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**stimulus-response classification runner、congruency-condition metrics。
 - **本 subtype 改：**color-word materials, congruent/incongruent mapping, timing/RT policy, interference metric。
-- Coverage (not in 101 / confirm): busch2024_stroop
+- Coverage (Psych-201 representative validation pass): busch2024_stroop
 
 #### not included in Yifei's task/env; **recent-probe / intention / associative memory**
 
@@ -528,7 +557,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**role/action parser and payoff bookkeeping。
 - **本 subtype 改：**offer distribution, responder/proposer role, acceptance threshold metric。
-- Coverage (not in 101 / confirm): heffner2022economicgames
+- Coverage (Psych-201 representative validation pass): heffner2022economicgames
 
 #### `repeated_games`
 
@@ -538,7 +567,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**game-action runner and payoff aggregation。
 - **本 subtype 改：**payoff matrix, partner model, repetition, history window, strategy metric。
-- Coverage (not in 101 / confirm): akata2023repeatedgames, heffner2022economicgames
+- Coverage (Psych-201 representative validation fail): akata2023repeatedgames
+- Coverage (Psych-201 representative validation pass): heffner2022economicgames
 
 #### `contribution_game`
 
@@ -548,7 +578,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**contribution parser and group-payoff aggregation。
 - **本 subtype 改：**group size, multiplier, feedback visibility, round structure。
-- Coverage (not in 101 / confirm): alsobay2025publicGoodsGame, heffner2022economicgames
+- Coverage (not in 101 / confirm): alsobay2025publicGoodsGame
+- Coverage (Psych-201 representative validation pass): heffner2022economicgames
 
 #### `dictator_game`
 
@@ -578,7 +609,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**payoff-matrix or strategic-choice runner。
 - **本 subtype 改：**attack/defer monitoring risk, investment race payoff, one-shot matrix-game payoff structure。
-- Coverage (not in 101 / confirm): aggarwal2023, hunter2021increased, zhu2024games
+- Coverage (not in 101 / confirm): aggarwal2023, hunter2021increased
+- Coverage (Psych-201 representative validation pass): zhu2024games
 
 ### Language & Pragmatics (4 groups)
 
@@ -590,7 +622,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**text prompt runner、choice/rating parser、condition-level aggregation。
 - **本 subtype 改：**context construction, literal/pragmatic target, speaker/listener role, answer key。
-- Coverage (not in 101 / confirm): hu2023lm-pragmatics, tesslerfranke_2018_not_unreasonable, vantiel2020-probabilistic_pragmatics, vantiel2020probabilistic_pragmatics, vantiel2021probabilisticpragmatics, vantiel2022meaninguse
+- Coverage (not in 101 / confirm): hu2023lm-pragmatics, vantiel2020-probabilistic_pragmatics, vantiel2020probabilistic_pragmatics, vantiel2021probabilisticpragmatics, vantiel2022meaninguse
+- Coverage (Psych-201 representative validation pass): tesslerfranke_2018_not_unreasonable
 
 #### not included in Yifei's task/env; **comprehension / substitution judgments**
 
@@ -620,7 +653,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**text material loader and lexical/free-response parser。
 - **本 subtype 改：**lexical-decision target, sensibility/relational labels, grammaticality key, free-association scoring。
-- Coverage (not in 101 / confirm): guenther2020LDT, guenther2020TS, guenther2022Relational, guenther2023Grammaticality, guenther2024associations_individual, sun2025rat
+- Coverage (Psych-201 representative validation pass): guenther2020LDT
+- Coverage (not in 101 / confirm): guenther2020TS, guenther2022Relational, guenther2023Grammaticality, guenther2024associations_individual, sun2025rat
 
 ### Judgment & Metacognition (6 groups)
 
@@ -638,6 +672,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**choice runner plus confidence/belief report parser。
 - **本 subtype 改：**belief latent state, confidence scale, sampling paradigm, calibration metric。
+- Coverage (Psych-201 representative validation pass): baar2022latent
 - Coverage (not in 101 / confirm): anvari2024sampling_paradigm, baar2021latent, hellmann_unpublished_brightness, schiekiera2025metascience
 
 #### `multi_cue_judgment`
@@ -664,7 +699,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**continuous/numeric estimate parser and calibration metrics。
 - **本 subtype 改：**stimulus generation, posterior target, scoring rule。
-- Coverage (101 material/condition gap): zhu2020bayesian
+- Coverage (Psych-201 representative validation missing): zhu2020bayesian
 
 ##### likelihood / probability / XOR judgments
 
@@ -708,7 +743,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**classification runner and binary/graded decision parser。
 - **本 subtype 改：**email/web materials, ground-truth labels, feedback wording, risk metric。
-- Coverage (not in 101 / confirm): singh2019phishing
+- Coverage (Psych-201 representative validation pass): singh2019phishing
 
 #### not included in Yifei's task/env; **category learning**
 
