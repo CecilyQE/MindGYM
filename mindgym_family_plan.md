@@ -83,7 +83,11 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 每个 task type 下面再拆 **subtype / engine**。 **Task type 共用底座** 是该类任务共享的最小 runner、action parser、feedback loop 和通用 metric。 **继承 / 复用** 表示可从相近 engine 起步。 **本 subtype 改** 表示必须按具体 paper/condition 重建的部分，例如 reward schedule、stimulus materials、latent transition、scoring rule、group/condition metadata。
 
-颜色是 **subtype 层级** 的覆盖状态，不是 task type 整体状态：绿色表示 Cecily 已完成，或已通过 human-path transcript replay；灰色表示 validation fail、partial 或缺 transcript payload，暂时不能承诺 human-feedback-exact；蓝色表示尚未完成 Cecily 实现或 transcript validation。
+颜色是 **subtype 层级** 的覆盖状态，不是 task type 整体状态：
+
+- 绿色：Cecily 已完成。
+- 灰色：validation fail、partial 或缺 transcript payload，暂时不能承诺 human-feedback-exact。
+- 蓝色：尚未完成 Cecily 实现或 transcript validation。
 
 **other / uncategorized** 不保留为 task type，因为它不是心理学任务范式。 能判断范式的条目已放到对应 task type；仍需核实的条目放在最接近的 subtype 下并标蓝，表示需要确认材料和机制能否复原。
 
