@@ -83,34 +83,9 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 每个 task type 下面再拆 **subtype / engine**。 **Task type 共用底座** 是该类任务共享的最小 runner、action parser、feedback loop 和通用 metric。 **继承 / 复用** 表示可从相近 engine 起步。 **本 subtype 改** 表示必须按具体 paper/condition 重建的部分，例如 reward schedule、stimulus materials、latent transition、scoring rule、group/condition metadata。
 
-颜色是 **subtype 层级** 的覆盖状态，不是 task type 整体状态： 绿色 表示 Cecily/Psych-101 已有底座，或本轮 Psych-201 representative env 已通过 transcript action-bound 和 feedback-content validation； 灰色 表示本轮 validation fail、partial 或缺 transcript payload，暂时不能承诺 human-feedback-exact； 蓝色 表示它属于 Psych-201 扩展集、不在 Psych-101，且尚未完成这轮 validation。
+颜色是 **subtype 层级** 的覆盖状态，不是 task type 整体状态：绿色表示 Cecily 已完成，或已通过 human-path transcript replay；灰色表示 validation fail、partial 或缺 transcript payload，暂时不能承诺 human-feedback-exact；蓝色表示尚未完成 Cecily 实现或 transcript validation。
 
 **other / uncategorized** 不保留为 task type，因为它不是心理学任务范式。 能判断范式的条目已放到对应 task type；仍需核实的条目放在最接近的 subtype 下并标蓝，表示需要确认材料和机制能否复原。
-
-### Psych-201 representative env validation
-
-这 18 个是当前为 Cecily 未覆盖 Psych-201 类别挑出的代表 env。绿色表示 transcript action-bound 和 feedback-content validation 已 pass；灰色表示 fail、partial 或缺 Psych-201 transcript payload。
-
-| Research / env | Status | Validation note |
-|---|---|---|
-| awad2018moral | green / pass | 33102/33102 feedback-content checks passed after transcript-level option binding. |
-| olschewski2025optimal | green / pass | 240/240 lottery transcripts pass. |
-| evangelidis2023upscaling | green / pass | 2014/2014 one-shot product/search transcripts pass after per-session labels bind. |
-| gunadi2021deferral | green / pass | 802/802 buy-now/defer transcripts pass after per-session labels bind. |
-| suthaharan2021paranoia | green / pass | 1012/1012 bandit point-feedback transcripts pass after arm-label binding. |
-| anvari2024observe_bet | green / pass | 926/926 observe/bet transcripts pass. |
-| anvari2024optional_stopping | gray / partial | 911/932 pass; 21 transcripts have internal best-value / payoff inconsistencies. |
-| cohen2020causal | green / pass | 101/101 causal mining transcripts pass after two-stage action binding. |
-| xu2023augmenting | green / pass | 79/79 arithmetic/advice transcripts pass after per-session response-label binding. |
-| busch2024_stroop | green / pass | 125/125 Stroop transcripts pass. |
-| heffner2022economicgames | green / pass | 1491/1491 ultimatum/public-goods transcripts pass after subtype/action binding. |
-| akata2023repeatedgames | gray / fail | 0/195 feedback-content checks pass; reported payoffs do not match transcript-stated payoff rules. |
-| zhu2024games | green / pass | 4673/4673 one-shot matrix-game transcripts pass. |
-| tesslerfranke_2018_not_unreasonable | green / pass | 829/829 continuous slider transcripts pass. |
-| guenther2020LDT | green / pass | 146/146 lexical-decision transcripts pass after per-session key binding. |
-| baar2022latent | green / pass | 150/150 social-prediction confidence transcripts pass after option-label binding. |
-| zhu2020bayesian | gray / missing | No local Psych-201 prompts payload; likely Zhu/Sanborn/Chater Bayesian Sampler data must be regenerated from external source. |
-| singh2019phishing | green / pass | 818/818 phishing score-feedback transcripts pass after per-session ham/phishing key binding. |
 
 ### Risk & Value-based Decision (10 groups)
 
@@ -122,7 +97,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**described lottery parser、risk preference summary metrics。
 - **本 subtype 改：**price list staircase, switching metric, gain/loss framing, payoff conversion。
-- Coverage (not in 101 / confirm): frey2017mpl, frey2017lotteries, spektor2024lossaversion
+- Coverage (needs Cecily validation): frey2017mpl, frey2017lotteries
+- Coverage (Cecily validated): spektor2024lossaversion
 
 #### `risky_choice`
 
@@ -133,13 +109,14 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **继承 / 复用：**two-option gamble renderer、EV/CPT features、choice parser。
 - **本 subtype 改：**stimulus set, probability/payoff format, feedback policy, theory-specific metrics。
 - Coverage (Cecily done): krueger2022identifying, wulff2018description, xiong2023neural, peterson2021using
-- Coverage (not in 101 / confirm): Thoma_et_al_2025_risky_choice, hussain2024risk, pirrone_unpublished_lottery, russek2024heuristics
+- Coverage (Cecily validated): hussain2024risk
+- Coverage (needs Cecily validation): Thoma_et_al_2025_risky_choice, pirrone_unpublished_lottery, russek2024heuristics
 
 ##### value-based two-option choice
 
 - **继承 / 复用：**two-option choice parser and value-feature extraction。
 - **本 subtype 改：**food/value stimulus set, reaction-time use, no stochastic outcome unless paper specifies one。
-- Coverage (not in 101 / confirm): pirrone_unpublished_food
+- Coverage (needs Cecily validation): pirrone_unpublished_food
 
 #### `skewness_choice`
 
@@ -149,8 +126,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**static gamble choice and value-feature extraction。
 - **本 subtype 改：**skewness manipulation, optimized stimulus generation, theory-discriminating contrasts。
-- Coverage (not in 101 / confirm): olschewski2024skewness
-- Coverage (Psych-201 representative validation pass): olschewski2025optimal
+- Coverage (needs Cecily validation): olschewski2024skewness
+- Coverage (Cecily validated): olschewski2025optimal
 
 #### `moral_machine`
 
@@ -160,8 +137,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**vignette/choice runner and condition parser。
 - **本 subtype 改：**scenario materials, moral dimensions, response labels, scoring interpretation。
-- Coverage (Psych-201 representative validation pass): awad2018moral
-- Coverage (not in 101 / confirm): ciranka_vandenbos_2024
+- Coverage (Cecily validated): awad2018moral
+- Coverage (needs Cecily validation): ciranka_vandenbos_2024
 
 #### `bart`
 
@@ -177,7 +154,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**BART pump/cash engine。
 - **本 subtype 改：**clinical metadata, instruction framing, variant-specific thresholds or outcomes。
-- Coverage (not in 101 / confirm): pike2023catastrophizing
+- Coverage (Cecily validated): pike2023catastrophizing
 
 #### `sampling_choice`
 
@@ -188,7 +165,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **继承 / 复用：**lottery latent state, sample history, final choice parser。
 - **本 subtype 改：**sample-then-feedback rule, description/experience condition, stopping/free-sampling rule。
 - Coverage (Cecily done): garcia2023experiential, plonsky2018when, wulff2018sampling
-- Coverage (not in 101 / confirm): frey2017dfe
+- Coverage (needs Cecily validation): frey2017dfe
 
 #### `columbia_card`
 
@@ -228,13 +205,13 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**multi-option choice parser、attribute table renderer、choice-share metrics。
 - **本 subtype 改：**decoy construction, attribute normalization, context condition, dominance relation。
-- Coverage (not in 101 / confirm): spektor2019contexteffects
+- Coverage (needs Cecily validation): spektor2019contexteffects
 
 ##### consumer multi-attribute choice / search or deferral
 
 - **继承 / 复用：**attribute-table choice parser and option/search/deferral action vocabulary。
 - **本 subtype 改：**hotel/price-history materials, search option, buy-now vs defer target, price-change history。
-- Coverage (Psych-201 representative validation pass): evangelidis2023upscaling, gunadi2021deferral
+- Coverage (Cecily validated): evangelidis2023upscaling, gunadi2021deferral
 
 ### Reinforcement Learning (7 groups)
 
@@ -247,15 +224,15 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **继承 / 复用：**arm/action/reward loop、Q-learning/regret/switch metrics。
 - **本 subtype 改：**arm count、reward distribution、trial schedule、instruction framing。
 - Coverage (Cecily done): bahrami2020four, feng2021dynamics, gershman2018deconstructing, sadeghiyeh2020temporal, somerville2017charting, waltz2020differential
-- Coverage (Psych-201 representative validation pass): suthaharan2021paranoia
-- Coverage (not in 101 / confirm): anvari2024armed_bandit, anllo2024weird, hartley2024twoarmedbandit, fan2022trait, rutledge2023happiness
+- Coverage (Cecily validated): suthaharan2021paranoia
+- Coverage (needs Cecily validation): anvari2024armed_bandit, anllo2024weird, hartley2024twoarmedbandit, fan2022trait, rutledge2023happiness
 
 ##### non-stationary / instructed horizon bandit
 
 - **继承 / 复用：**bandit loop plus drift / horizon / instructed-exposure controls。
 - **本 subtype 改：**reward-probability drift, instructed trials, horizon 1/6, safety or exploration constraints。
 - Coverage (101 material/condition gap): speekenbrink2008learning
-- Coverage (not in 101 / confirm): dubois2022value
+- Coverage (needs Cecily validation): dubois2022value
 
 #### `counterfactual_bandit`
 
@@ -265,7 +242,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**bandit choice loop、chosen reward update。
 - **本 subtype 改：**unchosen-arm feedback, counterfactual logging, learning metric。
-- Coverage (not in 101 / confirm): chambon2020feedback
+- Coverage (needs Cecily validation): chambon2020feedback
 
 #### `reward_learning`
 
@@ -275,7 +252,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**bandit loop、reward observation、choice parser。
 - **本 subtype 改：**reward scale, range normalization, magnitude condition。
-- Coverage (not in 101 / confirm): bavard2018magnitude, bavard2021range, bavard2023functional
+- Coverage (needs Cecily validation): bavard2018magnitude, bavard2021range, bavard2023functional
 
 #### `probability_learning`
 
@@ -285,7 +262,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**stimulus-response-feedback loop、learning-rate and bias metrics。
 - **本 subtype 改：**rewarded response, probability schedule, omission/zero outcome semantics。
-- Coverage (not in 101 / confirm): Thoma_et_al_2025_probability_learning, jagadish2023zero
+- Coverage (needs Cecily validation): Thoma_et_al_2025_probability_learning, jagadish2023zero
 
 #### `reversal_learning`
 
@@ -295,7 +272,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**instrumental learning skeleton and block/phase parser。
 - **本 subtype 改：**reversal schedule, criterion, feedback semantics, perseveration metric。
-- Coverage (not in 101 / confirm): reversal_learning
+- Coverage (needs Cecily validation): reversal_learning
 
 #### `optimism_learning`
 
@@ -306,7 +283,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **继承 / 复用：**stimulus-response-feedback loop、learning-rate and bias metrics。
 - **本 subtype 改：**positive/negative update asymmetry, belief report, feedback schedule。
 - Coverage (Cecily done): lefebvre2017behavioural
-- Coverage (not in 101 / confirm): optimism_learning
+- Coverage (needs Cecily validation): optimism_learning
 
 #### `reward_pairs`
 
@@ -316,7 +293,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**action-outcome mapping and choice parser。
 - **本 subtype 改：**devaluation phase, habit/goal metric, clinical grouping, stimulus set。
-- Coverage (not in 101 / confirm): gillan2016characterizing, holton2024goalcommitment, reward_pairs
+- Coverage (needs Cecily validation): gillan2016characterizing, holton2024goalcommitment, reward_pairs
 
 ### Explore-Exploit & Model-Based RL (8 groups)
 
@@ -329,14 +306,14 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **继承 / 复用：**stage-1 transition、stage-2 reward drift、stay/MB index。
 - **本 subtype 改：**stimulus theme、trial count、transition/reward schedule。
 - Coverage (Cecily done): kool2016when, zorowitz2023data
-- Coverage (not in 101 / confirm): decker2016twostep, potter2017twostep, shahar2019twosteptask
+- Coverage (needs Cecily validation): decker2016twostep, potter2017twostep, shahar2019twosteptask
 
 ##### cost / instruction / clinical two-step
 
 - **继承 / 复用：**two-step transition skeleton、model-based/model-free readout。
 - **本 subtype 改：**cost calculation、instruction/debrief condition、clinical group metadata、block schedule。
 - Coverage (Cecily done): kool2017cost
-- Coverage (not in 101 / confirm): castro_rodrigues2022twostep, sandbrink2024metacontrol, nussenbaum2020twostep, phaneuf-hadd_2025_cogeff
+- Coverage (needs Cecily validation): castro_rodrigues2022twostep, sandbrink2024metacontrol, nussenbaum2020twostep, phaneuf-hadd_2025_cogeff
 
 #### `spatial_search`
 
@@ -347,7 +324,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **继承 / 复用：**grid-state representation、query action parser、spatial generalization metrics。
 - **本 subtype 改：**kernel/function prior, payoff landscape, query budget, developmental or empowerment condition。
 - Coverage (Cecily done): wu2018generalisation
-- Coverage (not in 101 / confirm): Meder (2021), Schulz (2019), braendle2023empowerment, giron2023developmentalExploration
+- Coverage (needs Cecily validation): Meder (2021), Schulz (2019), braendle2023empowerment, giron2023developmentalExploration
 
 #### `observe_or_bet`
 
@@ -357,7 +334,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**information-value action parser and belief/update metrics。
 - **本 subtype 改：**hidden urn/generative process, observe cost, bet payoff, color/state schedule。
-- Coverage (Psych-201 representative validation pass): anvari2024observe_bet
+- Coverage (Cecily validated): anvari2024observe_bet
 
 #### `horizon`
 
@@ -407,7 +384,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**sequential search parser and stopping-position metrics。
 - **本 subtype 改：**recall availability, opening cost, sequence length, reward distribution。
-- Coverage (Psych-201 representative validation partial): anvari2024optional_stopping
+- Coverage (validation partial): anvari2024optional_stopping
 
 ### Reasoning (4 groups)
 
@@ -419,7 +396,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**multiple-choice/free-answer parser、correctness scoring、lure-choice metric。
 - **本 subtype 改：**item bank, numeric answer normalization, intuitive-lure labels, external human baseline。
-- Coverage (not in 101 / confirm): crt
+- Coverage (needs Cecily validation): crt
 
 #### `matrix_reasoning`
 
@@ -429,7 +406,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**matrix/item renderer、option parser、accuracy metric。
 - **本 subtype 改：**pattern generator, rule dimensions, distractor construction, visual/text rendering fidelity。
-- Coverage (not in 101 / confirm): matrix_reasoning
+- Coverage (needs Cecily validation): matrix_reasoning
 
 #### `causal_inference`
 
@@ -439,8 +416,9 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**causal graph / intervention API, prediction parser。
 - **本 subtype 改：**graph structure, outcome generator, intervention costs, scoring rule。
-- Coverage (Psych-201 representative validation pass): cohen2020causal
-- Coverage (not in 101 / confirm): witte2024interventionStudy, bramley2017
+- Coverage (Cecily validated): cohen2020causal
+- Coverage (Cecily validated): witte2024interventionStudy
+- Coverage (needs Cecily validation): bramley2017
 
 #### not included in Yifei's task/env; **algorithmic advice / augmented decision**
 
@@ -450,7 +428,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**binary decision parser and advice-condition logging。
 - **本 subtype 改：**subtraction/divisibility item generator, advice quality, time feedback, reliance scoring。
-- Coverage (Psych-201 representative validation pass): xu2023augmenting
+- Coverage (Cecily validated): xu2023augmenting
 
 ### Memory & Cognitive Control (8 groups)
 
@@ -462,7 +440,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**study-list -> recognition/free-recall wrapper。
 - **本 subtype 改：**semantic lure lists, false-alarm scoring, external human baseline。
-- Coverage (not in 101 / confirm): drm
+- Coverage (needs Cecily validation): drm
 
 #### `source_monitoring`
 
@@ -472,7 +450,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**study/test memory wrapper and source-choice parser。
 - **本 subtype 改：**speaker/source assignment, source labels, lure construction, external human baseline。
-- Coverage (not in 101 / confirm): source_monitoring
+- Coverage (needs Cecily validation): source_monitoring
 
 #### `digit_span`
 
@@ -502,7 +480,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**stimulus-response classification runner、congruency-condition metrics。
 - **本 subtype 改：**color-word materials, congruent/incongruent mapping, timing/RT policy, interference metric。
-- Coverage (Psych-201 representative validation pass): busch2024_stroop
+- Coverage (Cecily validated): busch2024_stroop
 
 #### not included in Yifei's task/env; **recent-probe / intention / associative memory**
 
@@ -524,7 +502,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**study-test scheduler and recall/recognition scoring shell。
 - **本 subtype 改：**image/word materials, association graph, lures, transfer labels, free-recall scoring。
-- Coverage (not in 101 / confirm): gross2023hindsightTransferLearning, guenther2024associations, haridi2024memory_1, haridi2024memory_2, haridi2024memory_3, rausch_unpublished_replication
+- Coverage (Cecily validated): haridi2024memory_1
+- Coverage (needs Cecily validation): gross2023hindsightTransferLearning, guenther2024associations, haridi2024memory_2, haridi2024memory_3, rausch_unpublished_replication
 
 #### not included in Yifei's task/env; **memory / chunking**
 
@@ -545,7 +524,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 - **继承 / 复用：**go/no-go state machine、commission/omission metrics。
 - **本 subtype 改：**stimulus-go mapping, timing, feedback, adaptive or fixed schedule。
 - Coverage (Cecily done): enkavi2019gonogo
-- Coverage (not in 101 / confirm): moutoussis2018pavlovian
+- Coverage (Cecily validated): moutoussis2018pavlovian
 
 ### Social & Economic Games (6 groups)
 
@@ -557,7 +536,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**role/action parser and payoff bookkeeping。
 - **本 subtype 改：**offer distribution, responder/proposer role, acceptance threshold metric。
-- Coverage (Psych-201 representative validation pass): heffner2022economicgames
+- Coverage (Cecily validated): heffner2022economicgames
 
 #### `repeated_games`
 
@@ -567,8 +546,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**game-action runner and payoff aggregation。
 - **本 subtype 改：**payoff matrix, partner model, repetition, history window, strategy metric。
-- Coverage (Psych-201 representative validation fail): akata2023repeatedgames
-- Coverage (Psych-201 representative validation pass): heffner2022economicgames
+- Coverage (validation fail): akata2023repeatedgames
+- Coverage (Cecily validated): heffner2022economicgames
 
 #### `contribution_game`
 
@@ -578,8 +557,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**contribution parser and group-payoff aggregation。
 - **本 subtype 改：**group size, multiplier, feedback visibility, round structure。
-- Coverage (not in 101 / confirm): alsobay2025publicGoodsGame
-- Coverage (Psych-201 representative validation pass): heffner2022economicgames
+- Coverage (Cecily validated): alsobay2025publicGoodsGame
+- Coverage (Cecily validated): heffner2022economicgames
 
 #### `dictator_game`
 
@@ -599,7 +578,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**pairwise comparison parser、training/test phase wrapper、transitive inference metric。
 - **本 subtype 改：**competence/popularity grid, person materials, training pairs, test-distance scoring。
-- Coverage (not in 101 / confirm): park2021socialhierarchy
+- Coverage (needs Cecily validation): park2021socialhierarchy
 
 #### not included in Yifei's task/env; **strategic / security / matrix games**
 
@@ -609,8 +588,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**payoff-matrix or strategic-choice runner。
 - **本 subtype 改：**attack/defer monitoring risk, investment race payoff, one-shot matrix-game payoff structure。
-- Coverage (not in 101 / confirm): aggarwal2023, hunter2021increased
-- Coverage (Psych-201 representative validation pass): zhu2024games
+- Coverage (needs Cecily validation): aggarwal2023, hunter2021increased
+- Coverage (Cecily validated): zhu2024games
 
 ### Language & Pragmatics (4 groups)
 
@@ -622,8 +601,8 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**text prompt runner、choice/rating parser、condition-level aggregation。
 - **本 subtype 改：**context construction, literal/pragmatic target, speaker/listener role, answer key。
-- Coverage (not in 101 / confirm): hu2023lm-pragmatics, vantiel2020-probabilistic_pragmatics, vantiel2020probabilistic_pragmatics, vantiel2021probabilisticpragmatics, vantiel2022meaninguse
-- Coverage (Psych-201 representative validation pass): tesslerfranke_2018_not_unreasonable
+- Coverage (needs Cecily validation): hu2023lm-pragmatics, vantiel2020-probabilistic_pragmatics, vantiel2020probabilistic_pragmatics, vantiel2021probabilisticpragmatics, vantiel2022meaninguse
+- Coverage (Cecily validated): tesslerfranke_2018_not_unreasonable
 
 #### not included in Yifei's task/env; **comprehension / substitution judgments**
 
@@ -633,7 +612,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**text material loader、forced-choice parser。
 - **本 subtype 改：**sentence/item bank, substitution candidates, semantic correctness target。
-- Coverage (not in 101 / confirm): guenther2024comprehension, guenther2024substitutions
+- Coverage (needs Cecily validation): guenther2024comprehension, guenther2024substitutions
 
 #### not included in Yifei's task/env; **reference-game reasoning / production**
 
@@ -643,7 +622,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**reference-game vignette runner and RSA-style listener/speaker scoring。
 - **本 subtype 改：**speaker vs listener role, display composition, target object, message-option set。
-- Coverage (not in 101 / confirm): frankedegen2016reasoning-exp1, frankedegen2016reasoning-exp2, franke2024bayesian
+- Coverage (needs Cecily validation): frankedegen2016reasoning-exp1, frankedegen2016reasoning-exp2, franke2024bayesian
 
 #### not included in Yifei's task/env; **lexical / relational / grammaticality / association judgments**
 
@@ -653,8 +632,9 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**text material loader and lexical/free-response parser。
 - **本 subtype 改：**lexical-decision target, sensibility/relational labels, grammaticality key, free-association scoring。
-- Coverage (Psych-201 representative validation pass): guenther2020LDT
-- Coverage (not in 101 / confirm): guenther2020TS, guenther2022Relational, guenther2023Grammaticality, guenther2024associations_individual, sun2025rat
+- Coverage (Cecily validated): guenther2020LDT
+- Coverage (Cecily validated): guenther2023Grammaticality, guenther2024associations_individual
+- Coverage (needs Cecily validation): guenther2020TS, guenther2022Relational, sun2025rat
 
 ### Judgment & Metacognition (6 groups)
 
@@ -672,8 +652,9 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**choice runner plus confidence/belief report parser。
 - **本 subtype 改：**belief latent state, confidence scale, sampling paradigm, calibration metric。
-- Coverage (Psych-201 representative validation pass): baar2022latent
-- Coverage (not in 101 / confirm): anvari2024sampling_paradigm, baar2021latent, hellmann_unpublished_brightness, schiekiera2025metascience
+- Coverage (Cecily validated): baar2022latent
+- Coverage (Cecily validated): anvari2024sampling_paradigm
+- Coverage (needs Cecily validation): baar2021latent, hellmann_unpublished_brightness, schiekiera2025metascience
 
 #### `multi_cue_judgment`
 
@@ -689,7 +670,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**cue-to-response shell and feedback/test metrics。
 - **本 subtype 改：**function family, shuffled feedback, omission/yes-no bias scoring。
-- Coverage (not in 101 / confirm): barnby2022knowing, breslav2022shuffle, cheung2025omissionyesnobias
+- Coverage (needs Cecily validation): barnby2022knowing, breslav2022shuffle, cheung2025omissionyesnobias
 
 #### `probability_estimation`
 
@@ -699,13 +680,13 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**continuous/numeric estimate parser and calibration metrics。
 - **本 subtype 改：**stimulus generation, posterior target, scoring rule。
-- Coverage (Psych-201 representative validation missing): zhu2020bayesian
+- Coverage (missing transcript payload): zhu2020bayesian
 
 ##### likelihood / probability / XOR judgments
 
 - **继承 / 复用：**probability judgment parser。
 - **本 subtype 改：**premise format, target event, likelihood/rating scale, XOR structure。
-- Coverage (not in 101 / confirm): Ying2023NIPE, bhatia2024likelihoodratings, tsvilodub-2023xorsome
+- Coverage (needs Cecily validation): Ying2023NIPE, bhatia2024likelihoodratings, tsvilodub-2023xorsome
 
 #### `things_odd_one_out`
 
@@ -721,7 +702,7 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**triplet/odd-one-out runner。
 - **本 subtype 改：**visual materials, semantic embedding target, answer key or human-reference scoring。
-- Coverage (not in 101 / confirm): guenther2023ViSpa
+- Coverage (needs Cecily validation): guenther2023ViSpa
 
 #### not included in Yifei's task/env; **perceptual / detection**
 
@@ -731,19 +712,19 @@ Yifei 页面有两层：8 个 **domain family** 和 38 个已实现的 **task/en
 
 - **继承 / 复用：**classification runner、accuracy/RT parsing。
 - **本 subtype 改：**visual stimuli, congruency/detail feedback, correct label generation。
-- Coverage (not in 101 / confirm): busch2024_navon
+- Coverage (needs Cecily validation): busch2024_navon
 
 ##### perceptual numerosity / dot decision
 
 - **继承 / 复用：**perceptual forced-choice parser and accuracy/RT metrics。
 - **本 subtype 改：**dot-array generator, numerosity or motion ratio, speed-accuracy tradeoff scoring。
-- Coverage (not in 101 / confirm): pirrone_2018_dots
+- Coverage (needs Cecily validation): pirrone_2018_dots
 
 ##### phishing / real-world detection
 
 - **继承 / 复用：**classification runner and binary/graded decision parser。
 - **本 subtype 改：**email/web materials, ground-truth labels, feedback wording, risk metric。
-- Coverage (Psych-201 representative validation pass): singh2019phishing
+- Coverage (Cecily validated): singh2019phishing
 
 #### not included in Yifei's task/env; **category learning**
 
