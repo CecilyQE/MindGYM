@@ -1157,12 +1157,10 @@
                 <strong>继承 / 复用</strong> 表示可从相近 engine 起步。
                 <strong>本 subtype 改</strong> 表示必须按具体 paper/condition 重建的部分，例如 reward schedule、stimulus materials、latent transition、scoring rule、group/condition metadata。
               </p>
-              <p>
-                颜色是 <strong>subtype 层级</strong> 的覆盖状态，不是 task type 整体状态：
-                <span class="research-tag green">绿色</span> 表示 Cecily 已完成，或已通过 human-path transcript replay（逐 trial <code>env.step()</code> reward + feedback）；
-                <span class="research-tag gray">灰色</span> 表示本轮 validation fail、partial 或缺 transcript payload，暂时不能承诺 human-feedback-exact；
-                <span class="research-tag blue">蓝色</span> 表示尚未完成 Cecily 实现或 transcript validation。
-              </p>
+              <p>颜色是 <strong>subtype 层级</strong> 的覆盖状态，不是 task type 整体状态：</p>
+              <p><span class="research-tag green">绿色</span> 表示 Cecily 已完成。</p>
+              <p><span class="research-tag gray">灰色</span> 表示本轮 validation fail、partial 或缺 transcript payload，暂时不能承诺 human-feedback-exact。</p>
+              <p><span class="research-tag blue">蓝色</span> 表示尚未完成 Cecily 实现或 transcript validation。</p>
               <p>
                 <strong>other / uncategorized</strong> 不保留为 task type，因为它不是心理学任务范式。
                 能判断范式的条目已放到对应 task type；仍需核实的条目放在最接近的 subtype 下并标蓝，表示需要确认材料和机制能否复原。
