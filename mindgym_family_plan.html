@@ -239,6 +239,17 @@
       padding: 18px;
     }
 
+    .subsection-title {
+      margin: 0;
+      padding: 16px 16px 4px;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+
+    .band > .section-note {
+      padding: 0 16px 12px;
+    }
+
     .grid {
       display: grid;
       gap: 14px;
@@ -424,6 +435,16 @@
     .taxonomy-table th:nth-child(2),
     .taxonomy-table td:nth-child(2) {
       width: 76%;
+    }
+
+    .coverage-table th:nth-child(1),
+    .coverage-table td:nth-child(1) {
+      width: 28%;
+    }
+
+    .coverage-table th:nth-child(2),
+    .coverage-table td:nth-child(2) {
+      width: 14%;
     }
 
     .taxonomy-table tr.yifei-family-row td {
@@ -1138,9 +1159,9 @@
               </p>
               <p>
                 颜色是 <strong>subtype 层级</strong> 的覆盖状态，不是 task type 整体状态：
-                <span class="research-tag green">绿色</span> 表示 Cecily/Psych-101 已有可作为 generative/exact env 起点的底座；
-                <span class="research-tag gray">灰色</span> 表示这个 research 在 Psych-101 里，但缺材料、condition 信息或 latent dynamics，暂时不能承诺 human-feedback-exact；
-                <span class="research-tag blue">蓝色</span> 表示它属于 Psych-201 扩展集、不在 Psych-101，Cecily 未覆盖，需要先确认材料和机制能否复原。
+                <span class="research-tag green">绿色</span> 表示 Cecily 已完成，或已通过 human-path transcript replay（逐 trial <code>env.step()</code> reward + feedback）；
+                <span class="research-tag gray">灰色</span> 表示本轮 validation fail、partial 或缺 transcript payload，暂时不能承诺 human-feedback-exact；
+                <span class="research-tag blue">蓝色</span> 表示尚未完成 Cecily 实现或 transcript validation。
               </p>
               <p>
                 <strong>other / uncategorized</strong> 不保留为 task type，因为它不是心理学任务范式。
@@ -1163,14 +1184,14 @@
                 <td data-label="Task type"><code>risk_mpl</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>described price-list lottery -> switching choice -> risk-aversion summary。<em>与 risky_choice 共用 lottery parser，但 MPL 重点是 staircase/switching metric。</em></div>
-                  <div class="subtype-block"><p class="subtype-title">multiple price list / lottery battery</p><p class="subtype-meta"><strong>继承 / 复用：</strong>described lottery parser、risk preference summary metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>price list staircase, switching metric, gain/loss framing, payoff conversion。</p><div class="tag-list"><span class="research-tag blue">frey2017mpl</span><span class="research-tag blue">frey2017lotteries</span><span class="research-tag blue">spektor2024lossaversion</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">multiple price list / lottery battery</p><p class="subtype-meta"><strong>继承 / 复用：</strong>described lottery parser、risk preference summary metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>price list staircase, switching metric, gain/loss framing, payoff conversion。</p><div class="tag-list"><span class="research-tag blue">frey2017mpl</span><span class="research-tag blue">frey2017lotteries</span><span class="research-tag green">spektor2024lossaversion</span></div></div>
                 </div></td>
               </tr>
               <tr>
                 <td data-label="Task type"><code>risky_choice</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>described gamble / lottery display -> option choice -> EV/CPT-style feature extraction。<em>这是静态 described-risk choice 的主 engine。</em></div>
-                  <div class="subtype-block"><p class="subtype-title">static described gamble choice</p><p class="subtype-meta"><strong>继承 / 复用：</strong>two-option gamble renderer、EV/CPT features、choice parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>stimulus set, probability/payoff format, feedback policy, theory-specific metrics。</p><div class="tag-list"><span class="research-tag green">krueger2022identifying</span><span class="research-tag green">wulff2018description</span><span class="research-tag green">xiong2023neural</span><span class="research-tag green">peterson2021using</span><span class="research-tag blue">Thoma_et_al_2025_risky_choice</span><span class="research-tag blue">hussain2024risk</span><span class="research-tag blue">pirrone_unpublished_lottery</span><span class="research-tag blue">russek2024heuristics</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">static described gamble choice</p><p class="subtype-meta"><strong>继承 / 复用：</strong>two-option gamble renderer、EV/CPT features、choice parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>stimulus set, probability/payoff format, feedback policy, theory-specific metrics。</p><div class="tag-list"><span class="research-tag green">krueger2022identifying</span><span class="research-tag green">wulff2018description</span><span class="research-tag green">xiong2023neural</span><span class="research-tag green">peterson2021using</span><span class="research-tag blue">Thoma_et_al_2025_risky_choice</span><span class="research-tag green">hussain2024risk</span><span class="research-tag blue">pirrone_unpublished_lottery</span><span class="research-tag blue">russek2024heuristics</span></div></div>
                   <div class="subtype-block"><p class="subtype-title">value-based two-option choice</p><p class="subtype-meta"><strong>继承 / 复用：</strong>two-option choice parser and value-feature extraction。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>food/value stimulus set, reaction-time use, no stochastic outcome unless paper specifies one。</p><div class="tag-list"><span class="research-tag blue">pirrone_unpublished_food</span></div></div>
                 </div></td>
               </tr>
@@ -1178,14 +1199,14 @@
                 <td data-label="Task type"><code>skewness_choice</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>described risky stimuli with skewness manipulation -> option choice -> skewness preference metric。</div>
-                  <div class="subtype-block"><p class="subtype-title">skewness / optimized risky stimuli</p><p class="subtype-meta"><strong>继承 / 复用：</strong>static gamble choice and value-feature extraction。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>skewness manipulation, optimized stimulus generation, theory-discriminating contrasts。</p><div class="tag-list"><span class="research-tag blue">olschewski2024skewness</span><span class="research-tag blue">olschewski2025optimal</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">skewness / optimized risky stimuli</p><p class="subtype-meta"><strong>继承 / 复用：</strong>static gamble choice and value-feature extraction。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>skewness manipulation, optimized stimulus generation, theory-discriminating contrasts。</p><div class="tag-list"><span class="research-tag blue">olschewski2024skewness</span><span class="research-tag green">olschewski2025optimal</span></div></div>
                 </div></td>
               </tr>
               <tr>
                 <td data-label="Task type"><code>moral_machine</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>moral dilemma vignette -> forced choice -> moral-dimension aggregation。<em>Yifei 放在 Risk family；机制上仍是 moral/social judgment。</em></div>
-                  <div class="subtype-block"><p class="subtype-title">moral machine / sacrificial dilemma</p><p class="subtype-meta"><strong>继承 / 复用：</strong>vignette/choice runner and condition parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>scenario materials, moral dimensions, response labels, scoring interpretation。</p><div class="tag-list"><span class="research-tag blue">awad2018moral</span><span class="research-tag blue">ciranka_vandenbos_2024</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">moral machine / sacrificial dilemma</p><p class="subtype-meta"><strong>继承 / 复用：</strong>vignette/choice runner and condition parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>scenario materials, moral dimensions, response labels, scoring interpretation。</p><div class="tag-list"><span class="research-tag green">awad2018moral</span><span class="research-tag blue">ciranka_vandenbos_2024</span></div></div>
                 </div></td>
               </tr>
               <tr>
@@ -1193,7 +1214,7 @@
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>pump/cash action -> explosion or accumulated reward -> risk-taking metrics。</div>
                   <div class="subtype-block"><p class="subtype-title">classic BART</p><p class="subtype-meta"><strong>继承 / 复用：</strong>pump/cash state machine、explosion/cashout metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>threshold distribution, balloon count, money conversion, instructions。</p><div class="tag-list"><span class="research-tag green">frey2017risk</span></div></div>
-                  <div class="subtype-block"><p class="subtype-title">clinical BART variant</p><p class="subtype-meta"><strong>继承 / 复用：</strong>BART pump/cash engine。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>clinical metadata, instruction framing, variant-specific thresholds or outcomes。</p><div class="tag-list"><span class="research-tag blue">pike2023catastrophizing</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">clinical BART variant</p><p class="subtype-meta"><strong>继承 / 复用：</strong>BART pump/cash engine。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>clinical metadata, instruction framing, variant-specific thresholds or outcomes。</p><div class="tag-list"><span class="research-tag green">pike2023catastrophizing</span></div></div>
                 </div></td>
               </tr>
               <tr>
@@ -1229,7 +1250,7 @@
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>multi-option attribute table -> choice -> context-effect metric。</div>
                   <div class="subtype-block"><p class="subtype-title">attraction / compromise / similarity choice sets</p><p class="subtype-meta"><strong>继承 / 复用：</strong>multi-option choice parser、attribute table renderer、choice-share metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>decoy construction, attribute normalization, context condition, dominance relation。</p><div class="tag-list"><span class="research-tag blue">spektor2019contexteffects</span></div></div>
-                  <div class="subtype-block"><p class="subtype-title">consumer multi-attribute choice / search or deferral</p><p class="subtype-meta"><strong>继承 / 复用：</strong>attribute-table choice parser and option/search/deferral action vocabulary。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>hotel/price-history materials, search option, buy-now vs defer target, price-change history。</p><div class="tag-list"><span class="research-tag blue">evangelidis2023upscaling</span><span class="research-tag blue">gunadi2021deferral</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">consumer multi-attribute choice / search or deferral</p><p class="subtype-meta"><strong>继承 / 复用：</strong>attribute-table choice parser and option/search/deferral action vocabulary。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>hotel/price-history materials, search option, buy-now vs defer target, price-change history。</p><div class="tag-list"><span class="research-tag green">evangelidis2023upscaling</span><span class="research-tag green">gunadi2021deferral</span></div></div>
                 </div></td>
               </tr>
               <tr class="yifei-family-row"><td colspan="2"><strong>Reinforcement Learning</strong> <span>(7 groups)</span></td></tr>
@@ -1237,7 +1258,7 @@
                 <td data-label="Task type"><code>k_armed</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>arm choice -> stochastic reward/feedback -> trial-level learning metrics。</div>
-                  <div class="subtype-block"><p class="subtype-title">stationary / ordinary k-arm bandit</p><p class="subtype-meta"><strong>继承 / 复用：</strong>arm/action/reward loop、Q-learning/regret/switch metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>arm count、reward distribution、trial schedule、instruction framing。</p><div class="tag-list"><span class="research-tag green">bahrami2020four</span><span class="research-tag green">feng2021dynamics</span><span class="research-tag green">gershman2018deconstructing</span><span class="research-tag green">sadeghiyeh2020temporal</span><span class="research-tag green">somerville2017charting</span><span class="research-tag green">waltz2020differential</span><span class="research-tag blue">anvari2024armed_bandit</span><span class="research-tag blue">anllo2024weird</span><span class="research-tag blue">hartley2024twoarmedbandit</span><span class="research-tag blue">fan2022trait</span><span class="research-tag blue">rutledge2023happiness</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">stationary / ordinary k-arm bandit</p><p class="subtype-meta"><strong>继承 / 复用：</strong>arm/action/reward loop、Q-learning/regret/switch metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>arm count、reward distribution、trial schedule、instruction framing。</p><div class="tag-list"><span class="research-tag green">bahrami2020four</span><span class="research-tag green">feng2021dynamics</span><span class="research-tag green">gershman2018deconstructing</span><span class="research-tag green">sadeghiyeh2020temporal</span><span class="research-tag green">somerville2017charting</span><span class="research-tag green">waltz2020differential</span><span class="research-tag green">suthaharan2021paranoia</span><span class="research-tag blue">anvari2024armed_bandit</span><span class="research-tag blue">anllo2024weird</span><span class="research-tag blue">hartley2024twoarmedbandit</span><span class="research-tag blue">fan2022trait</span><span class="research-tag blue">rutledge2023happiness</span></div></div>
                   <div class="subtype-block"><p class="subtype-title">non-stationary / instructed horizon bandit</p><p class="subtype-meta"><strong>继承 / 复用：</strong>bandit loop plus drift / horizon / instructed-exposure controls。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>reward-probability drift, instructed trials, horizon 1/6, safety or exploration constraints。</p><div class="tag-list"><span class="research-tag gray">speekenbrink2008learning</span><span class="research-tag blue">dubois2022value</span></div></div>
                 </div></td>
               </tr>
@@ -1303,7 +1324,7 @@
                 <td data-label="Task type"><code>observe_or_bet</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>observe information or place bet -> hidden-state belief update -> value-of-information metric。</div>
-                  <div class="subtype-block"><p class="subtype-title">observe action vs bet action</p><p class="subtype-meta"><strong>继承 / 复用：</strong>information-value action parser and belief/update metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>hidden urn/generative process, observe cost, bet payoff, color/state schedule。</p><div class="tag-list"><span class="research-tag blue">anvari2024observe_bet</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">observe action vs bet action</p><p class="subtype-meta"><strong>继承 / 复用：</strong>information-value action parser and belief/update metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>hidden urn/generative process, observe cost, bet payoff, color/state schedule。</p><div class="tag-list"><span class="research-tag green">anvari2024observe_bet</span></div></div>
                 </div></td>
               </tr>
               <tr>
@@ -1338,7 +1359,7 @@
                 <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>optional stopping / secretary search</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>sequential reveal/search -> stop or recall -> payoff and optimal-threshold metric。</div>
-                  <div class="subtype-block"><p class="subtype-title">optional stopping with recall</p><p class="subtype-meta"><strong>继承 / 复用：</strong>sequential search parser and stopping-position metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>recall availability, opening cost, sequence length, reward distribution。</p><div class="tag-list"><span class="research-tag blue">optional_stopping_with_recall</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">optional stopping with recall</p><p class="subtype-meta"><strong>继承 / 复用：</strong>sequential search parser and stopping-position metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>recall availability, opening cost, sequence length, reward distribution。</p><div class="tag-list"><span class="research-tag gray">anvari2024optional_stopping</span></div></div>
                 </div></td>
               </tr>
               <tr class="yifei-family-row"><td colspan="2"><strong>Reasoning</strong> <span>(4 groups)</span></td></tr>
@@ -1360,14 +1381,14 @@
                 <td data-label="Task type"><code>causal_inference</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>causal structure -> intervention/prediction response -> outcome/scoring rule。</div>
-                  <div class="subtype-block"><p class="subtype-title">causal prediction / intervention</p><p class="subtype-meta"><strong>继承 / 复用：</strong>causal graph / intervention API, prediction parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>graph structure, outcome generator, intervention costs, scoring rule。</p><div class="tag-list"><span class="research-tag blue">cohen2020causal</span><span class="research-tag blue">witte2024interventionStudy</span><span class="research-tag blue">bramley2017</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">causal prediction / intervention</p><p class="subtype-meta"><strong>继承 / 复用：</strong>causal graph / intervention API, prediction parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>graph structure, outcome generator, intervention costs, scoring rule。</p><div class="tag-list"><span class="research-tag green">cohen2020causal</span><span class="research-tag green">witte2024interventionStudy</span><span class="research-tag blue">bramley2017</span></div></div>
                 </div></td>
               </tr>
               <tr>
                 <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>algorithmic advice / augmented decision</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>base decision problem + optional advice/augmentation -> reliance and accuracy metric。</div>
-                  <div class="subtype-block"><p class="subtype-title">algorithmic augmentation with arithmetic decisions</p><p class="subtype-meta"><strong>继承 / 复用：</strong>binary decision parser and advice-condition logging。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>subtraction/divisibility item generator, advice quality, time feedback, reliance scoring。</p><div class="tag-list"><span class="research-tag blue">xu2023augmenting</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">algorithmic augmentation with arithmetic decisions</p><p class="subtype-meta"><strong>继承 / 复用：</strong>binary decision parser and advice-condition logging。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>subtraction/divisibility item generator, advice quality, time feedback, reliance scoring。</p><div class="tag-list"><span class="research-tag green">xu2023augmenting</span></div></div>
                 </div></td>
               </tr>
               <tr class="yifei-family-row"><td colspan="2"><strong>Memory & Cognitive Control</strong> <span>(8 groups)</span></td></tr>
@@ -1403,7 +1424,7 @@
                 <td data-label="Task type"><code>stroop</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>stimulus -> automatic response conflict -> interference-control metric。</div>
-                  <div class="subtype-block"><p class="subtype-title">Stroop / interference control</p><p class="subtype-meta"><strong>继承 / 复用：</strong>stimulus-response classification runner、congruency-condition metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>color-word materials, congruent/incongruent mapping, timing/RT policy, interference metric。</p><div class="tag-list"><span class="research-tag blue">busch2024_stroop</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">Stroop / interference control</p><p class="subtype-meta"><strong>继承 / 复用：</strong>stimulus-response classification runner、congruency-condition metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>color-word materials, congruent/incongruent mapping, timing/RT policy, interference metric。</p><div class="tag-list"><span class="research-tag green">busch2024_stroop</span></div></div>
                 </div></td>
               </tr>
               <tr>
@@ -1412,7 +1433,7 @@
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>study phase -> delay/probe/test phase -> recall/recognition/source scoring。</div>
                   <div class="subtype-block"><p class="subtype-title">recent-probe working memory</p><p class="subtype-meta"><strong>继承 / 复用：</strong>study/test phase wrapper、probe presentation、accuracy/RT metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>probe lag, foil construction, response window, adaptive or fixed schedule。</p><div class="tag-list"><span class="research-tag green">enkavi2019recentprobes</span></div></div>
                   <div class="subtype-block"><p class="subtype-title">intention / source-memory gap</p><p class="subtype-meta"><strong>继承 / 复用：</strong>memory phase wrapper and response parsing。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>missing source/intention materials and latent study/test mapping before exact env。</p><div class="tag-list"><span class="research-tag gray">popov2023intent</span></div></div>
-                  <div class="subtype-block"><p class="subtype-title">associative / episodic / hindsight transfer memory</p><p class="subtype-meta"><strong>继承 / 复用：</strong>study-test scheduler and recall/recognition scoring shell。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>image/word materials, association graph, lures, transfer labels, free-recall scoring。</p><div class="tag-list"><span class="research-tag blue">gross2023hindsightTransferLearning</span><span class="research-tag blue">guenther2024associations</span><span class="research-tag blue">haridi2024memory_1</span><span class="research-tag blue">haridi2024memory_2</span><span class="research-tag blue">haridi2024memory_3</span><span class="research-tag blue">rausch_unpublished_replication</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">associative / episodic / hindsight transfer memory</p><p class="subtype-meta"><strong>继承 / 复用：</strong>study-test scheduler and recall/recognition scoring shell。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>image/word materials, association graph, lures, transfer labels, free-recall scoring。</p><div class="tag-list"><span class="research-tag blue">gross2023hindsightTransferLearning</span><span class="research-tag blue">guenther2024associations</span><span class="research-tag green">haridi2024memory_1</span><span class="research-tag blue">haridi2024memory_2</span><span class="research-tag blue">haridi2024memory_3</span><span class="research-tag blue">rausch_unpublished_replication</span></div></div>
                 </div></td>
               </tr>
               <tr>
@@ -1426,7 +1447,7 @@
                 <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>go / no-go response inhibition</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>stimulus -> respond/withhold -> commission/omission metrics。</div>
-                  <div class="subtype-block"><p class="subtype-title">go / no-go</p><p class="subtype-meta"><strong>继承 / 复用：</strong>go/no-go state machine、commission/omission metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>stimulus-go mapping, timing, feedback, adaptive or fixed schedule。</p><div class="tag-list"><span class="research-tag green">enkavi2019gonogo</span><span class="research-tag blue">moutoussis2018pavlovian</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">go / no-go</p><p class="subtype-meta"><strong>继承 / 复用：</strong>go/no-go state machine、commission/omission metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>stimulus-go mapping, timing, feedback, adaptive or fixed schedule。</p><div class="tag-list"><span class="research-tag green">enkavi2019gonogo</span><span class="research-tag green">moutoussis2018pavlovian</span></div></div>
                 </div></td>
               </tr>
               <tr class="yifei-family-row"><td colspan="2"><strong>Social & Economic Games</strong> <span>(6 groups)</span></td></tr>
@@ -1434,21 +1455,21 @@
                 <td data-label="Task type"><code>ultimatum</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>economic game role/action -> payoff and fairness metric。</div>
-                  <div class="subtype-block"><p class="subtype-title">ultimatum responder / proposer variant</p><p class="subtype-meta"><strong>继承 / 复用：</strong>role/action parser and payoff bookkeeping。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>offer distribution, responder/proposer role, acceptance threshold metric。</p><div class="tag-list"><span class="research-tag blue">heffner2022economicgames</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">ultimatum responder / proposer variant</p><p class="subtype-meta"><strong>继承 / 复用：</strong>role/action parser and payoff bookkeeping。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>offer distribution, responder/proposer role, acceptance threshold metric。</p><div class="tag-list"><span class="research-tag green">heffner2022economicgames</span></div></div>
                 </div></td>
               </tr>
               <tr>
                 <td data-label="Task type"><code>repeated_games</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>repeated 2x2 payoff matrix -> action choice -> cooperation/strategy metric。</div>
-                  <div class="subtype-block"><p class="subtype-title">repeated matrix games</p><p class="subtype-meta"><strong>继承 / 复用：</strong>game-action runner and payoff aggregation。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>payoff matrix, partner model, repetition, history window, strategy metric。</p><div class="tag-list"><span class="research-tag blue">akata2023repeatedgames</span><span class="research-tag blue">heffner2022economicgames</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">repeated matrix games</p><p class="subtype-meta"><strong>继承 / 复用：</strong>game-action runner and payoff aggregation。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>payoff matrix, partner model, repetition, history window, strategy metric。</p><div class="tag-list"><span class="research-tag gray">akata2023repeatedgames</span><span class="research-tag green">heffner2022economicgames</span></div></div>
                 </div></td>
               </tr>
               <tr>
                 <td data-label="Task type"><code>contribution_game</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>public-goods contribution -> group payoff feedback -> cooperation metric。</div>
-                  <div class="subtype-block"><p class="subtype-title">public goods game</p><p class="subtype-meta"><strong>继承 / 复用：</strong>contribution parser and group-payoff aggregation。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>group size, multiplier, feedback visibility, round structure。</p><div class="tag-list"><span class="research-tag blue">alsobay2025publicGoodsGame</span><span class="research-tag blue">heffner2022economicgames</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">public goods game</p><p class="subtype-meta"><strong>继承 / 复用：</strong>contribution parser and group-payoff aggregation。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>group size, multiplier, feedback visibility, round structure。</p><div class="tag-list"><span class="research-tag green">alsobay2025publicGoodsGame</span><span class="research-tag green">heffner2022economicgames</span></div></div>
                 </div></td>
               </tr>
               <tr>
@@ -1469,7 +1490,7 @@
                 <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>strategic / security / matrix games</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>strategic choice or monitoring decision -> payoff/risk feedback -> strategic metric。</div>
-                  <div class="subtype-block"><p class="subtype-title">security / investment / one-shot matrix variants</p><p class="subtype-meta"><strong>继承 / 复用：</strong>payoff-matrix or strategic-choice runner。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>attack/defer monitoring risk, investment race payoff, one-shot matrix-game payoff structure。</p><div class="tag-list"><span class="research-tag blue">aggarwal2023</span><span class="research-tag blue">hunter2021increased</span><span class="research-tag blue">zhu2024games</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">security / investment / one-shot matrix variants</p><p class="subtype-meta"><strong>继承 / 复用：</strong>payoff-matrix or strategic-choice runner。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>attack/defer monitoring risk, investment race payoff, one-shot matrix-game payoff structure。</p><div class="tag-list"><span class="research-tag blue">aggarwal2023</span><span class="research-tag blue">hunter2021increased</span><span class="research-tag green">zhu2024games</span></div></div>
                 </div></td>
               </tr>
               <tr class="yifei-family-row"><td colspan="2"><strong>Language & Pragmatics</strong> <span>(4 groups)</span></td></tr>
@@ -1477,7 +1498,7 @@
                 <td data-label="Task type"><code>rsa_pragmatics</code></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>text context/question -> choice/rating/free-text response -> pragmatic target scoring。</div>
-                  <div class="subtype-block"><p class="subtype-title">probabilistic pragmatics / RSA-style judgments</p><p class="subtype-meta"><strong>继承 / 复用：</strong>text prompt runner、choice/rating parser、condition-level aggregation。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>context construction, literal/pragmatic target, speaker/listener role, answer key。</p><div class="tag-list"><span class="research-tag blue">hu2023lm-pragmatics</span><span class="research-tag blue">tesslerfranke_2018_not_unreasonable</span><span class="research-tag blue">vantiel2020-probabilistic_pragmatics</span><span class="research-tag blue">vantiel2020probabilistic_pragmatics</span><span class="research-tag blue">vantiel2021probabilisticpragmatics</span><span class="research-tag blue">vantiel2022meaninguse</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">probabilistic pragmatics / RSA-style judgments</p><p class="subtype-meta"><strong>继承 / 复用：</strong>text prompt runner、choice/rating parser、condition-level aggregation。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>context construction, literal/pragmatic target, speaker/listener role, answer key。</p><div class="tag-list"><span class="research-tag blue">hu2023lm-pragmatics</span><span class="research-tag green">tesslerfranke_2018_not_unreasonable</span><span class="research-tag blue">vantiel2020-probabilistic_pragmatics</span><span class="research-tag blue">vantiel2020probabilistic_pragmatics</span><span class="research-tag blue">vantiel2021probabilisticpragmatics</span><span class="research-tag blue">vantiel2022meaninguse</span></div></div>
                 </div></td>
               </tr>
               <tr>
@@ -1498,7 +1519,7 @@
                 <td data-label="Task type"><span class="pill gray">not included in Yifei's task/env</span><br><strong>lexical / relational / grammaticality / association judgments</strong></td>
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>lexical/text item -> judgment/free response -> label or semantic scoring。</div>
-                  <div class="subtype-block"><p class="subtype-title">lexical and linguistic judgments</p><p class="subtype-meta"><strong>继承 / 复用：</strong>text material loader and lexical/free-response parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>lexical-decision target, sensibility/relational labels, grammaticality key, free-association scoring。</p><div class="tag-list"><span class="research-tag blue">guenther2020LDT</span><span class="research-tag blue">guenther2020TS</span><span class="research-tag blue">guenther2022Relational</span><span class="research-tag blue">guenther2023Grammaticality</span><span class="research-tag blue">guenther2024associations_individual</span><span class="research-tag blue">sun2025rat</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">lexical and linguistic judgments</p><p class="subtype-meta"><strong>继承 / 复用：</strong>text material loader and lexical/free-response parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>lexical-decision target, sensibility/relational labels, grammaticality key, free-association scoring。</p><div class="tag-list"><span class="research-tag green">guenther2020LDT</span><span class="research-tag blue">guenther2020TS</span><span class="research-tag blue">guenther2022Relational</span><span class="research-tag green">guenther2023Grammaticality</span><span class="research-tag green">guenther2024associations_individual</span><span class="research-tag blue">sun2025rat</span></div></div>
                 </div></td>
               </tr>
               <tr class="yifei-family-row"><td colspan="2"><strong>Judgment & Metacognition</strong> <span>(6 groups)</span></td></tr>
@@ -1507,7 +1528,7 @@
                 <td data-label="Subtype / engine"><div class="subtype-stack">
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>primary judgment/choice + confidence/rating -> calibration/discrimination metrics。</div>
                   <div class="subtype-block"><p class="subtype-title">knowledge calibration / Dunning-Kruger</p><p class="subtype-meta"><strong>继承 / 复用：</strong>question-answer-confidence parser、calibration metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>question bank, ground truth, confidence scale, feedback policy。</p><div class="tag-list"><span class="research-tag gray">jansen2021dunningkruger</span></div></div>
-                  <div class="subtype-block"><p class="subtype-title">choice + confidence / latent belief tasks</p><p class="subtype-meta"><strong>继承 / 复用：</strong>choice runner plus confidence/belief report parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>belief latent state, confidence scale, sampling paradigm, calibration metric。</p><div class="tag-list"><span class="research-tag blue">anvari2024sampling_paradigm</span><span class="research-tag blue">baar2021latent</span><span class="research-tag blue">hellmann_unpublished_brightness</span><span class="research-tag blue">schiekiera2025metascience</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">choice + confidence / latent belief tasks</p><p class="subtype-meta"><strong>继承 / 复用：</strong>choice runner plus confidence/belief report parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>belief latent state, confidence scale, sampling paradigm, calibration metric。</p><div class="tag-list"><span class="research-tag green">baar2022latent</span><span class="research-tag green">anvari2024sampling_paradigm</span><span class="research-tag blue">baar2021latent</span><span class="research-tag blue">hellmann_unpublished_brightness</span><span class="research-tag blue">schiekiera2025metascience</span></div></div>
                 </div></td>
               </tr>
               <tr>
@@ -1540,7 +1561,7 @@
                   <div class="type-base-block"><strong>Task type 共用底座：</strong>stimulus -> detection/classification response -> accuracy or discrimination metric。</div>
                   <div class="subtype-block"><p class="subtype-title">Navon / perceptual detection</p><p class="subtype-meta"><strong>继承 / 复用：</strong>classification runner、accuracy/RT parsing。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>visual stimuli, congruency/detail feedback, correct label generation。</p><div class="tag-list"><span class="research-tag blue">busch2024_navon</span></div></div>
                   <div class="subtype-block"><p class="subtype-title">perceptual numerosity / dot decision</p><p class="subtype-meta"><strong>继承 / 复用：</strong>perceptual forced-choice parser and accuracy/RT metrics。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>dot-array generator, numerosity or motion ratio, speed-accuracy tradeoff scoring。</p><div class="tag-list"><span class="research-tag blue">pirrone_2018_dots</span></div></div>
-                  <div class="subtype-block"><p class="subtype-title">phishing / real-world detection</p><p class="subtype-meta"><strong>继承 / 复用：</strong>classification runner and binary/graded decision parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>email/web materials, ground-truth labels, feedback wording, risk metric。</p><div class="tag-list"><span class="research-tag blue">singh2019phishing</span></div></div>
+                  <div class="subtype-block"><p class="subtype-title">phishing / real-world detection</p><p class="subtype-meta"><strong>继承 / 复用：</strong>classification runner and binary/graded decision parser。</p><p class="subtype-meta"><strong>本 subtype 改：</strong>email/web materials, ground-truth labels, feedback wording, risk metric。</p><div class="tag-list"><span class="research-tag green">singh2019phishing</span></div></div>
                 </div></td>
               </tr>
               <tr>
@@ -1604,7 +1625,7 @@
                 <td data-label="总 variants">47</td>
                 <td data-label="Psych-101 覆盖">7</td>
                 <td data-label="101 未覆盖"><span class="pill amber">40</span></td>
-                <td data-label="未覆盖 research"><p class="compact-list">agrawal2024stress, anllo2024weird, anvari2024armed_bandit, bavard2018magnitude, bavard2021range, bavard2023functional, chambon2020feedback, fan2022trait, haines2020, hartley2024twoarmedbandit, nasioulas2024feedback, palminteri2017confirmation, rosenbaum2022valence, rutledge2023happiness, suthaharan2021paranoia, vandendriessche2022depression, witte_thalmann2024exploration</p></td>
+                <td data-label="未覆盖 research"><p class="compact-list">agrawal2024stress, anllo2024weird, anvari2024armed_bandit, bavard2018magnitude, bavard2021range, bavard2023functional, chambon2020feedback, fan2022trait, haines2020, hartley2024twoarmedbandit, nasioulas2024feedback, palminteri2017confirmation, rosenbaum2022valence, rutledge2023happiness, <span class="research-tag green">suthaharan2021paranoia</span>, vandendriessche2022depression, witte_thalmann2024exploration</p></td>
               </tr>
               <tr>
                 <td data-label="Raw Psych-201 task type"><strong>two-step / model-based RL</strong></td>
@@ -1618,35 +1639,35 @@
                 <td data-label="总 variants">17</td>
                 <td data-label="Psych-101 覆盖">0</td>
                 <td data-label="101 未覆盖"><span class="pill violet">17</span></td>
-                <td data-label="未覆盖 research"><p class="compact-list">frankedegen2016reasoning-exp1, guenther2024comprehension, guenther2024substitutions, hu2023lm-pragmatics, tesslerfranke_2018_not_unreasonable, vantiel2020-probabilistic_pragmatics, vantiel2020probabilistic_pragmatics, vantiel2021probabilisticpragmatics, vantiel2022meaninguse</p></td>
+                <td data-label="未覆盖 research"><p class="compact-list">frankedegen2016reasoning-exp1, guenther2024comprehension, guenther2024substitutions, hu2023lm-pragmatics, <span class="research-tag green">tesslerfranke_2018_not_unreasonable</span>, vantiel2020-probabilistic_pragmatics, vantiel2020probabilistic_pragmatics, vantiel2021probabilisticpragmatics, vantiel2022meaninguse</p></td>
               </tr>
               <tr>
                 <td data-label="Raw Psych-201 task type"><strong>risky choice (described)</strong></td>
                 <td data-label="总 variants">20</td>
                 <td data-label="Psych-101 覆盖">4</td>
                 <td data-label="101 未覆盖"><span class="pill amber">16</span></td>
-                <td data-label="未覆盖 research"><p class="compact-list">frey2017lotteries, frey2017mpl, hussain2024risk, olschewski2024skewness, olschewski2025optimal, pirrone_unpublished_lottery, spektor2024lossaversion</p></td>
+                <td data-label="未覆盖 research"><p class="compact-list">frey2017lotteries, frey2017mpl, <span class="research-tag green">hussain2024risk</span>, olschewski2024skewness, <span class="research-tag green">olschewski2025optimal</span>, pirrone_unpublished_lottery, <span class="research-tag green">spektor2024lossaversion</span></p></td>
               </tr>
               <tr>
                 <td data-label="Raw Psych-201 task type"><strong>memory / recall / recognition</strong></td>
                 <td data-label="总 variants">13</td>
                 <td data-label="Psych-101 覆盖">5</td>
                 <td data-label="101 未覆盖"><span class="pill blue">8</span></td>
-                <td data-label="未覆盖 research"><p class="compact-list">busch2024_stroop, gross2023hindsightTransferLearning, guenther2024associations, haridi2024memory_1, haridi2024memory_2, haridi2024memory_3, rausch_unpublished_replication</p></td>
+                <td data-label="未覆盖 research"><p class="compact-list"><span class="research-tag green">busch2024_stroop</span>, gross2023hindsightTransferLearning, guenther2024associations, <span class="research-tag green">haridi2024memory_1</span>, haridi2024memory_2, haridi2024memory_3, rausch_unpublished_replication</p></td>
               </tr>
               <tr>
                 <td data-label="Raw Psych-201 task type"><strong>metacognition / confidence</strong></td>
                 <td data-label="总 variants">9</td>
                 <td data-label="Psych-101 覆盖">1</td>
                 <td data-label="101 未覆盖"><span class="pill blue">8</span></td>
-                <td data-label="未覆盖 research"><p class="compact-list">anvari2024sampling_paradigm, baar2021latent, hellmann_unpublished_brightness, schiekiera2025metascience</p></td>
+                <td data-label="未覆盖 research"><p class="compact-list"><span class="research-tag green">anvari2024sampling_paradigm</span>, baar2021latent, <span class="research-tag green">baar2022latent</span>, hellmann_unpublished_brightness, schiekiera2025metascience</p></td>
               </tr>
               <tr>
                 <td data-label="Raw Psych-201 task type"><strong>moral / social</strong></td>
                 <td data-label="总 variants">8</td>
                 <td data-label="Psych-101 覆盖">1</td>
                 <td data-label="101 未覆盖"><span class="pill violet">7</span></td>
-                <td data-label="未覆盖 research"><p class="compact-list">akata2023repeatedgames, alsobay2025publicGoodsGame, awad2018moral, ciranka_vandenbos_2024, heffner2022economicgames</p></td>
+                <td data-label="未覆盖 research"><p class="compact-list"><span class="research-tag gray">akata2023repeatedgames</span>, <span class="research-tag green">alsobay2025publicGoodsGame</span>, <span class="research-tag green">awad2018moral</span>, ciranka_vandenbos_2024, <span class="research-tag green">heffner2022economicgames</span></p></td>
               </tr>
               <tr>
                 <td data-label="Raw Psych-201 task type"><strong>probabilistic instrumental learning</strong></td>
@@ -1688,14 +1709,14 @@
                 <td data-label="总 variants">4</td>
                 <td data-label="Psych-101 覆盖">0</td>
                 <td data-label="101 未覆盖"><span class="pill green">4</span></td>
-                <td data-label="未覆盖 research"><p class="compact-list">busch2024_navon, singh2019phishing</p></td>
+                <td data-label="未覆盖 research"><p class="compact-list">busch2024_navon, <span class="research-tag green">singh2019phishing</span></p></td>
               </tr>
               <tr>
                 <td data-label="Raw Psych-201 task type"><strong>causal reasoning</strong></td>
                 <td data-label="总 variants">2</td>
                 <td data-label="Psych-101 覆盖">0</td>
                 <td data-label="101 未覆盖"><span class="pill green">2</span></td>
-                <td data-label="未覆盖 research"><p class="compact-list">cohen2020causal, witte2024interventionStudy</p></td>
+                <td data-label="未覆盖 research"><p class="compact-list"><span class="research-tag green">cohen2020causal</span>, <span class="research-tag green">witte2024interventionStudy</span></p></td>
               </tr>
               <tr>
                 <td data-label="Raw Psych-201 task type"><strong>habit vs goal-directed</strong></td>
@@ -1709,7 +1730,7 @@
                 <td data-label="总 variants">2</td>
                 <td data-label="Psych-101 覆盖">1</td>
                 <td data-label="101 未覆盖"><span class="pill green">1</span></td>
-                <td data-label="未覆盖 research"><p class="compact-list">pike2023catastrophizing</p></td>
+                <td data-label="未覆盖 research"><p class="compact-list"><span class="research-tag green">pike2023catastrophizing</span></p></td>
               </tr>
               <tr>
                 <td data-label="Raw Psych-201 task type"><strong>odd-one-out / triplet</strong></td>
@@ -1723,7 +1744,7 @@
                 <td data-label="总 variants">1</td>
                 <td data-label="Psych-101 覆盖">0</td>
                 <td data-label="101 未覆盖"><span class="pill green">1</span></td>
-                <td data-label="未覆盖 research"><p class="compact-list">anvari2024observe_bet</p></td>
+                <td data-label="未覆盖 research"><p class="compact-list"><span class="research-tag green">anvari2024observe_bet</span></p></td>
               </tr>
               <tr>
                 <td data-label="Raw Psych-201 task type"><strong>horizon task / explore-exploit</strong></td>
